@@ -25,7 +25,7 @@ git status
 git push
 ```
 
-###建分支、切换到分支
+##建分支、切换到分支
 
 ```
 git branch gh-pages
