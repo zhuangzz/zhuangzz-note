@@ -284,25 +284,27 @@
     &lt;button&gt;&#x63D0;&#x4EA4;&lt;/button&gt;
 &lt;/form&gt;
 </code></pre><h3 id="&#x53D1;&#x5E03;&#x8BC4;&#x8BBA;">&#x53D1;&#x5E03;&#x8BC4;&#x8BBA;</h3>
-<p>&#x5F53;&#x70B9;&#x51FB;&#x63D0;&#x4EA4;&#x6309;&#x94AE;&#x65F6;&#x80FD;&#x53D1;&#x5E03;&#x8F93;&#x5165;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x8FC7;&#x7A0B;&#xFF1A;
--&#x70B9;&#x4E00;&#x4E0B; submit &#x8FD9;&#x4E2A;&#x6309;&#x94AE;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x53D1;&#x6210;&#x7684; event &#xFF08;&#x4E8B;&#x4EF6;&#xFF09;&#x5C31;&#x662F; &#x201C;&#x8868;&#x5355;&#x63D0;&#x4EA4;&#xFF08; form submit &#xFF09;&#x201D;
--&#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5982;&#x4F55;&#x6765;&#x5199;&#x5BF9;&#x5E94;&#x7684;&#x201D;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;&#x201C;&#x4E00;&#x822C;&#x4F1A;&#x53EB; handleXXX &#xFF0C;&#x610F;&#x601D;&#x662F;&#x201D;&#x5904;&#x7406;XXX&#x4E8B;&#x4EF6;&#x201C;
--&#x5982;&#x4F55;&#x628A;&#x201D;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;&#x201C;&#x8DDF;&#x4E8B;&#x4EF6;&#x672C;&#x8EAB;&#x7ED1;&#x5B9A;&#x8D77;&#x6765;&#x5462;&#xFF1F;&#x7EAF; html &#x4E2D;&#x7528; action &#x5C5E;&#x6027;&#x6765;&#x5904;&#x7406;&#x3002;&#x4F46;&#x662F;&#x6709;&#x4E86; React &#x5C31;&#x4E0D;&#x7528; action &#x3002;&#x7528; onSubmit &#xFF08; on &#x7684;&#x610F;&#x601D;&#x5C31;&#x662F;&#x201D;&#x5F53;&#x53D1;&#x751F;&#x201C; ) &#x3002;&#x53C2;&#x8003;<a href="https://facebook.github.io/react/docs/forms.html" target="_blank">https://facebook.github.io/react/docs/forms.html</a></p>
-<pre><code> &lt;form onSubmit={this.handleSubmit}
-</code></pre><p>-&#x73B0;&#x5728;&#x7684;&#x95EE;&#x9898;&#x662F;&#xFF0C;&#x6BCF;&#x6B21;&#x63D0;&#x4EA4;&#xFF0C;&#x9875;&#x9762;&#x90FD;&#x4F1A;&#x5237;&#x65B0;&#xFF0C;&#x800C;&#x6211;&#x4EEC;&#x5199;&#x7684;&#x662F;&#x201D;&#x5355;&#x9875;&#x9762;&#x5E94;&#x7528;&#x201C;&#xFF0C;&#x6240;&#x4EE5;&#x9875;&#x9762;&#x4E0D;&#x5141;&#x8BB8;&#x5237;&#x65B0;</p>
-<pre><code>handleSubmit=(e)=&gt;{
-    e.preventDefault()
+<p>&#x5F53;&#x70B9;&#x51FB;&#x63D0;&#x4EA4;&#x6309;&#x94AE;&#x65F6;&#x80FD;&#x53D1;&#x5E03;&#x8F93;&#x5165;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x8FC7;&#x7A0B;&#xFF1A;</p>
+<ul>
+<li>&#x70B9;&#x4E00;&#x4E0B; submit &#x8FD9;&#x4E2A;&#x6309;&#x94AE;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x53D1;&#x6210;&#x7684; event &#xFF08;&#x4E8B;&#x4EF6;&#xFF09;&#x5C31;&#x662F; &#x201C;&#x8868;&#x5355;&#x63D0;&#x4EA4;&#xFF08; form submit &#xFF09;&#x201D;</li>
+<li>&#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5982;&#x4F55;&#x6765;&#x5199;&#x5BF9;&#x5E94;&#x7684;&#x201D;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;&#x201C;&#x4E00;&#x822C;&#x4F1A;&#x53EB; handleXXX &#xFF0C;&#x610F;&#x601D;&#x662F;&#x201D;&#x5904;&#x7406;XXX&#x4E8B;&#x4EF6;&#x201C;</li>
+<li>&#x5982;&#x4F55;&#x628A;&#x201D;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;&#x201C;&#x8DDF;&#x4E8B;&#x4EF6;&#x672C;&#x8EAB;&#x7ED1;&#x5B9A;&#x8D77;&#x6765;&#x5462;&#xFF1F;&#x7EAF; html &#x4E2D;&#x7528; action &#x5C5E;&#x6027;&#x6765;&#x5904;&#x7406;&#x3002;&#x4F46;&#x662F;&#x6709;&#x4E86; React &#x5C31;&#x4E0D;&#x7528; action &#x3002;&#x7528; onSubmit &#xFF08; on &#x7684;&#x610F;&#x601D;&#x5C31;&#x662F;&#x201D;&#x5F53;&#x53D1;&#x751F;&#x201C; ) &#x3002;&#x53C2;&#x8003;<a href="https://facebook.github.io/react/docs/forms.html" target="_blank">https://facebook.github.io/react/docs/forms.html</a><pre><code>&lt;form onSubmit={this.handleSubmit}
+</code></pre></li>
+<li>&#x73B0;&#x5728;&#x7684;&#x95EE;&#x9898;&#x662F;&#xFF0C;&#x6BCF;&#x6B21;&#x63D0;&#x4EA4;&#xFF0C;&#x9875;&#x9762;&#x90FD;&#x4F1A;&#x5237;&#x65B0;&#xFF0C;&#x800C;&#x6211;&#x4EEC;&#x5199;&#x7684;&#x662F;&#x201D;&#x5355;&#x9875;&#x9762;&#x5E94;&#x7528;&#x201C;&#xFF0C;&#x6240;&#x4EE5;&#x9875;&#x9762;&#x4E0D;&#x5141;&#x8BB8;&#x5237;&#x65B0;<pre><code>handleSubmit=(e)=&gt;{
+  e.preventDefault()
 }
-</code></pre><p>-&#x4E0B;&#x4E00;&#x6B65;&#x5C31;&#x9700;&#x8981;&#x62FF;&#x5230;&#x7528;&#x6237;&#x586B;&#x5199;&#x7684;&#x8BC4;&#x8BBA;&#x5185;&#x5BB9;&#x4E86;</p>
-<pre><code>handleSubmit=(e)=&gt;{
-    e.preventDefault()
-    let newComment=this.comment.value
-    this.setState={
-        comments:[...this.state.comments,nwComment]
+</code></pre></li>
+<li>&#x4E0B;&#x4E00;&#x6B65;&#x5C31;&#x9700;&#x8981;&#x62FF;&#x5230;&#x7528;&#x6237;&#x586B;&#x5199;&#x7684;&#x8BC4;&#x8BBA;&#x5185;&#x5BB9;&#x4E86;<pre><code>handleSubmit=(e)=&gt;{
+  e.preventDefault()
+  let newComment=this.comment.value
+  this.setState={
+      comments:[...this.state.comments,nwComment]
 }
 &lt;form ref={value =&gt; this.commentForm = value} onSubmit={this.handleSubmit}&gt;&lt;/form&gt;
 &lt;input type=&quot;text&quot; ref={value =&gt; this.commentInput = value} /&gt;
-</code></pre>
+</code></pre></li>
+</ul>
+
                                 
                                 </section>
                             
@@ -345,7 +347,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第二节：内部 state 使用","level":"1.3.2","depth":2,"next":{"title":"第三节：不用 Redux 实现组件间通信","level":"1.3.3","depth":2,"path":"redux/3-state.md","ref":"./redux/3-state.md","articles":[]},"previous":{"title":"第一节：状态的复习","level":"1.3.1","depth":2,"path":"redux/1-state.md","ref":"./redux/1-state.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"redux/2-state.md","mtime":"2017-07-19T13:56:08.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-19T14:12:15.862Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第二节：内部 state 使用","level":"1.3.2","depth":2,"next":{"title":"第三节：不用 Redux 实现组件间通信","level":"1.3.3","depth":2,"path":"redux/3-state.md","ref":"./redux/3-state.md","articles":[]},"previous":{"title":"第一节：状态的复习","level":"1.3.1","depth":2,"path":"redux/1-state.md","ref":"./redux/1-state.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"redux/2-state.md","mtime":"2017-07-19T14:28:04.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-19T14:28:09.947Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
