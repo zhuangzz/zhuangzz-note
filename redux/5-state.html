@@ -1,0 +1,468 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第五节：处理多类数据 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="4-state.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Inction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../react/">
+            
+                <a href="../react/">
+            
+                    
+                    第一章:终端命令
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../react/1-state.html">
+            
+                <a href="../react/1-state.html">
+            
+                    
+                    第一节:安装nodejs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../react/2-state.html">
+            
+                <a href="../react/2-state.html">
+            
+                    
+                    第二节:从github克隆仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../react/3-state.html">
+            
+                <a href="../react/3-state.html">
+            
+                    
+                    第三节:向github创建个人网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第二章：redux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="1-state.html">
+            
+                <a href="1-state.html">
+            
+                    
+                    第一节：状态的复习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="2-state.html">
+            
+                <a href="2-state.html">
+            
+                    
+                    第二节：内部 state 使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="3-state.html">
+            
+                <a href="3-state.html">
+            
+                    
+                    第三节：不用 Redux 实现组件间通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="4-state.html">
+            
+                <a href="4-state.html">
+            
+                    
+                    第四节：Redux Store
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.5" data-path="5-state.html">
+            
+                <a href="5-state.html">
+            
+                    
+                    第五节：处理多类数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第五节：处理多类数据</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x8FD9;&#x4E00;&#x8282;&#x6765;&#x770B;&#x770B; redux &#x5982;&#x4F55;&#x5904;&#x7406;&#x591A;&#x7C7B;&#x6570;&#x636E;&#x3002;</p>
+<h3 id="&#x6DFB;&#x52A0;&#x70B9;&#x8D5E;&#x529F;&#x80FD;">&#x6DFB;&#x52A0;&#x70B9;&#x8D5E;&#x529F;&#x80FD;</h3>
+<p>&#x76EE;&#x524D; PostBody &#x7EC4;&#x4EF6;&#x4E2D;&#x53EA;&#x663E;&#x793A;&#x8BC4;&#x8BBA;&#xFF0C;&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x5728;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x70B9;&#x8D5E;&#x7684;&#x6309;&#x94AE;&#x8FDB;&#x6765;&#x3002;</p>
+<h4 id="store-&#x4E2D;&#x5B58;&#x5165;&#x591A;&#x7C7B;&#x6570;&#x636E;">Store &#x4E2D;&#x5B58;&#x5165;&#x591A;&#x7C7B;&#x6570;&#x636E;</h4>
+<p>&#x5728;&#x53BB;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; Reducer&#xFF0F;like &#xFF0C;&#x7136;&#x540E; reducers/like.js &#x4E2D;&#x8FD9;&#x6837;&#x5199;</p>
+<pre><code>export default function commentReducer(state = 0, action) {
+  console.log(action)
+  switch (action.type) {
+    case &apos;x&apos;:
+      return state;
+    default:
+      return state;
+  }
+}
+</code></pre><p> &#x5728; reducers/index.js &#x4E2D;&#x8FD9;&#x6837;&#x5199;</p>
+<pre><code>import likeReducer from &apos;./like&apos;
+import commentReducer from &apos;./comment&apos;
+import { combineReducers } from &apos;redux&apos;
+
+
+const rootReducer = combineReducers({
+  comments: commentReducer,
+  likes: likeReducer
+})
+
+export default rootReducer
+</code></pre><blockquote>
+<p>&#x4E0A;&#x9762;&#x7684; comments &#x548C; likes &#x6700;&#x7EC8;&#x5BF9;&#x5E94;&#x4E86; store.getState() &#x8F93;&#x51FA;&#x7684;&#x72B6;&#x6001;&#x6570;&#x7684;&#x5BF9;&#x8C61;&#x7684;&#x4E24;&#x4E2A; key &#x3002;</p>
+</blockquote>
+<p>&#x53C2;&#x8003;&#x7F51;&#x5740;<a href="https://github.com/happypeter/redux-hello/commit/4a887c260613f21c144c14610c488d1c120cfb71" target="_blank">https://github.com/happypeter/redux-hello/commit/4a887c260613f21c144c14610c488d1c120cfb71</a></p>
+<h4 id="&#x663E;&#x793A;0&#x8D5E;">&#x663E;&#x793A;&#x201C;0&#x8D5E;&#x201D;</h4>
+<p>&#x4FEE;&#x6539;PostBody.js&#x4E2D;&#xFF1A;</p>
+<pre><code>import React, { Component } from &apos;react&apos;;
+import {connect} from &quot;react-redux&quot;
+class PostBody extends Component {
+  render() {
+    return (
+      &lt;div className=&quot;post-body&quot; style={{height:&quot;80px&quot;,backgroundColor:&quot;lightpink&quot;}}&gt;
+       {this.props.comments.length}
+       &lt;div className=&quot;likes-num num&quot;&gt;
+
+            {this.props.likes} &#x8D5E;
+       &lt;/div&gt;
+      &lt;/div&gt;
+    )
+  }
+}
+
+const mapStateToProps = (state) =&gt; ({
+    comments:state.comments,
+    likes:state.likes
+});
+
+export default connect(mapStateToProps)(PostBody);
+</code></pre><p>&#x53C2;&#x8003;<a href="https://github.com/happypeter/redux-hello/commit/0aaa99b7629de8d4ce68bba6bffc8dc9adde50e7" target="_blank">https://github.com/happypeter/redux-hello/commit/0aaa99b7629de8d4ce68bba6bffc8dc9adde50e7</a></p>
+<h4 id="&#x663E;&#x793A;&#x8BC4;&#x8BBA;">&#x663E;&#x793A;&#x8BC4;&#x8BBA;</h4>
+<p>&#x53C2;&#x8003;<a href="https://github.com/zhuangzz/redux-hello/commits/master" target="_blank">https://github.com/zhuangzz/redux-hello/commits/master</a></p>
+<h4 id="&#x70B9;&#x8D5E;">&#x70B9;&#x8D5E;</h4>
+<p>&#x601D;&#x8DEF;&#xFF1A;</p>
+<ul>
+<li>&#x6570;&#x636E;&#x5B58;&#x653E;&#x5230;store.js &#x4E2D;&#xFF08;&#x5373;&#x5728;reducers/like.js&#x4E2D;&#xFF09;</li>
+</ul>
+<p>store.js&#xFF1A;</p>
+<pre><code>import { createStore } from &apos;redux&apos;;
+import rootReducer from &quot;./reducers&quot;;
+
+let store = createStore(rootReducer)
+export default store
+</code></pre><p>&#x662F;&#x4E4B;&#x524D;&#x5199;&#x597D;&#x7684;,&#x4E0D;&#x7528;&#x6539;&#x4E86;&#x3002;&#x53EA;&#x9700;&#x8981;&#x53BB;like.js&#x4E2D;&#x589E;&#x52A0;&#x3002;</p>
+<ul>
+<li>&#x5728;PostBody.js&#x589E;&#x52A0;onClick&#x4E8B;&#x4EF6;</li>
+<li>&#x5728;PostBody.js&#x4E2D;&#x5199;action
+&#x53C2;&#x8003;<a href="https://github.com/zhuangzz/redux-hello/commit/5d15c13e8a4c0cec685a0f3519ca58feae7808d0" target="_blank">https://github.com/zhuangzz/redux-hello/commit/5d15c13e8a4c0cec685a0f3519ca58feae7808d0</a></li>
+</ul>
+<h4 id="&#x589E;&#x52A0;&#x9875;&#x9762;">&#x589E;&#x52A0;&#x9875;&#x9762;</h4>
+<ul>
+<li>&#x88C5;&#x5305;</li>
+</ul>
+<pre><code>npm i react-router-dom --save
+</code></pre><ul>
+<li>&#x5F15;&#x5165;</li>
+</ul>
+<pre><code>import {
+    Switch,
+    BrowserRouter as Router,
+    Route} from &quot;react-router-dom&quot;;
+</code></pre><ul>
+<li>&#x5199;&#x8DEF;&#x5F84;</li>
+</ul>
+<p>&#x53C2;&#x8003;<a href="https://github.com/zhuangzz/redux-hello/commit/6608269b64894d384733ea7b007738cc0f1aa08c" target="_blank">https://github.com/zhuangzz/redux-hello/commit/6608269b64894d384733ea7b007738cc0f1aa08c</a></p>
+<h4 id="&#x5B9E;&#x73B0;&#x7B5B;&#x9009;&#xFF0C;&#x9875;&#x9762;&#x5355;&#x72EC;&#x663E;&#x793A;&#x672C;&#x9875;&#x9762;state&#x5185;&#x5BB9;">&#x5B9E;&#x73B0;&#x7B5B;&#x9009;&#xFF0C;&#x9875;&#x9762;&#x5355;&#x72EC;&#x663E;&#x793A;&#x672C;&#x9875;&#x9762;state&#x5185;&#x5BB9;</h4>
+<blockquote>
+<p>&#x8981;&#x5B9E;&#x73B0;&#x6839;&#x636E;ID&#x5C31;&#x80FD;&#x5B9E;&#x73B0;&#x5728;&#x4E0D;&#x540C;ID&#x9875;&#x9762;&#x7684;&#x4E0D;&#x540C;state&#x5185;&#x5BB9;&#x5C55;&#x793A;</p>
+</blockquote>
+<ul>
+<li>&#x5C06;commit.js&#x4E2D;state&#x5185;&#x6539;&#x53D8;</li>
+</ul>
+<ul>
+<li>&#x5728;CommentBox.js&#x4E2D;&#x5B9E;&#x73B0;&#x7B5B;&#x9009;</li>
+</ul>
+<p>&#x53C2;&#x8003;<a href="https://github.com/zhuangzz/redux-hello/commit/6664d2497d32324d6e7fd4a5de08325c0996ea95" target="_blank">https://github.com/zhuangzz/redux-hello/commit/6664d2497d32324d6e7fd4a5de08325c0996ea95</a></p>
+<p>*&#x589E;&#x52A0;&#x8D5E;</p>
+<p>&#x53C2;&#x8003;<a href="https://github.com/zhuangzz/redux-hello/commit/15ccb84392de6503c0e9d26818b856e42f34da2a" target="_blank">https://github.com/zhuangzz/redux-hello/commit/15ccb84392de6503c0e9d26818b856e42f34da2a</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="4-state.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 第四节：Redux Store">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第五节：处理多类数据","level":"1.3.5","depth":2,"previous":{"title":"第四节：Redux Store","level":"1.3.4","depth":2,"path":"redux/4-state.md","ref":"./redux/4-state.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"redux/5-state.md","mtime":"2017-07-20T14:16:46.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-20T14:25:16.037Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
