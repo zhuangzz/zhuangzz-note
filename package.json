@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/zhuangzz/zhuangzz-note/issues"
   },
-  "homepage": "https://github.com/zhuangzz/zhuangzz-note#readme"
+  "homepage": "https://github.com/zhuangzz/zhuangzz-note#readme",
+  "dependencies": {
+    "gh-pages": "^1.0.0"
+  }
 }

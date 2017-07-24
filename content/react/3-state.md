@@ -47,16 +47,16 @@ git push -set-upstrem...
 
 因为开发过程中，我们需要用本地机器向 github.com 的仓库中 写东西（ git push ），同时我们又不想每次都输入密码，所以我们就用 ssh key 的形式来达成互信，过程如下：
 
--在本地机器上生成一对 ssh key ，一个公钥，一个私钥
--把公钥添加到 github.com
+*在本地机器上生成一对 ssh key ，一个公钥，一个私钥
+*把公钥添加到 github.com
 
 具体操作如下：
--首先本地运行 ssh-keygen 命令，（三次回车）可以在 ~/.ssh 文件夹下生产 ssh key
+*首先本地运行 ssh-keygen 命令，（三次回车）可以在 ~/.ssh 文件夹下生产 ssh key
 >"~"是用户主目录
--到 ~/.ssh/id_rsa.pub >cd .ssh   cat id_rsa.pub 也就是公钥文件中，拷贝公钥字符串
--把字符串粘贴到 github.com -> setting -> ssh keys -> add(注意要删除公钥末尾的换行符)
+*到 ~/.ssh/id_rsa.pub >cd .ssh   cat id_rsa.pub 也就是公钥文件中，拷贝公钥字符串
+*把字符串粘贴到 github.com -> setting -> ssh keys -> add(注意要删除公钥末尾的换行符)
 
-
+##
 
 
 
