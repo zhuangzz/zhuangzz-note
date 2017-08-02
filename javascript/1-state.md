@@ -137,9 +137,34 @@ var a=20
 a==30 ?  console.log("haha") : console.log("aaa")
 ```
 
+分支语句：
+
+```
+//判断分支
+var a=50;
+if(a>=80){
+	console.log("sss")
+}else if(a>=60){
+	console.log("aaa")
+}else{
+	console.log("ccc")
+}
+```
 
 
+```
+//判断值
+var num=5
+switch(num){
+	case 1:console.log("今天星期一");break;
+	case 2:console.log("今天星期二");break;
+	case 3:console.log("今天星期三");break;
+	case 4:console.log("今天星期四");break;
+	default:console.log("今天星期五");break;
+}
+```
 
+for循环
 
 
 
