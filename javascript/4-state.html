@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>第二节:8.2 · GitBook</title>
+        <title>第四节:8.7 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="3-state.html" />
+    <link rel="next" href="../react/" />
     
     
-    <link rel="prev" href="1-state.html" />
+    <link rel="prev" href="3-state.html" />
     
 
     </head>
@@ -239,7 +239,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.2" data-path="2-state.html">
+        <li class="chapter " data-level="1.3.2" data-path="2-state.html">
             
                 <a href="2-state.html">
             
@@ -265,7 +265,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4" data-path="4-state.html">
+        <li class="chapter active" data-level="1.3.4" data-path="4-state.html">
             
                 <a href="4-state.html">
             
@@ -481,7 +481,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >第二节:8.2</a>
+        <a href=".." >第四节:8.7</a>
     </h1>
 </div>
 
@@ -496,34 +496,52 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>for </p>
-<p>eval(&quot;1+2&quot;)&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x6210;&#x6570;&#x5B57;</p>
-<p>eval(num1+sign+num2)&#x5148;&#x8F6C;&#x5316;&#x6210;&#x6570;&#x5B57;&#xFF0C;&#x518D;&#x6267;&#x884C;</p>
-<p>jq&#x96C6;&#x5408;&#x5BF9;&#x8C61;  .each(function(){})</p>
-<h3 id="for&#x5FAA;&#x73AF;">for&#x5FAA;&#x73AF;</h3>
-<p>for(var i=0;i&lt;10;i++){
-    console.log(i)
-}</p>
-<ul>
-<li><p>&#x58F0;&#x660E;&#x53D8;&#x91CF;i&#xFF0C;&#x5E76;&#x521D;&#x59CB;&#x503C;&#x4E3A;0</p>
-</li>
-<li><p>&#x5224;&#x65AD;i&lt;10&#x662F;&#x5426;&#x6210;&#x7ACB;</p>
-</li>
-<li><p>&#x5224;&#x65AD;&#x6210;&#x7ACB;&#x65F6;&#x6267;&#x884C;&#x5927;&#x62EC;&#x53F7;&#x5185;&#x7684;&#x5185;&#x5BB9;  &#x6267;&#x884C;i++  &#x5E76;&#x8FD4;&#x56DE;&#x7B2C;&#x4E8C;&#x6B65;</p>
-</li>
-<li><p>&#x4E0D;&#x6210;&#x7ACB;&#x8DF3;&#x51FA;&#x5FAA;&#x73AF;</p>
-</li>
-</ul>
-<pre><code>        var x=0;
-        for(i=0;i&lt;10;i++){
-            console.log(i)
-            x=x+i
+                                <p>filter  map  forEach   indexOf   &#x6392;&#x5E8F;  &#x53BB;&#x91CD;</p>
+<h3 id="&#x5192;&#x6CE1;&#x6392;&#x5E8F;">&#x5192;&#x6CE1;&#x6392;&#x5E8F;</h3>
+<pre><code>var arr=[&quot;5&quot;,&quot;4&quot;,&quot;3&quot;,&quot;2&quot;,&quot;1&quot;]
+for(var i=0;i&lt;arr.length-1;i++){
+    for(var j=0;j&lt;arr.length-1-i;j++){
+      if(arr[j]&gt;arr[j+1]){
+      num=arr[j]
+      arr[j]=arr[j+1]
+      arr[j+1]=num
+    }
+    }
+}
+console.log(arr)
 
+//&#x968F;&#x7740;i&#x589E;&#x52A0;&#x6570;&#x7EC4;&#x957F;&#x5EA6;&#x4F1A;&#x51CF;&#x5C0F;&#xFF0C;&#x76F4;&#x5230;i&#x7B49;&#x4E8E;&#x6570;&#x7EC4;&#x957F;&#x5EA6;&#xFF0C;&#x505C;&#x6B62;&#x6BD4;&#x8F83;
+//&#x5224;&#x65AD;j&#xFF08;&#x76F8;&#x4E92;&#x6BD4;&#x8F83;&#x7684;&#x5143;&#x7D20;&#x7684;&#x7D22;&#x5F15;&#x503C;&#xFF09;,&#x53EA;&#x8981;&#x5C0F;&#x4E8E;&#x5F53;&#x524D;&#x6570;&#x7EC4;&#x957F;&#x5EA6;&#x5C31;&#x7EE7;&#x7EED;&#x8FDB;&#x884C;&#x4E24;&#x6570;&#x6BD4;&#x8F83;
+//&#x5224;&#x65AD;&#x4E24;&#x6570;&#x5927;&#x5C0F;
+//&#x4E24;&#x6570;&#x7F6E;&#x6362;
+</code></pre><pre><code>//&#x7B2C;&#x4E00;&#x4E2A;&#x548C;&#x540E;&#x9762;&#x6240;&#x6709;&#x53BB;&#x6BD4;&#xFF0C;&#x7136;&#x540E;&#x7B2C;&#x4E8C;&#x4E2A;&#x548C;&#x540E;&#x9762;&#x6BD4;&#x3001;&#x7B2C;&#x4E09;&#x4E2A;...
+        for(var j=1;j&lt;array.length;j++){
+            for(var x=j;x&lt;array.length;x++){
+                if(array[j-1]&gt;array[x]){
+                    var num=array[j-1]
+                    array[j-1]=array[x]
+                    array[x]=num
+                }    
+            }
         }
-        console.log(i)
-        console.log(x)
-</code></pre><p>while  do while</p>
-
+</code></pre><h3 id="&#x53BB;&#x91CD;">&#x53BB;&#x91CD;</h3>
+<pre><code>//&#x6392;&#x5E8F;&#x540E;&#x53BB;&#x91CD;
+        for(var a=0;a&lt;array.length-1;a++){
+            if(array[a]==array[a+1]){
+                array.splice(a+1,1)
+                a=a-1
+            }
+        }
+</code></pre><pre><code>//&#x4E0D;&#x6392;&#x5E8F;&#x53BB;&#x91CD;
+        for(var j=0;j&lt;array.length-1;j++){
+            for(var x=j;x&lt;array.length;x++){
+                if(array[j]==array[x+1]){
+                    array.splice(x,1)
+                    x=x-1
+                }    //&#x4E00;&#x5B9A;&#x8981;&#x5220;x,&#x4E0D;&#x7136;&#x63A5;&#x4E0B;&#x6765;j-1&#x4E0E;x+1&#x6BD4;&#x8F83;&#xFF0C;&#x987A;&#x5E8F;&#x5C31;&#x4E71;&#x4E86;
+            }
+        }
+</code></pre>
                                 
                                 </section>
                             
@@ -550,12 +568,12 @@
 
             
                 
-                <a href="1-state.html" class="navigation navigation-prev " aria-label="Previous page: 第一节:8.1">
+                <a href="3-state.html" class="navigation navigation-prev " aria-label="Previous page: 第三节:8.4">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="3-state.html" class="navigation navigation-next " aria-label="Next page: 第三节:8.4">
+                <a href="../react/" class="navigation navigation-next " aria-label="Next page: 第三章:终端命令">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -566,7 +584,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第二节:8.2","level":"1.3.2","depth":2,"next":{"title":"第三节:8.4","level":"1.3.3","depth":2,"path":"javascript/3-state.md","ref":"./javascript/3-state.md","articles":[]},"previous":{"title":"第一节:8.1","level":"1.3.1","depth":2,"path":"javascript/1-state.md","ref":"./javascript/1-state.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript/2-state.md","mtime":"2017-08-04T03:13:29.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-07T08:52:07.668Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第四节:8.7","level":"1.3.4","depth":2,"next":{"title":"第三章:终端命令","level":"1.4","depth":1,"path":"react/index.md","ref":"./react/index.md","articles":[{"title":"第一节:安装nodejs","level":"1.4.1","depth":2,"path":"react/1-state.md","ref":"./react/1-state.md","articles":[]},{"title":"第二节:从github克隆仓库","level":"1.4.2","depth":2,"path":"react/2-state.md","ref":"./react/2-state.md","articles":[]},{"title":"第三节:向github创建个人网站","level":"1.4.3","depth":2,"path":"react/3-state.md","ref":"./react/3-state.md","articles":[]}]},"previous":{"title":"第三节:8.4","level":"1.3.3","depth":2,"path":"javascript/3-state.md","ref":"./javascript/3-state.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript/4-state.md","mtime":"2017-08-07T08:42:36.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-07T08:52:07.668Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
