@@ -1,184 +1,652 @@
-###日期对象   date
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第五节:日期对象 函数 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../react/" />
+    
+    
+    <link rel="prev" href="4-state.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
 
 
-创建日期对象  var date= new Date()
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Inction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../jquery/">
+            
+                <a href="../jquery/">
+            
+                    
+                    第一章：jQuery
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../jquery/1-state.html">
+            
+                <a href="../jquery/1-state.html">
+            
+                    
+                    第一节:安装sublime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../jquery/2-state.html">
+            
+                <a href="../jquery/2-state.html">
+            
+                    
+                    第二节:认真的初学者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../jquery/3-state.html">
+            
+                <a href="../jquery/3-state.html">
+            
+                    
+                    第三节:7.25
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../jquery/4-state.html">
+            
+                <a href="../jquery/4-state.html">
+            
+                    
+                    第四节:7.26
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../jquery/5-state.html">
+            
+                <a href="../jquery/5-state.html">
+            
+                    
+                    第五节:7.27
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../jquery/6-state.html">
+            
+                <a href="../jquery/6-state.html">
+            
+                    
+                    第六节:7.28
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../jquery/8-state.html">
+            
+                <a href="../jquery/8-state.html">
+            
+                    
+                    第七节:8.1
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第二章:javaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="1-state.html">
+            
+                <a href="1-state.html">
+            
+                    
+                    第一节:变量 数据类型 for循环 运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="2-state.html">
+            
+                <a href="2-state.html">
+            
+                    
+                    第二节:for循环 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="3-state.html">
+            
+                <a href="3-state.html">
+            
+                    
+                    第三节:对象 数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="4-state.html">
+            
+                <a href="4-state.html">
+            
+                    
+                    第四节:排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.5" data-path="5-state.html">
+            
+                <a href="5-state.html">
+            
+                    
+                    第五节:日期对象 函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../react/">
+            
+                <a href="../react/">
+            
+                    
+                    第三章:终端命令
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../react/1-state.html">
+            
+                <a href="../react/1-state.html">
+            
+                    
+                    第一节:安装nodejs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../react/2-state.html">
+            
+                <a href="../react/2-state.html">
+            
+                    
+                    第二节:从github克隆仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../react/3-state.html">
+            
+                <a href="../react/3-state.html">
+            
+                    
+                    第三节:向github创建个人网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../redux/">
+            
+                <a href="../redux/">
+            
+                    
+                    第四章：redux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../redux/1-state.html">
+            
+                <a href="../redux/1-state.html">
+            
+                    
+                    第一节：状态的复习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../redux/2-state.html">
+            
+                <a href="../redux/2-state.html">
+            
+                    
+                    第二节：内部 state 使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../redux/3-state.html">
+            
+                <a href="../redux/3-state.html">
+            
+                    
+                    第三节：不用 Redux 实现组件间通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../redux/4-state.html">
+            
+                <a href="../redux/4-state.html">
+            
+                    
+                    第四节：Redux Store
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../redux/5-state.html">
+            
+                <a href="../redux/5-state.html">
+            
+                    
+                    第五节：处理多类数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../redux/6-state.html">
+            
+                <a href="../redux/6-state.html">
+            
+                    
+                    第六节：js :拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../redux/7-state.html">
+            
+                <a href="../redux/7-state.html">
+            
+                    
+                    第七节：吮指
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
 
 
-```
-var date= new Date()
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第五节:日期对象 函数</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="&#x65E5;&#x671F;&#x5BF9;&#x8C61;---date">&#x65E5;&#x671F;&#x5BF9;&#x8C61;   date</h3>
+<p>&#x521B;&#x5EFA;&#x65E5;&#x671F;&#x5BF9;&#x8C61;  var date= new Date()</p>
+<pre><code>var date= new Date()
 date.getFullYear()
-```
-
-var time=Date()
-
-日期对象 
-
-* .getFullYear()获取年份
-
-date.getFullYear()
-
-
-* .getMonth()获取月份
-
-* .getDate()获取几号
-
-* .getDay()获取星期  1 2 3 4 5 6 0
-
-* .getHours()获取小时
-
-* .getMinutes()获取分钟数
-
-* .getSeconds()获取秒
-
-* .getMillseconds()获取毫秒
-
-* .getTime()获取格林威治时间  1970.1.1 0：0:0到当前时间
-
-
-setInteval(function(){
-	console.log(123)
-},1000)
-
-
-###函数  必须有function声明函数
-
-
-
-创建函数
-
-```
-function fun(){
-	console.log(123)//函数声明的时候不执行，只有调用的时候才执行
+</code></pre><p>var time=Date()</p>
+<p>&#x65E5;&#x671F;&#x5BF9;&#x8C61; </p>
+<ul>
+<li>.getFullYear()&#x83B7;&#x53D6;&#x5E74;&#x4EFD;</li>
+</ul>
+<p>date.getFullYear()</p>
+<ul>
+<li><p>.getMonth()&#x83B7;&#x53D6;&#x6708;&#x4EFD;</p>
+</li>
+<li><p>.getDate()&#x83B7;&#x53D6;&#x51E0;&#x53F7;</p>
+</li>
+<li><p>.getDay()&#x83B7;&#x53D6;&#x661F;&#x671F;  1 2 3 4 5 6 0</p>
+</li>
+<li><p>.getHours()&#x83B7;&#x53D6;&#x5C0F;&#x65F6;</p>
+</li>
+<li><p>.getMinutes()&#x83B7;&#x53D6;&#x5206;&#x949F;&#x6570;</p>
+</li>
+<li><p>.getSeconds()&#x83B7;&#x53D6;&#x79D2;</p>
+</li>
+<li><p>.getMillseconds()&#x83B7;&#x53D6;&#x6BEB;&#x79D2;</p>
+</li>
+<li><p>.getTime()&#x83B7;&#x53D6;&#x683C;&#x6797;&#x5A01;&#x6CBB;&#x65F6;&#x95F4;  1970.1.1 0&#xFF1A;0:0&#x5230;&#x5F53;&#x524D;&#x65F6;&#x95F4;</p>
+</li>
+</ul>
+<p>setInteval(function(){
+    console.log(123)
+},1000)</p>
+<h3 id="&#x51FD;&#x6570;--&#x5FC5;&#x987B;&#x6709;function&#x58F0;&#x660E;&#x51FD;&#x6570;">&#x51FD;&#x6570;  &#x5FC5;&#x987B;&#x6709;function&#x58F0;&#x660E;&#x51FD;&#x6570;</h3>
+<p>&#x521B;&#x5EFA;&#x51FD;&#x6570;</p>
+<pre><code>function fun(){
+    console.log(123)//&#x51FD;&#x6570;&#x58F0;&#x660E;&#x7684;&#x65F6;&#x5019;&#x4E0D;&#x6267;&#x884C;&#xFF0C;&#x53EA;&#x6709;&#x8C03;&#x7528;&#x7684;&#x65F6;&#x5019;&#x624D;&#x6267;&#x884C;
 }
-
-```
-
-调用函数  函数名()
-
-```
-fun();
-```
-
-
-函数名首字母不能大写
-
-
-函数声明提升   将函数提升到作用域的最前面，声明后，在哪里都能用
-
-```
-var fun=function(){
-	//通过变量方式去创建,变量提升时与变量声明提升一样，只是fun(),即在undefined后加（）不是一个函数。
+</code></pre><p>&#x8C03;&#x7528;&#x51FD;&#x6570;  &#x51FD;&#x6570;&#x540D;()</p>
+<pre><code>fun();
+</code></pre><p>&#x51FD;&#x6570;&#x540D;&#x9996;&#x5B57;&#x6BCD;&#x4E0D;&#x80FD;&#x5927;&#x5199;</p>
+<p>&#x51FD;&#x6570;&#x58F0;&#x660E;&#x63D0;&#x5347;   &#x5C06;&#x51FD;&#x6570;&#x63D0;&#x5347;&#x5230;&#x4F5C;&#x7528;&#x57DF;&#x7684;&#x6700;&#x524D;&#x9762;&#xFF0C;&#x58F0;&#x660E;&#x540E;&#xFF0C;&#x5728;&#x54EA;&#x91CC;&#x90FD;&#x80FD;&#x7528;</p>
+<pre><code>var fun=function(){
+    //&#x901A;&#x8FC7;&#x53D8;&#x91CF;&#x65B9;&#x5F0F;&#x53BB;&#x521B;&#x5EFA;,&#x53D8;&#x91CF;&#x63D0;&#x5347;&#x65F6;&#x4E0E;&#x53D8;&#x91CF;&#x58F0;&#x660E;&#x63D0;&#x5347;&#x4E00;&#x6837;&#xFF0C;&#x53EA;&#x662F;fun(),&#x5373;&#x5728;undefined&#x540E;&#x52A0;&#xFF08;&#xFF09;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x3002;
 }
-```
+</code></pre><pre><code>function fun(x,y){
+    var z=x+y
+    console.log(z)//&#x58F0;&#x660E;&#x5728;&#x5F53;&#x524D;&#x4F5C;&#x7528;&#x57DF;&#x7684;&#x53D8;&#x91CF;&#x6216;&#x51FD;&#x6570;&#x53EA;&#x80FD;&#x5728;&#x5F53;&#x524D;&#x4F5C;&#x7528;&#x57DF;&#x6216;&#x5B50;&#x4F5C;&#x7528;&#x57DF;&#x4F7F;&#x7528;
 
-```
-function fun(x,y){
-	var z=x+y
-	console.log(z)//声明在当前作用域的变量或函数只能在当前作用域或子作用域使用
-
-	return z;//函数的返回值
+    return z;//&#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;
 }
 console.log(fun(10,10))//20
-```
-
-
->x,y形参
-
-
->10实参
-
-> return z;函数返回值  return什么返回什么
-
-
-
-> 函数的return    直接跳出函数
-
-js中函数有作用域     声明在当前作用域的变量或函数只能在当前作用域或子作用域使用
-
-```
-function sort(arr){
-	console.log(newArr)
+</code></pre><blockquote>
+<p>x,y&#x5F62;&#x53C2;</p>
+<p>10&#x5B9E;&#x53C2;</p>
+<p>return z;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;  return&#x4EC0;&#x4E48;&#x8FD4;&#x56DE;&#x4EC0;&#x4E48;</p>
+<p>&#x51FD;&#x6570;&#x7684;return    &#x76F4;&#x63A5;&#x8DF3;&#x51FA;&#x51FD;&#x6570;</p>
+</blockquote>
+<p>js&#x4E2D;&#x51FD;&#x6570;&#x6709;&#x4F5C;&#x7528;&#x57DF;     &#x58F0;&#x660E;&#x5728;&#x5F53;&#x524D;&#x4F5C;&#x7528;&#x57DF;&#x7684;&#x53D8;&#x91CF;&#x6216;&#x51FD;&#x6570;&#x53EA;&#x80FD;&#x5728;&#x5F53;&#x524D;&#x4F5C;&#x7528;&#x57DF;&#x6216;&#x5B50;&#x4F5C;&#x7528;&#x57DF;&#x4F7F;&#x7528;</p>
+<pre><code>function sort(arr){
+    console.log(newArr)
 }
 sort{[1,2,3]}
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="4-state.html" class="navigation navigation-prev " aria-label="Previous page: 第四节:排序">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../react/" class="navigation navigation-next " aria-label="Next page: 第三章:终端命令">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第五节:日期对象 函数","level":"1.3.5","depth":2,"next":{"title":"第三章:终端命令","level":"1.4","depth":1,"path":"react/index.md","ref":"./react/index.md","articles":[{"title":"第一节:安装nodejs","level":"1.4.1","depth":2,"path":"react/1-state.md","ref":"./react/1-state.md","articles":[]},{"title":"第二节:从github克隆仓库","level":"1.4.2","depth":2,"path":"react/2-state.md","ref":"./react/2-state.md","articles":[]},{"title":"第三节:向github创建个人网站","level":"1.4.3","depth":2,"path":"react/3-state.md","ref":"./react/3-state.md","articles":[]}]},"previous":{"title":"第四节:排序","level":"1.3.4","depth":2,"path":"javascript/4-state.md","ref":"./javascript/4-state.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript/5-state.md","mtime":"2017-08-08T08:31:31.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-08T08:36:38.403Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
 
