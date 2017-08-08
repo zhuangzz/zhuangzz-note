@@ -1,0 +1,181 @@
+8.8
+
+###日期对象   date
+
+
+创建日期对象  var date= new Date()
+
+
+```
+var date= new Date()
+date.getFullYear()
+```
+
+var time=Date()
+
+日期对象 
+
+* .getFullYear()获取年份
+
+date.getFullYear()
+
+
+* .getMonth()获取月份
+
+* .getDate()获取几号
+
+* .getDay()获取星期  1 2 3 4 5 6 0
+
+* .getHours()获取小时
+
+* .getMinutes()获取分钟数
+
+* .getSeconds()获取秒
+
+* .getMillseconds()获取毫秒
+
+* .getTime()获取格林威治时间  1970.1.1 0：0:0到当前时间
+
+
+setInteval(function(){
+	console.log(123)
+},1000)
+
+
+###函数  必须有function声明函数
+
+
+
+创建函数
+
+```
+function fun(){
+	console.log(123)//函数声明的时候不执行，只有调用的时候才执行
+}
+
+```
+
+调用函数  函数名()
+
+```
+fun();
+```
+
+
+函数名首字母不能大写
+
+
+函数声明提升   将函数提升到作用域的最前面，声明后，在哪里都能用
+
+```
+var fun=function(){
+	//通过变量方式去创建,变量提升时与变量声明提升一样，只是fun(),即在undefined后加（）不是一个函数。
+}
+```
+
+```
+function fun(x,y){
+	var z=x+y
+	console.log(z)//声明在当前作用域的变量或函数只能在当前作用域或子作用域使用
+
+	return z;//函数的返回值
+}
+console.log(fun(10,10))//20
+```
+>x,y形参
+
+
+>10实参
+
+>* return z;函数返回值  return什么返回什么
+>* 函数的return    直接跳出函数
+
+js中函数有作用域     声明在当前作用域的变量或函数只能在当前作用域或子作用域使用
+
+```
+function sort(arr){
+	console.log(newArr)
+}
+sort{[1,2,3]}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
