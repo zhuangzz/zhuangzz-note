@@ -575,23 +575,55 @@
 <p>Unicode 65A 66B 67C...</p>
 <p>UTF-16 </p>
 </blockquote>
-<p>str.charAt(0)&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7B2C;1&#x4E2A;&#x5B57;&#x7B26;</p>
-<p>str.charCodeAt(1)&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7B2C;2&#x4E2A;&#x5B57;&#x7B26;&#x7684;UTF-16&#x7801;</p>
-<p>str.concat(string2, string3[, ..., stringN])&#x8FDE;&#x63A5;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;</p>
-<p>str.endsWith(&quot;a&quot;,b)&#x68C0;&#x6D4B;str&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x4EE5;a&#x7ED3;&#x5C3E;&#xFF0C;&#x6839;&#x636E;&#x5224;&#x65AD;&#x7ED3;&#x679C;&#x8FD4;&#x56DE; true &#x6216; false&#x3002;b&#x53C2;&#x6570;&#x89C4;&#x5B9A;&#x68C0;&#x6D4B;&#x7684;&#x672B;&#x7AEF;&#x4F4D;&#x7F6E;&#xFF08;b&#x662F;&#x7B2C;b&#x4E2A;&#x5B57;&#x7B26;&#xFF09;    es6&#x65B0;&#x7279;&#x6027;</p>
-<p>str.includes(&#x201C;a&#x201D;,1)&#x68C0;&#x6D4B;a&#x662F;&#x5426;&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#xFF0C;&#x4ECE;&#x7D22;&#x5F15;&#x503C;&#x4E3A;1&#x7684;&#x5F00;&#x59CB;</p>
-<p>str.indexOf(&#x201C;a&#x201D;,1)&#x68C0;&#x6D4B;a&#x5B57;&#x7B26;&#x4E32;&#x5728;str&#x4E2D;&#x662F;&#x5426;&#x5B58;&#x5728;&#xFF0C;&#x5B58;&#x5728;&#x8FD4;&#x56DE;&#x7B2C;&#x4E00;&#x6B21;&#x51FA;&#x73B0;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x4E0D;&#x5B58;&#x5728;&#x8FD4;&#x56DE;-1&#x3002;&#x4ECE;&#x7D22;&#x5F15;&#x503C;1&#x5F00;&#x59CB;&#x627E;</p>
-<p>str.link(url) &#x521B;&#x5EFA;&#x4E00;&#x4E2A;href&#x7684;a&#x6807;&#x7B7E;  str&#x5F53;&#x4F5C;&#x6807;&#x7B7E;&#x5185;&#x90E8;&#x7684;&#x6587;&#x5B57;</p>
-<p>str.repeat(6)&#x8FD4;&#x56DE;&#x65B0;&#x7684;&#x91CD;&#x590D;&#x4E4B;&#x540E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;6&#x4EE3;&#x8868;&#x91CD;&#x590D;6&#x6B21;</p>
-<p>str.slice(1, 4)&#x4ECE;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x622A;&#x53D6;&#x4E00;&#x6BB5;     &#x63D0;&#x53D6;&#x65B0;&#x5B57;&#x7B26;&#x4E32;&#x4ECE;&#x7B2C;&#x4E8C;&#x4E2A;&#x5B57;&#x7B26;&#x5230;&#x7B2C;&#x56DB;&#x4E2A; (&#x5B57;&#x7B26;&#x7D22;&#x5F15;&#x503C;&#x4E3A; 1, 2, &#x548C; 3)&#x3002;     str.slice(2, -1) &#x63D0;&#x53D6;&#x7B2C;&#x4E09;&#x4E2A;&#x5B57;&#x7B26;&#x5230;&#x5012;&#x6570;&#x7B2C;&#x4E8C;&#x4E2A;&#x5B57;&#x7B26;&#x3002;</p>
-<p>str.split(&quot;&quot;) &#x65B9;&#x6CD5;&#x5C06;&#x4E00;&#x4E2A;String&#x5BF9;&#x8C61;&#x5206;&#x5272;&#x6210;&#x6570;&#x7EC4;&#xFF0C;&#x901A;&#x8FC7;&quot;&quot;  &quot; &quot; &quot;-&quot;&#x7B49;&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x5206;&#x6210;&#x5B50;&#x4E32;&#x3002;&#x83B7;&#x53D6;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x5355;&#x4E2A;&#x5B57;&#x7B26;&#x51FA;&#x73B0;&#x6B21;&#x6570;&#x6700;&#x591A;   </p>
-<p>str.toLocaleLowerCase()&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32;&#x503C;&#x8F6C;&#x6362;&#x4E3A;&#x5C0F;&#x5199;&#x7684;&#x503C;</p>
-<p>str.toLowerCase()&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32;&#x503C;&#x8F6C;&#x6362;&#x4E3A;&#x5C0F;&#x5199;&#x7684;&#x503C;</p>
-<p>str.toLocaleUpperCase()&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32;&#x503C;&#x8F6C;&#x6362;&#x4E3A;&#x5927;&#x5199;&#x7684;&#x503C;</p>
-<p>str.toUpperCase()&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32;&#x503C;&#x8F6C;&#x6362;&#x4E3A;&#x5927;&#x5199;&#x7684;&#x503C;</p>
-<p>str.trim()&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x4E24;&#x7AEF;&#x7A7A;&#x767D;&#x5B57;&#x7B26;&#x5220;&#x9664;</p>
-<p>str.trimLeft()&#x5220;&#x9664;&#x5DE6;&#x8FB9;&#x7A7A;&#x767D;</p>
-<p>str.trimRight()&#x5220;&#x9664;&#x53F3;&#x8FB9;&#x7A7A;&#x767D;</p>
+<ul>
+<li>str.charAt(0)&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7B2C;1&#x4E2A;&#x5B57;&#x7B26;</li>
+</ul>
+<ul>
+<li>str.charCodeAt(1)&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7B2C;2&#x4E2A;&#x5B57;&#x7B26;&#x7684;UTF-16&#x7801;</li>
+</ul>
+<ul>
+<li>str.concat(string2, string3[, ..., stringN])&#x8FDE;&#x63A5;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;</li>
+</ul>
+<ul>
+<li>str.endsWith(&quot;a&quot;,b)&#x68C0;&#x6D4B;str&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x4EE5;a&#x7ED3;&#x5C3E;&#xFF0C;&#x6839;&#x636E;&#x5224;&#x65AD;&#x7ED3;&#x679C;&#x8FD4;&#x56DE; true &#x6216; false&#x3002;b&#x53C2;&#x6570;&#x89C4;&#x5B9A;&#x68C0;&#x6D4B;&#x7684;&#x672B;&#x7AEF;&#x4F4D;&#x7F6E;&#xFF08;b&#x662F;&#x7B2C;b&#x4E2A;&#x5B57;&#x7B26;&#xFF09;    es6&#x65B0;&#x7279;&#x6027;</li>
+</ul>
+<ul>
+<li>str.includes(&#x201C;a&#x201D;,1)&#x68C0;&#x6D4B;a&#x662F;&#x5426;&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#xFF0C;&#x4ECE;&#x7D22;&#x5F15;&#x503C;&#x4E3A;1&#x7684;&#x5F00;&#x59CB;</li>
+</ul>
+<ul>
+<li>str.indexOf(&#x201C;a&#x201D;,1)&#x68C0;&#x6D4B;a&#x5B57;&#x7B26;&#x4E32;&#x5728;str&#x4E2D;&#x662F;&#x5426;&#x5B58;&#x5728;&#xFF0C;&#x5B58;&#x5728;&#x8FD4;&#x56DE;&#x7B2C;&#x4E00;&#x6B21;&#x51FA;&#x73B0;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x4E0D;&#x5B58;&#x5728;&#x8FD4;&#x56DE;-1&#x3002;&#x4ECE;&#x7D22;&#x5F15;&#x503C;1&#x5F00;&#x59CB;&#x627E;</li>
+</ul>
+<ul>
+<li>str.link(url) &#x521B;&#x5EFA;&#x4E00;&#x4E2A;href&#x7684;a&#x6807;&#x7B7E;  str&#x5F53;&#x4F5C;&#x6807;&#x7B7E;&#x5185;&#x90E8;&#x7684;&#x6587;&#x5B57;</li>
+</ul>
+<ul>
+<li>str.repeat(6)&#x8FD4;&#x56DE;&#x65B0;&#x7684;&#x91CD;&#x590D;&#x4E4B;&#x540E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;6&#x4EE3;&#x8868;&#x91CD;&#x590D;6&#x6B21;</li>
+</ul>
+<ul>
+<li>str.slice(1, 4)&#x4ECE;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x622A;&#x53D6;&#x4E00;&#x6BB5;     &#x63D0;&#x53D6;&#x65B0;&#x5B57;&#x7B26;&#x4E32;&#x4ECE;&#x7B2C;&#x4E8C;&#x4E2A;&#x5B57;&#x7B26;&#x5230;&#x7B2C;&#x56DB;&#x4E2A; (&#x5B57;&#x7B26;&#x7D22;&#x5F15;&#x503C;&#x4E3A; 1, 2, &#x548C; 3)&#x3002;     str.slice(2, -1) &#x63D0;&#x53D6;&#x7B2C;&#x4E09;&#x4E2A;&#x5B57;&#x7B26;&#x5230;&#x5012;&#x6570;&#x7B2C;&#x4E8C;&#x4E2A;&#x5B57;&#x7B26;&#x3002;</li>
+</ul>
+<ul>
+<li><p>str.split(&quot;&quot;) &#x65B9;&#x6CD5;&#x5C06;&#x4E00;&#x4E2A;String&#x5BF9;&#x8C61;&#x5206;&#x5272;&#x6210;&#x6570;&#x7EC4;&#xFF0C;&#x901A;&#x8FC7;&quot;&quot;  &quot; &quot; &quot;-&quot;&#x7B49;&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x5206;&#x6210;&#x5B50;&#x4E32;&#x3002;&#x83B7;&#x53D6;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x5355;&#x4E2A;&#x5B57;&#x7B26;&#x51FA;&#x73B0;&#x6B21;&#x6570;&#x6700;&#x591A;   </p>
+</li>
+<li><p>str.toLocaleLowerCase()&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32;&#x503C;&#x8F6C;&#x6362;&#x4E3A;&#x5C0F;&#x5199;&#x7684;&#x503C;</p>
+</li>
+<li><p>str.toLowerCase()&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32;&#x503C;&#x8F6C;&#x6362;&#x4E3A;&#x5C0F;&#x5199;&#x7684;&#x503C;</p>
+</li>
+</ul>
+<ul>
+<li>str.toLocaleUpperCase()&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32;&#x503C;&#x8F6C;&#x6362;&#x4E3A;&#x5927;&#x5199;&#x7684;&#x503C;</li>
+</ul>
+<ul>
+<li>str.toUpperCase()&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32;&#x503C;&#x8F6C;&#x6362;&#x4E3A;&#x5927;&#x5199;&#x7684;&#x503C;</li>
+</ul>
+<ul>
+<li><p>str.trim()&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x4E24;&#x7AEF;&#x7A7A;&#x767D;&#x5B57;&#x7B26;&#x5220;&#x9664;</p>
+</li>
+<li><p>str.trimLeft()&#x5220;&#x9664;&#x5DE6;&#x8FB9;&#x7A7A;&#x767D;</p>
+</li>
+<li><p>str.trimRight()&#x5220;&#x9664;&#x53F3;&#x8FB9;&#x7A7A;&#x767D;</p>
+</li>
+</ul>
 
                                 
                                 </section>
@@ -635,7 +667,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第六节:倒计时 字符串对象","level":"1.3.6","depth":2,"next":{"title":"第三章:终端命令","level":"1.4","depth":1,"path":"react/index.md","ref":"./react/index.md","articles":[{"title":"第一节:安装nodejs","level":"1.4.1","depth":2,"path":"react/1-state.md","ref":"./react/1-state.md","articles":[]},{"title":"第二节:从github克隆仓库","level":"1.4.2","depth":2,"path":"react/2-state.md","ref":"./react/2-state.md","articles":[]},{"title":"第三节:向github创建个人网站","level":"1.4.3","depth":2,"path":"react/3-state.md","ref":"./react/3-state.md","articles":[]}]},"previous":{"title":"第五节:日期对象 函数","level":"1.3.5","depth":2,"path":"javascript/5-state.md","ref":"./javascript/5-state.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript/6-state.md","mtime":"2017-08-09T08:08:54.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-09T08:09:07.843Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第六节:倒计时 字符串对象","level":"1.3.6","depth":2,"next":{"title":"第三章:终端命令","level":"1.4","depth":1,"path":"react/index.md","ref":"./react/index.md","articles":[{"title":"第一节:安装nodejs","level":"1.4.1","depth":2,"path":"react/1-state.md","ref":"./react/1-state.md","articles":[]},{"title":"第二节:从github克隆仓库","level":"1.4.2","depth":2,"path":"react/2-state.md","ref":"./react/2-state.md","articles":[]},{"title":"第三节:向github创建个人网站","level":"1.4.3","depth":2,"path":"react/3-state.md","ref":"./react/3-state.md","articles":[]}]},"previous":{"title":"第五节:日期对象 函数","level":"1.3.5","depth":2,"path":"javascript/5-state.md","ref":"./javascript/5-state.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript/6-state.md","mtime":"2017-08-09T08:18:13.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-09T08:20:03.062Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
