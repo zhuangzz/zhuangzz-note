@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../react/" />
+    <link rel="next" href="9-state.html" />
     
     
     <link rel="prev" href="7-state.html" />
@@ -323,6 +323,19 @@
             
                     
                     第八节:8.11
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="9-state.html">
+            
+                <a href="9-state.html">
+            
+                    
+                    第九节:8.14
             
                 </a>
             
@@ -618,6 +631,7 @@ obj[i].index=function(){return i}   obj[0].index </p>
             &lt;img src=&quot;images/4.jpg&quot; alt=&quot;&quot;&gt;
             &lt;img src=&quot;images/5.jpg&quot; alt=&quot;&quot;&gt;
         &lt;/div&gt;
+        &lt;a href=&quot;#&quot; class=&quot;l&quot;&gt;&lt;&lt;/a&gt;&lt;a href=&quot;#&quot; class=&quot;r&quot;&gt;&gt;&lt;/a&gt;
     &lt;/div&gt;
     &lt;ul&gt;
         &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;/a&gt;&lt;/li&gt;
@@ -626,22 +640,64 @@ obj[i].index=function(){return i}   obj[0].index </p>
         &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
-</code></pre><pre><code>        var objA=document.querySelectorAll(&quot;ul li a&quot;)
+</code></pre><pre><code class="lang-js">        <span class="hljs-keyword">var</span> objA=<span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&quot;ul li a&quot;</span>)
 
-        for(var i=0;i&lt;objA.length;i++){
-            objA[i].index=i
-            objA[i].onclick=function(e){
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i=<span class="hljs-number">0</span>;i&lt;objA.length;i++){
+            objA[i].index=i<span class="hljs-comment">//&#x901A;&#x8FC7;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x6A21;&#x62DF;&#x7D22;&#x5F15;&#x503C;</span>
+            objA[i].onclick=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>)</span>{
                 e.preventDefault()
-                var ind=this.index
-                var pic=document.querySelector(&quot;.pic&quot;)
-                var picLe=ind*(-1146)+&quot;px&quot;
-                console.log(picLe)
+                <span class="hljs-keyword">var</span> ind=<span class="hljs-keyword">this</span>.index
+                num=ind
+                <span class="hljs-keyword">var</span> pic=<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;.pic&quot;</span>)
+                <span class="hljs-keyword">var</span> picLe=ind*(<span class="hljs-number">-1146</span>)+<span class="hljs-string">&quot;px&quot;</span>
+                <span class="hljs-built_in">console</span>.log(picLe)
                 pic.style.marginLeft=picLe
-                // objA[].style.backgroundColor=&quot;red&quot;
-                this.style.backgroundColor=&quot;green&quot;
+                <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> j=<span class="hljs-number">0</span>;j&lt;objA.length;j++){
+                    <span class="hljs-keyword">if</span>(j!=ind){
+                        objA[j].style.backgroundColor=<span class="hljs-string">&quot;red&quot;</span>
+                    }
+                }
+
+                <span class="hljs-keyword">this</span>.style.backgroundColor=<span class="hljs-string">&quot;green&quot;</span>
             }
+            <span class="hljs-keyword">var</span> num=<span class="hljs-number">0</span>
+            <span class="hljs-keyword">var</span> objR=<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;.r&quot;</span>)        
+            objR.onclick=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>)</span>{
+              e.preventDefault()
+              num++
+              <span class="hljs-keyword">if</span>(num&gt;<span class="hljs-number">4</span>){
+                  num=<span class="hljs-number">0</span>
+              }
+              <span class="hljs-keyword">var</span> picR=num*(<span class="hljs-number">-1146</span>)+<span class="hljs-string">&quot;px&quot;</span>
+              <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;.pic&quot;</span>).style.marginLeft=picR
+                <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> j=<span class="hljs-number">0</span>;j&lt;objA.length;j++){
+                    <span class="hljs-keyword">if</span>(j!=num){
+                        objA[j].style.backgroundColor=<span class="hljs-string">&quot;red&quot;</span>
+                    }
+                }    
+                objA[num].style.backgroundColor=<span class="hljs-string">&quot;green&quot;</span>
+            }
+            <span class="hljs-keyword">var</span> objL=<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;.l&quot;</span>)
+            objL.onclick=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>)</span>{
+                e.preventDefault()
+                num--
+                <span class="hljs-keyword">if</span>(num&lt;<span class="hljs-number">0</span>){
+                    num=<span class="hljs-number">4</span>
+                }
+                <span class="hljs-keyword">var</span> picL=num*(<span class="hljs-number">-1146</span>)+<span class="hljs-string">&quot;px&quot;</span>
+                <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;.pic&quot;</span>).style.marginLeft=picL
+                <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> j=<span class="hljs-number">0</span>;j&lt;objA.length;j++){
+                    <span class="hljs-keyword">if</span>(j!=num){
+                        objA[j].style.backgroundColor=<span class="hljs-string">&quot;red&quot;</span>
+                    }
+                }    
+                objA[num].style.backgroundColor=<span class="hljs-string">&quot;green&quot;</span>
+            }
+
+
         }
 </code></pre>
+
                                 
                                 </section>
                             
@@ -673,7 +729,7 @@ obj[i].index=function(){return i}   obj[0].index </p>
                 </a>
                 
                 
-                <a href="../react/" class="navigation navigation-next " aria-label="Next page: 第三章:终端命令">
+                <a href="9-state.html" class="navigation navigation-next " aria-label="Next page: 第九节:8.14">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -684,7 +740,7 @@ obj[i].index=function(){return i}   obj[0].index </p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第八节:8.11","level":"1.3.8","depth":2,"next":{"title":"第三章:终端命令","level":"1.4","depth":1,"path":"react/index.md","ref":"./react/index.md","articles":[{"title":"第一节:安装nodejs","level":"1.4.1","depth":2,"path":"react/1-state.md","ref":"./react/1-state.md","articles":[]},{"title":"第二节:从github克隆仓库","level":"1.4.2","depth":2,"path":"react/2-state.md","ref":"./react/2-state.md","articles":[]},{"title":"第三节:向github创建个人网站","level":"1.4.3","depth":2,"path":"react/3-state.md","ref":"./react/3-state.md","articles":[]}]},"previous":{"title":"第七节:函数 正则表达式","level":"1.3.7","depth":2,"path":"javascript/7-state.md","ref":"./javascript/7-state.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript/8-state.md","mtime":"2017-08-14T01:15:12.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-14T01:21:35.063Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第八节:8.11","level":"1.3.8","depth":2,"next":{"title":"第九节:8.14","level":"1.3.9","depth":2,"path":"javascript/9-state.md","ref":"./javascript/9-state.md","articles":[]},"previous":{"title":"第七节:函数 正则表达式","level":"1.3.7","depth":2,"path":"javascript/7-state.md","ref":"./javascript/7-state.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript/8-state.md","mtime":"2017-08-14T02:42:29.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-14T02:42:55.763Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
