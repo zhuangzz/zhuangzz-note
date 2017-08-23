@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>第二章:javaScript · GitBook</title>
+        <title>第十五节:8.22 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="1-state.html" />
+    <link rel="next" href="../react/" />
     
     
-    <link rel="prev" href="../jquery/8-state.html" />
+    <link rel="prev" href="14-state.html" />
     
 
     </head>
@@ -212,7 +212,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3" data-path="./">
+        <li class="chapter " data-level="1.3" data-path="./">
             
                 <a href="./">
             
@@ -408,7 +408,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.15" data-path="15-state.html">
+        <li class="chapter active" data-level="1.3.15" data-path="15-state.html">
             
                 <a href="15-state.html">
             
@@ -624,7 +624,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >第二章:javaScript</a>
+        <a href=".." >第十五节:8.22</a>
     </h1>
 </div>
 
@@ -639,7 +639,107 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>index.md</p>
+                                <h3 id="&#x6784;&#x9020;&#x51FD;&#x6570;">&#x6784;&#x9020;&#x51FD;&#x6570;</h3>
+<p>&#x51FD;&#x6570;&#x540E;&#x624D;&#x52A0;()</p>
+<p>&#x5BF9;&#x8C61;&#x540E;&#x624D;&#x6709;.</p>
+<p>&#x5185;&#x7F6E;&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF1A;Number String RegExp  Date  Array  Boolean</p>
+<p>var time=new Date()</p>
+<p>&#x6784;&#x9020;&#x51FD;&#x6570;&#x7528;&#x6765;&#x901A;&#x8FC7;&#x51FD;&#x6570;&#x521B;&#x5EFA;&#x5BF9;&#x8C61;</p>
+<p>&#x521B;&#x5EFA;&#x5BF9;&#x8C61;&#x5DE5;&#x5382;&#x6A21;&#x5F0F;</p>
+<pre><code class="lang-js">        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">creatobj</span>(<span class="hljs-params">username,userage</span>)</span>{
+            <span class="hljs-keyword">var</span> obj={}
+            obj.name=username
+            obj.age=userage
+            <span class="hljs-keyword">return</span> obj
+        }
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">creatobj1</span>(<span class="hljs-params">username,userage</span>)</span>{
+            <span class="hljs-keyword">var</span> obj={}
+            obj.name=username
+            obj.age=userage
+            <span class="hljs-keyword">return</span> obj
+        }
+        <span class="hljs-keyword">var</span> obj2=creatobj(<span class="hljs-string">&quot;ddd&quot;</span>,<span class="hljs-number">12</span>)
+        <span class="hljs-keyword">var</span> obj3=creatobj(<span class="hljs-string">&quot;ddd&quot;</span>,<span class="hljs-number">12</span>)
+        <span class="hljs-keyword">var</span> obj3=creatobj1(<span class="hljs-string">&quot;ddd&quot;</span>,<span class="hljs-number">12</span>)
+        <span class="hljs-built_in">console</span>.log(obj2)
+        <span class="hljs-built_in">console</span>.log(obj3)
+        <span class="hljs-built_in">console</span>.log(obj2==obj3)
+</code></pre>
+<p>instanceof&#x68C0;&#x6D4B;&#x5BF9;&#x8C61;&#x662F;&#x7528;&#x54EA;&#x4E2A;&#x6784;&#x9020;&#x51FD;&#x6570;&#x521B;&#x5EFA;&#x7684;</p>
+<p>&#x7528;&#x6CD5;&#xFF1A;&#x5BF9;&#x8C61; instanceof  &#x6784;&#x9020;&#x51FD;&#x6570;&#x540D;</p>
+<p>Array(&#x53EF;&#x53D8;&#x7684; String Number Function&#x7B49;)</p>
+<p>&#x6784;&#x9020;&#x51FD;&#x6570;</p>
+<pre><code class="lang-js">        <span class="hljs-comment">//&#x6784;&#x9020;&#x51FD;&#x6570;</span>
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">CreatObj</span>(<span class="hljs-params">username,userage</span>) </span>{
+            <span class="hljs-keyword">this</span>.name=username
+            <span class="hljs-keyword">this</span>.age=userage<span class="hljs-comment">//this&#x6307;&#x5411;&#x6784;&#x9020;&#x51FD;&#x6570;&#x5B9E;&#x4F8B;&#x5316;&#x5BF9;&#x8C61;</span>
+            <span class="hljs-keyword">this</span>.say=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-number">11</span>)
+            }
+        }
+        <span class="hljs-keyword">var</span> obj=<span class="hljs-keyword">new</span>    CreatObj(<span class="hljs-string">&quot;haha&quot;</span>,<span class="hljs-number">123456</span>)<span class="hljs-comment">//new&#x628A;this&#x6307;&#x5411;&#x6539;&#x53D8;&#x6210;obj&#xFF0C;&#x4E5F;&#x521B;&#x5EFA;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x65B0;&#x5BF9;&#x8C61;</span>
+        <span class="hljs-built_in">console</span>.log(obj)
+        <span class="hljs-built_in">console</span>.log(obj <span class="hljs-keyword">instanceof</span> CreatObj)
+</code></pre>
+<ul>
+<li>&#x539F;&#x578B; &#x6784;&#x9020;&#x51FD;&#x6570;&#x540D;.prototype</li>
+</ul>
+<p>&#x6BCF;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF0C;&#x90FD;&#x4F1A;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x539F;&#x578B;&#x5BF9;&#x8C61;(CreatObj.prototype)&#x3002;&#x901A;&#x8FC7; &#x6784;&#x9020;&#x51FD;&#x6570;.prototype &#x53BB;&#x83B7;&#x53D6;&#x6216;&#x4FEE;&#x6539;</p>
+<p>&#x539F;&#x578B;&#x4F5C;&#x7528;&#xFF1A;&#x5B58;&#x50A8;&#x6216;&#x8BBE;&#x7F6E; &#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;&#x516C;&#x6709;&#x5C5E;&#x6027;&#x6216;&#x65B9;&#x6CD5;</p>
+<p>CreatObj.prototype.say=function(){
+    console.log(22)
+}</p>
+<p>&#x6784;&#x9020;&#x51FD;&#x6570;&#x521B;&#x5EFA;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5148;&#x6DFB;&#x52A0;&#x6784;&#x9020;&#x51FD;&#x6570;&#x5185;&#x90E8;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#xFF0C;&#x7136;&#x540E;&#x6DFB;&#x52A0;&#x539F;&#x578B;&#x5185;&#x90E8;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#xFF0C;&#x5982;&#x679C;&#x91CD;&#x540D;&#xFF0C;&#x4F7F;&#x7528;&#x6784;&#x9020;&#x51FD;&#x6570;&#x5185;&#x90E8;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;</p>
+<p>&#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;&#x539F;&#x578B;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#xFF0C;&#x53EA;&#x8981;&#x4FEE;&#x6539;&#x4E86;&#xFF0C;&#x6240;&#x6709;&#x5B9E;&#x4F8B;&#x5316;&#x5BF9;&#x8C61;&#x7684;&#x516C;&#x6709;&#x65B9;&#x6CD5;&#x6216;&#x5C5E;&#x6027;&#x90FD;&#x4F1A;&#x6539;&#x53D8;</p>
+<p><strong>proto</strong>&#x6BCF;&#x5F53;&#x5B9E;&#x4F8B;&#x5316;&#x5BF9;&#x8C61;&#x88AB;&#x521B;&#x5EFA;&#x65F6;&#xFF0C;&#x90FD;&#x4F1A;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x4E00;&#x4E2A;<strong>proto</strong>&#x5C5E;&#x6027;&#xFF0C;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x6307;&#x5411;&#x8BE5;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;&#x539F;&#x578B;</p>
+<pre><code>console.log(obj.__proto__)
+obj.__proto__.name=&quot;&#x5C0F;&#x7EA2;&quot;
+</code></pre><p>constructor &#x6BCF;&#x4E2A;&#x539F;&#x578B;&#x5BF9;&#x8C61;&#x90FD;&#x6709;&#x4E00;&#x4E2A;constructor&#x5C5E;&#x6027;&#xFF0C;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x6307;&#x5411;&#x8BE5;&#x6784;&#x9020;&#x51FD;&#x6570;</p>
+<p>console.log(CreateObj.prototype.constructor)</p>
+<p>&#x539F;&#x578B;&#x94FE;   &#x7EE7;&#x627F;    &#x5BF9;&#x8C61;&#x5192;&#x5145;</p>
+<p>&#x7EE7;&#x627F;  &#x5C06;&#x4E00;&#x4E2A;&#x7528;&#x6784;&#x9020;&#x51FD;&#x6570;&#x521B;&#x5EFA;&#x7684;&#x5B9E;&#x4F8B;&#x5316;&#x5BF9;&#x8C61;&#x8D4B;&#x503C;&#x7ED9;&#x53E6;&#x4E00;&#x4E2A;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;&#x539F;&#x578B;&#xFF0C;&#x90A3;&#x4E48;&#x7528;&#x540E;&#x9762;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x521B;&#x5EFA;&#x7684;&#x5B9E;&#x4F8B;&#x5316;&#x5BF9;&#x8C61; &#x7EE7;&#x627F;&#x524D;&#x9762;&#x7684;&#x5B9E;&#x4F8B;&#x5316;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;</p>
+<p>&#x5F53;&#x8BBF;&#x95EE;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#x5316;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x65F6;&#xFF0C;&#x9996;&#x5148;&#x53BB;&#x521B;&#x5EFA;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x91CC;&#x9762;&#x627E;&#xFF0C;&#x7136;&#x540E;&#x53BB;&#x8FD9;&#x4E2A;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;&#x539F;&#x578B;&#x91CC;&#x9762;&#x627E;&#xFF0C;&#x6700;&#x540E;&#x53BB;&#x7EE7;&#x627F;&#x7684;&#x5B9E;&#x4F8B;&#x5316;&#x5BF9;&#x8C61;&#x91CC;&#x9762;&#x627E;&#xFF08;&#x89C4;&#x5219;&#x548C;&#x524D;&#x9762;&#x4E00;&#x6837;&#xFF09;&#xFF08;&#x5B9E;&#x4F8B;&#x5316;&#x5BF9;&#x8C61;&#x88AB;&#x5305;&#x542B;&#x5728;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;&#x539F;&#x578B;&#x91CC;&#x9762;&#xFF09;</p>
+<p>call   apply</p>
+<pre><code class="lang-js">
+                <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">A</span>(<span class="hljs-params"></span>)</span>{}
+
+&#x3000;&#x3000;&#x3000;&#x3000;<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">B</span>(<span class="hljs-params">a</span>)</span>{
+&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;<span class="hljs-keyword">this</span>.a = a;
+&#x3000;&#x3000;&#x3000;&#x3000;}
+
+&#x3000;&#x3000;&#x3000;&#x3000;<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">C</span>(<span class="hljs-params">a</span>)</span>{
+&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;<span class="hljs-keyword">if</span>(a){
+&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;<span class="hljs-keyword">this</span>.a = a;
+&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;}
+&#x3000;&#x3000;&#x3000;&#x3000;}
+
+&#x3000;&#x3000;&#x3000;&#x3000;A.prototype.a = <span class="hljs-number">1</span>;
+&#x3000;&#x3000;&#x3000;&#x3000;B.prototype.a = <span class="hljs-number">1</span>;
+&#x3000;&#x3000;&#x3000;&#x3000;C.prototype.a = <span class="hljs-number">1</span>;
+&#x3000;&#x3000;&#x3000;&#x3000;<span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">new</span> A().a);    <span class="hljs-comment">// 1   </span>
+&#x3000;&#x3000;&#x3000;&#x3000;<span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">new</span> B().a);    <span class="hljs-comment">// undefined  </span>
+&#x3000;&#x3000;&#x3000;&#x3000;<span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">new</span> C().a);   <span class="hljs-comment">// 1</span>
+</code></pre>
+<pre><code class="lang-js">        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Foo</span>(<span class="hljs-params"></span>) </span>{
+            getName = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ <span class="hljs-built_in">console</span>.log(<span class="hljs-number">1</span>)};
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+        }
+        Foo.getName = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ <span class="hljs-built_in">console</span>.log(<span class="hljs-number">2</span>)};
+
+        Foo.prototype.getName = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ <span class="hljs-built_in">console</span>.log(<span class="hljs-number">3</span>);};
+
+        <span class="hljs-keyword">var</span> getName = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ <span class="hljs-built_in">console</span>.log(<span class="hljs-number">4</span>);};
+
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getName</span>(<span class="hljs-params"></span>) </span>{ <span class="hljs-built_in">console</span>.log(<span class="hljs-number">5</span>);}
+        <span class="hljs-comment">// &#x8BF7;&#x5199;&#x51FA;&#x4EE5;&#x4E0B;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF1A;    </span>
+        Foo.getName();<span class="hljs-comment">//2&#x5BF9;&#x8C61;       </span>
+        <span class="hljs-built_in">window</span>.getName();<span class="hljs-comment">//4,&#x51FD;&#x6570;&#x5148;&#x63D0;&#x5347;(5), var getName &#x518D;&#x63D0;&#x5347;&#xFF0C;&#x540E;&#x6267;&#x884C;4</span>
+        Foo().getName(); <span class="hljs-comment">//1,&#x51FD;&#x6570;&#x5148;&#x63D0;&#x5347;(5), var getName &#x518D;&#x63D0;&#x5347;&#xFF0C;4&#x63D0;&#x5347;&#xFF0C;window.getName(),&#x56E0;&#x4E3A;Foo()&#x4E2D;getName&#x662F;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;&#x6700;&#x540E;&#x6267;&#x884C;1&#xFF0C;    </span>
+        getName(); <span class="hljs-comment">//1(&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x548C;&#x4E0A;&#x4E00;&#x53E5;&#x6362;&#x4F4D;&#x7F6E;&#xFF0C;&#x7ED3;&#x679C;&#x5C31;&#x662F;4)    </span>
+        <span class="hljs-keyword">new</span> Foo.getName();  
+        <span class="hljs-keyword">new</span> Foo().getName(); 
+        <span class="hljs-keyword">new</span> <span class="hljs-keyword">new</span> Foo().getName();
+</code></pre>
 
                                 
                                 </section>
@@ -667,12 +767,12 @@
 
             
                 
-                <a href="../jquery/8-state.html" class="navigation navigation-prev " aria-label="Previous page: 第七节:8.1">
+                <a href="14-state.html" class="navigation navigation-prev " aria-label="Previous page: 第十四节:8.21">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="1-state.html" class="navigation navigation-next " aria-label="Next page: 第一节:变量 数据类型 for循环 运算符">
+                <a href="../react/" class="navigation navigation-next " aria-label="Next page: 第三章:终端命令">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -683,7 +783,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第二章:javaScript","level":"1.3","depth":1,"next":{"title":"第一节:变量 数据类型 for循环 运算符","level":"1.3.1","depth":2,"path":"javascript/1-state.md","ref":"./javascript/1-state.md","articles":[]},"previous":{"title":"第七节:8.1","level":"1.2.7","depth":2,"path":"jquery/8-state.md","ref":"./jquery/8-state.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript/index.md","mtime":"2017-08-01T02:14:04.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-23T01:27:33.608Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第十五节:8.22","level":"1.3.15","depth":2,"next":{"title":"第三章:终端命令","level":"1.4","depth":1,"path":"react/index.md","ref":"./react/index.md","articles":[{"title":"第一节:安装nodejs","level":"1.4.1","depth":2,"path":"react/1-state.md","ref":"./react/1-state.md","articles":[]},{"title":"第二节:从github克隆仓库","level":"1.4.2","depth":2,"path":"react/2-state.md","ref":"./react/2-state.md","articles":[]},{"title":"第三节:向github创建个人网站","level":"1.4.3","depth":2,"path":"react/3-state.md","ref":"./react/3-state.md","articles":[]}]},"previous":{"title":"第十四节:8.21","level":"1.3.14","depth":2,"path":"javascript/14-state.md","ref":"./javascript/14-state.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript/15-state.md","mtime":"2017-08-22T12:56:53.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-23T01:27:33.608Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
