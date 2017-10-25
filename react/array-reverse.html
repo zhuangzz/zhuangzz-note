@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>JSON-Server安装 · GitBook</title>
+        <title>如何将数组逆序(reverse)输出 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -56,6 +56,8 @@
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
+    
+    <link rel="next" href="object-assign.html" />
     
     
     <link rel="prev" href="array-filter.html" />
@@ -132,7 +134,7 @@
                 <a href="../jquery/2-state.html">
             
                     
-                    第二节:认真的初学者
+                    第二节:2
             
                 </a>
             
@@ -145,7 +147,7 @@
                 <a href="../jquery/3-state.html">
             
                     
-                    第三节:7.25
+                    第三节:3
             
                 </a>
             
@@ -158,7 +160,7 @@
                 <a href="../jquery/4-state.html">
             
                     
-                    第四节:7.26
+                    第四节:4
             
                 </a>
             
@@ -171,7 +173,7 @@
                 <a href="../jquery/5-state.html">
             
                     
-                    第五节:7.27
+                    第五节:5
             
                 </a>
             
@@ -184,7 +186,7 @@
                 <a href="../jquery/6-state.html">
             
                     
-                    第六节:7.28
+                    第六节:6
             
                 </a>
             
@@ -197,7 +199,7 @@
                 <a href="../jquery/8-state.html">
             
                     
-                    第七节:8.1
+                    第七节:7
             
                 </a>
             
@@ -924,12 +926,38 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.7.15" data-path="json-server.html">
+        <li class="chapter active" data-level="1.7.15" data-path="array-reverse.html">
             
-                <a href="json-server.html">
+                <a href="array-reverse.html">
             
                     
-                    JSON-Server安装
+                    如何将数组逆序(reverse)输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.16" data-path="object-assign.html">
+            
+                <a href="object-assign.html">
+            
+                    
+                    如何对象合并object.assign
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.17" data-path="object-keys.html">
+            
+                <a href="object-keys.html">
+            
+                    
+                    Object.keys如何用
             
                 </a>
             
@@ -972,7 +1000,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >JSON-Server安装</a>
+        <a href=".." >如何将数组逆序(reverse)输出</a>
     </h1>
 </div>
 
@@ -987,51 +1015,16 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>&#x4F5C;&#x4E3A;&#x524D;&#x7AEF;&#x548C;&#x5BA2;&#x6237;&#x7AEF;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#xFF0C;&#x5728;&#x540E;&#x7AEF;&#x8FD8;&#x6CA1;&#x6709;&#x7ED9;&#x51FA;&#x5BF9;&#x5E94;&#x7684;api&#x63A5;&#x53E3;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x65E0;&#x6CD5;&#x505A;&#x6D4B;&#x8BD5;&#x3002; &#x8FD9;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;json-server&#x5FEB;&#x901F;&#x642D;&#x5EFA;&#x4E00;&#x4E2A;&#x6D4B;&#x8BD5;&#x7684;api&#x63A5;&#x53E3;&#xFF0C;&#x80FD;&#x5FEB;&#x901F;&#x642D;&#x5EFA;&#x597D;&#x3002;</p>
-<h3 id="&#x521B;&#x5EFA;dbjson">&#x521B;&#x5EFA;db.json</h3>
-<p>&#x5728;&#x91CC;&#x9762;&#x52A0;&#x5165;json&#x683C;&#x5F0F;&#x7684;&#x6570;&#x636E;</p>
-<pre><code>{
-  &quot;post&quot;:[
-{
-  &quot;id&quot; :&quot;13479587123&quot;,
-  &quot;title&quot; :&quot;&#x6807;&#x9898;&#x4E00;&quot;,
-  &quot;content&quot;:&quot;nksdjnkj&quot;
-},
-{
-  &quot;id&quot;:&quot;264564123&quot;,
-  &quot;title&quot;:&quot;&#x6807;&#x9898;&#x4E8C;&quot;,
-  &quot;content&quot;:&quot;nksdjnkj&quot;
-},
-{
-  &quot;id&quot;:&quot;37165756723&quot;,
-  &quot;title&quot;:&quot;&#x6807;&#x9898;&#x4E09;&quot;,
-  &quot;content&quot;:&quot;nksdjnkj&quot;
-},
-{
-  &quot;id&quot;:&quot;476571233224&quot;,
-  &quot;title&quot;:&quot;&#x6807;&#x9898;&#x56DB;&quot;,
-  &quot;content&quot;:&quot;nksdjnkj&quot;
-},
-{
-  &quot;id&quot;:&quot;5123dsd&quot;,
-  &quot;title&quot;:&quot;&#x6807;&#x9898;&#x4E94;&quot;,
-  &quot;content&quot;:&quot;nksdjnkj&quot;
-}]
-}
-</code></pre><h3 id="&#x5168;&#x5C40;&#x5B89;&#x88C5;json-server">&#x5168;&#x5C40;&#x5B89;&#x88C5;JSON-Server</h3>
-<pre><code>npm install -g json-server
-</code></pre><h3 id="&#x8FD0;&#x884C;json-server">&#x8FD0;&#x884C;JSON-Server</h3>
-<pre><code>json-server --watch db.json -p 3008
-</code></pre><h3 id="&#x4E00;&#x4E9B;&#x57FA;&#x672C;&#x547D;&#x4EE4;">&#x4E00;&#x4E9B;&#x57FA;&#x672C;&#x547D;&#x4EE4;</h3>
-<pre><code>
-GET    /posts
-GET    /posts/1
-POST   /posts
-PUT    /posts/1
-PATCH  /posts/1
-DELETE /posts/1
-</code></pre><p>&#x610F;&#x601D;&#x5206;&#x522B;&#x662F;</p>
-
+                                <p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7; array.reverse() &#x63A5;&#x53E3;&#xFF0C;&#x5C06;&#x6570;&#x7EC4;&#x9006;&#x5E8F;&#x8F93;&#x51FA;&#x3002;</p>
+<h3 id="&#x6253;&#x602A;">&#x6253;&#x602A;</h3>
+<p>&#x6709;&#x6570;&#x7EC4; a</p>
+<pre><code>const a = [1, 2, 3, 4]
+</code></pre><p>&#x5982;&#x4F55;&#x5F97;&#x5230;&#x6570;&#x7EC4; b</p>
+<pre><code>[4, 3, 2, 1]
+</code></pre><p>&#x7B54;&#x6848;</p>
+<pre><code>const a = [1, 2, 3, 4]
+const b = a.reverse()
+</code></pre>
                                 
                                 </section>
                             
@@ -1058,10 +1051,14 @@ DELETE /posts/1
 
             
                 
-                <a href="array-filter.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 数组filter方法如何用">
+                <a href="array-filter.html" class="navigation navigation-prev " aria-label="Previous page: 数组filter方法如何用">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="object-assign.html" class="navigation navigation-next " aria-label="Next page: 如何对象合并object.assign">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -1070,7 +1067,7 @@ DELETE /posts/1
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"JSON-Server安装","level":"1.7.15","depth":2,"previous":{"title":"数组filter方法如何用","level":"1.7.14","depth":2,"path":"react/array-filter.md","ref":"./react/array-filter.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"react/json-server.md","mtime":"2017-09-12T02:53:55.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-18T07:22:17.192Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"如何将数组逆序(reverse)输出","level":"1.7.15","depth":2,"next":{"title":"如何对象合并object.assign","level":"1.7.16","depth":2,"path":"react/object-assign.md","ref":"./react/object-assign.md","articles":[]},"previous":{"title":"数组filter方法如何用","level":"1.7.14","depth":2,"path":"react/array-filter.md","ref":"./react/array-filter.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"react/array-reverse.md","mtime":"2017-09-18T07:31:53.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-10-25T07:51:56.119Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
