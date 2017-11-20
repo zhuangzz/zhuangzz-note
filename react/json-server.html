@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>操作列表上的一个元素 · GitBook</title>
+        <title>JSON-Server安装 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="json-server.html" />
+    <link rel="next" href="data-v.html" />
     
     
-    <link rel="prev" href="pass-handle.html" />
+    <link rel="prev" href="list-mani.html" />
     
 
     </head>
@@ -1251,7 +1251,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.7.41" data-path="list-mani.html">
+        <li class="chapter " data-level="1.7.41" data-path="list-mani.html">
             
                 <a href="list-mani.html">
             
@@ -1264,7 +1264,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.42" data-path="json-server.html">
+        <li class="chapter active" data-level="1.7.42" data-path="json-server.html">
             
                 <a href="json-server.html">
             
@@ -1402,7 +1402,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >操作列表上的一个元素</a>
+        <a href=".." >JSON-Server安装</a>
     </h1>
 </div>
 
@@ -1417,62 +1417,59 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>&#x6765;&#x5BF9;&#x524D;&#x9762;&#x63D0;&#x8FC7;&#x7684;&#x77E5;&#x8BC6;&#x70B9;&#xFF1A;</p>
-<ul>
-<li><p>&#x6570;&#x7EC4;&#x548C; key</p>
-</li>
-<li><p>&#x4E8B;&#x4EF6;&#x54CD;&#x5E94;&#x51FD;&#x6570;&#x4E2D;&#x4F20;&#x53C2;&#x6570;</p>
-</li>
-</ul>
-<p>&#x7EFC;&#x5408;&#x8FD0;&#x7528;&#x4E00;&#x4E0B;&#x3002;</p>
-<h3 id="&#x6253;&#x602A;">&#x6253;&#x602A;</h3>
-<p>&#x7ED9;&#x51FA;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#xFF0C;&#x663E;&#x793A;&#x51FA;&#x5404;&#x79CD;&#x8863;&#x670D;&#x5C3A;&#x7801;</p>
-<p>M L XL XXL
-&#x8BA9;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x53BB;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x5C3A;&#x7801;&#x3002;</p>
-<p>&#x7B54;&#x6848;</p>
-<pre><code>import React, { Component } from &apos;react&apos;
-import &apos;./app.css&apos;
-
-class App extends Component {
-  state = {
-    activeIndex: 0,
-    sizes: [
-      {
-        size: &apos;X&apos;
-      },
-      {
-        size: &apos;XL&apos;
-      },
-      {
-        size: &apos;XXL&apos;
-      }
-    ]
-  }
-
-  handleClick = (i) =&gt; {
-    console.log(i)
-    this.setState({
-      activeIndex: i
-    })
-  }
-
-  render () {
-
-    const list = this.state.sizes.map((t, i) =&gt; (
-      &lt;div onClick={() =&gt; this.handleClick(i)}
-        className={`size ${this.state.activeIndex===i&amp;&amp; &apos;active&apos;}`}
-        key={i}&gt;{t.size}&lt;/div&gt;
-    ))
-    return (
-      &lt;div className=&apos;app&apos;&gt;
-        {list}
-      &lt;/div&gt;
-    )
-  }
+                                <p>&#x4F5C;&#x4E3A;&#x524D;&#x7AEF;&#x548C;&#x5BA2;&#x6237;&#x7AEF;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#xFF0C;&#x5728;&#x540E;&#x7AEF;&#x8FD8;&#x6CA1;&#x6709;&#x7ED9;&#x51FA;&#x5BF9;&#x5E94;&#x7684;api&#x63A5;&#x53E3;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x65E0;&#x6CD5;&#x505A;&#x6D4B;&#x8BD5;&#x3002; &#x8FD9;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;json-server&#x5FEB;&#x901F;&#x642D;&#x5EFA;&#x4E00;&#x4E2A;&#x6D4B;&#x8BD5;&#x7684;api&#x63A5;&#x53E3;&#xFF0C;&#x80FD;&#x5FEB;&#x901F;&#x642D;&#x5EFA;&#x597D;&#x3002;</p>
+<h3 id="&#x521B;&#x5EFA;dbjson">&#x521B;&#x5EFA;db.json</h3>
+<p>&#x5728;&#x91CC;&#x9762;&#x52A0;&#x5165;json&#x683C;&#x5F0F;&#x7684;&#x6570;&#x636E;</p>
+<pre><code>{
+  &quot;post&quot;:[
+{
+  &quot;id&quot; :&quot;13479587123&quot;,
+  &quot;title&quot; :&quot;&#x6807;&#x9898;&#x4E00;&quot;,
+  &quot;content&quot;:&quot;nksdjnkj&quot;
+},
+{
+  &quot;id&quot;:&quot;264564123&quot;,
+  &quot;title&quot;:&quot;&#x6807;&#x9898;&#x4E8C;&quot;,
+  &quot;content&quot;:&quot;nksdjnkj&quot;
+},
+{
+  &quot;id&quot;:&quot;37165756723&quot;,
+  &quot;title&quot;:&quot;&#x6807;&#x9898;&#x4E09;&quot;,
+  &quot;content&quot;:&quot;nksdjnkj&quot;
+},
+{
+  &quot;id&quot;:&quot;476571233224&quot;,
+  &quot;title&quot;:&quot;&#x6807;&#x9898;&#x56DB;&quot;,
+  &quot;content&quot;:&quot;nksdjnkj&quot;
+},
+{
+  &quot;id&quot;:&quot;5123dsd&quot;,
+  &quot;title&quot;:&quot;&#x6807;&#x9898;&#x4E94;&quot;,
+  &quot;content&quot;:&quot;nksdjnkj&quot;
+}]
 }
+</code></pre><h3 id="&#x5168;&#x5C40;&#x5B89;&#x88C5;json-server">&#x5168;&#x5C40;&#x5B89;&#x88C5;JSON-Server</h3>
+<pre><code>npm install -g json-server
+</code></pre><h3 id="&#x8FD0;&#x884C;json-server">&#x8FD0;&#x884C;JSON-Server</h3>
+<pre><code>json-server --watch db.json -p 3008
+</code></pre><h3 id="&#x4E00;&#x4E9B;&#x57FA;&#x672C;&#x547D;&#x4EE4;">&#x4E00;&#x4E9B;&#x57FA;&#x672C;&#x547D;&#x4EE4;</h3>
+<pre><code>
+GET    /posts
+GET    /posts/1
+POST   /posts
+PUT    /posts/1
+PATCH  /posts/1
+DELETE /posts/1
+</code></pre><p>&#x610F;&#x601D;&#x5206;&#x522B;&#x662F;</p>
+<pre><code>&#x8BFB;&#x53D6;&#x6240;&#x6709;&#x6587;&#x7AE0;
+&#x8BFB;&#x53D6; id &#x4E3A; 1 &#x7684;&#x6587;&#x7AE0;
+&#x53D1;&#x5E03;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;
+&#x66F4;&#x65B0; id &#x4E3A; 1 &#x7684;&#x6587;&#x7AE0;
+&#x5220;&#x9664; id &#x4E3A; 1 &#x7684;&#x6587;&#x7AE0;
+</code></pre><p>&#x6CE8;&#x610F;&#xFF1A;&#x542F;&#x52A8;&#x4E86; json-server &#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x62E5;&#x6709;&#x4E86;&#x4E00;&#x5957; API &#xFF0C;&#x5305;&#x62EC;&#x4E0A;&#x9762;&#x51E0;&#x4E2A;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5176;&#x4E2D;&#x4E0D;&#x5305;&#x62EC; / &#x8FD9;&#x4E2A; API &#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x8BBF;&#x95EE; <a href="http://localhost:3008/" target="_blank">http://localhost:3008/</a> &#x8FD9;&#x4E2A;&#x4F4D;&#x7F6E;&#x662F;&#x4E0D;&#x4F1A;&#x770B;&#x5230;&#x4EFB;&#x4F55;&#x6570;&#x636E;&#x7684;&#x3002;</p>
+<h3 id="&#x89C6;&#x9891;">&#x89C6;&#x9891;</h3>
+<p><a href="http://digicity-1253322599.costj.myqcloud.com/json-server.mp4" target="_blank">http://digicity-1253322599.costj.myqcloud.com/json-server.mp4</a></p>
 
-export default App
-</code></pre>
                                 
                                 </section>
                             
@@ -1499,12 +1496,12 @@ export default App
 
             
                 
-                <a href="pass-handle.html" class="navigation navigation-prev " aria-label="Previous page: 向事件处理函数中传参数">
+                <a href="list-mani.html" class="navigation navigation-prev " aria-label="Previous page: 操作列表上的一个元素">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="json-server.html" class="navigation navigation-next " aria-label="Next page: JSON-Server安装">
+                <a href="data-v.html" class="navigation navigation-next " aria-label="Next page: 数据可视化">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1515,7 +1512,7 @@ export default App
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"操作列表上的一个元素","level":"1.7.41","depth":2,"next":{"title":"JSON-Server安装","level":"1.7.42","depth":2,"path":"react/json-server.md","ref":"./react/json-server.md","articles":[]},"previous":{"title":"向事件处理函数中传参数","level":"1.7.40","depth":2,"path":"react/pass-handle.md","ref":"./react/pass-handle.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"react/list-mani.md","mtime":"2017-11-09T01:15:26.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-11-20T08:03:05.285Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"JSON-Server安装","level":"1.7.42","depth":2,"next":{"title":"数据可视化","level":"1.7.43","depth":2,"path":"react/data-v.md","ref":"./react/data-v.md","articles":[]},"previous":{"title":"操作列表上的一个元素","level":"1.7.41","depth":2,"path":"react/list-mani.md","ref":"./react/list-mani.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"react/json-server.md","mtime":"2017-09-18T07:28:22.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-11-20T08:03:05.285Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
