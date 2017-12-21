@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>macOS安装monggo · GitBook</title>
+        <title>macOS安装mongo · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -56,6 +56,8 @@
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
+    
+    <link rel="next" href="use.html" />
     
     
     <link rel="prev" href="index.md" />
@@ -1468,7 +1470,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.11.1" data-path="../docker/image.html">
+        <li class="chapter " data-level="1.11.1" data-path="../docker/install.html">
+            
+                <a href="../docker/install.html">
+            
+                    
+                    docker安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../docker/image.html">
             
                 <a href="../docker/image.html">
             
@@ -1481,7 +1496,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.2" data-path="../docker/hello.html">
+        <li class="chapter " data-level="1.11.3" data-path="../docker/hello.html">
             
                 <a href="../docker/hello.html">
             
@@ -1494,7 +1509,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.3" data-path="../docker/installnew.html">
+        <li class="chapter " data-level="1.11.4" data-path="../docker/installnew.html">
             
                 <a href="../docker/installnew.html">
             
@@ -1507,7 +1522,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.4" data-path="../docker/new-image.html">
+        <li class="chapter " data-level="1.11.5" data-path="../docker/new-image.html">
             
                 <a href="../docker/new-image.html">
             
@@ -1520,7 +1535,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.5" data-path="../docker/public.html">
+        <li class="chapter " data-level="1.11.6" data-path="../docker/public.html">
             
                 <a href="../docker/public.html">
             
@@ -1589,7 +1604,20 @@
                 <a href="install.html">
             
                     
-                    macOS安装monggo
+                    macOS安装mongo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="use.html">
+            
+                <a href="use.html">
+            
+                    
+                    mongo基本使用
             
                 </a>
             
@@ -1632,7 +1660,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >macOS安装monggo</a>
+        <a href=".." >macOS安装mongo</a>
     </h1>
 </div>
 
@@ -1649,11 +1677,11 @@
                                 
                                 <h3 id="&#x4E00;&#x3001;&#x4F7F;&#x7528;&#x5305;&#x7BA1;&#x7406;&#x5668;&#x8FDB;&#x884C;&#x5B89;&#x88C5;">&#x4E00;&#x3001;&#x4F7F;&#x7528;&#x5305;&#x7BA1;&#x7406;&#x5668;&#x8FDB;&#x884C;&#x5B89;&#x88C5;</h3>
 <p>1.&#x66F4;&#x65B0; Homebrew&#x7684;package&#x6570;&#x636E;&#x5E93;&#xFF08;macosx&#x4E0A;&#x7684;&#x8F6F;&#x4EF6;&#x5305;&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#xFF09;</p>
-<pre><code> brew update
+<pre><code>brew update
 </code></pre><p>2.&#x5B89;&#x88C5;MongoDb</p>
 <pre><code>brew install mongodb
 </code></pre><p>3.&#x542F;&#x52A8;MongoDb&#xFF08;&#x5B89;&#x88C5;&#x6210;&#x529F;&#x540E;&#x547D;&#x4EE4;&#x884C;&#x6709;&#x63D0;&#x793A;&#xFF09;</p>
-<pre><code> mongod --config /usr/local/etc/mongod.conf
+<pre><code>mongod --config /usr/local/etc/mongod.conf
 </code></pre><p>4.&#x8FDE;&#x63A5;&#x5230;mongo</p>
 <pre><code>mongo
 </code></pre><h3 id="&#x4E8C;&#x3001;&#x4F7F;&#x7528;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;">&#x4E8C;&#x3001;&#x4F7F;&#x7528;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;</h3>
@@ -1667,7 +1695,7 @@
 </code></pre><p>3.&#x7B80;&#x5316;&#x547D;&#x540D;</p>
 <pre><code>mv mongodb-osx-x86_64-3.2.4 mongodb
 </code></pre><p>4.&#x6307;&#x5B9A;MongoDb&#x6570;&#x636E;&#x5B58;&#x50A8;&#x6587;&#x4EF6;&#x5939;&#xFF3B;&#x9ED8;&#x8BA4;&#x8DEF;&#x5F84;&#x4E3A;&#xFF1A;/data/db&#xFF3D;</p>
-<pre><code> mkdir-p /data/db
+<pre><code>mkdir-p /data/db
 </code></pre><p>&#x6CE8;&#xFF1A;&#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x5939;&#x65F6;&#x80AF;&#x80FD;&#x4F1A;&#x51FA;&#x73B0;&#x6743;&#x9650;&#x95EE;&#x9898;&#xFF0C;&#x4F7F;&#x7528;sudo&#x6216;&#x8005;&#x8D85;&#x7EA7;&#x7528;&#x6237;&#x6765;&#x8FD0;&#x884C;&#x3002;</p>
 <p>5.&#x786E;&#x4FDD;&#x6587;&#x4EF6;&#x5939;&#x6743;&#x9650;</p>
 <pre><code>chown-R $USER /data/db
@@ -1677,7 +1705,7 @@
  mongod
 </code></pre><h3 id="&#x4F7F;&#x7528;mongodb">&#x4F7F;&#x7528;MongoDB</h3>
 <p>1.&#x9996;&#x5148;&#x9700;&#x8981;&#x8FDE;&#x63A5;&#x5230;MongoDB service:</p>
-<p>3.&#x542F;&#x52A8;MongoDb&#xFF08;&#x5B89;&#x88C5;&#x6210;&#x529F;&#x540E;&#x547D;&#x4EE4;&#x884C;&#x6709;&#x63D0;&#x793A;&#xFF09;</p>
+<p>&#x542F;&#x52A8;MongoDb&#xFF08;&#x5B89;&#x88C5;&#x6210;&#x529F;&#x540E;&#x547D;&#x4EE4;&#x884C;&#x6709;&#x63D0;&#x793A;&#xFF09;</p>
 <pre><code> mongod --config /usr/local/etc/mongod.conf
  mongo
 </code></pre><p>2.&#x63D2;&#x5165;&#x6570;&#x636E;:</p>
@@ -1713,10 +1741,14 @@ WriteResult({ &quot;nInserted&quot; : 1 })
 
             
                 
-                <a href="index.md" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 第十二章：mongodb">
+                <a href="index.md" class="navigation navigation-prev " aria-label="Previous page: 第十二章：mongodb">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="use.html" class="navigation navigation-next " aria-label="Next page: mongo基本使用">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -1725,7 +1757,7 @@ WriteResult({ &quot;nInserted&quot; : 1 })
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"macOS安装monggo","level":"1.13.1","depth":2,"previous":{"title":"第十二章：mongodb","level":"1.13","depth":1,"path":"mongodb/index.md","ref":"./mongodb/index.md","articles":[{"title":"macOS安装monggo","level":"1.13.1","depth":2,"path":"mongodb/install.md","ref":"./mongodb/install.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"mongodb/install.md","mtime":"2017-12-21T06:44:23.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-21T06:44:31.176Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"macOS安装mongo","level":"1.13.1","depth":2,"next":{"title":"mongo基本使用","level":"1.13.2","depth":2,"path":"mongodb/use.md","ref":"./mongodb/use.md","articles":[]},"previous":{"title":"第十二章：mongodb","level":"1.13","depth":1,"path":"mongodb/index.md","ref":"./mongodb/index.md","articles":[{"title":"macOS安装mongo","level":"1.13.1","depth":2,"path":"mongodb/install.md","ref":"./mongodb/install.md","articles":[]},{"title":"mongo基本使用","level":"1.13.2","depth":2,"path":"mongodb/use.md","ref":"./mongodb/use.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"mongodb/install.md","mtime":"2017-12-21T08:17:09.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-21T08:28:01.475Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
