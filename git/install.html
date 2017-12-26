@@ -1747,10 +1747,10 @@
 <h3 id="2-git-bash-&#x914D;&#x7F6E;">2. git bash &#x914D;&#x7F6E;</h3>
 <p>&#x5148;&#x53BB;&#x81EA;&#x884C;&#x521B;&#x5EFA;gitlab&#x8D26;&#x53F7;&#xFF0C;&#x7136;&#x540E;&#x8FDB;&#x884C;&#x5982;&#x4E0B;&#x64CD;&#x4F5C;</p>
 <h5 id="21-&#x68C0;&#x67E5;ssh-keys&#x662F;&#x5426;&#x5B58;&#x5728;">2.1 &#x68C0;&#x67E5;SSH keys&#x662F;&#x5426;&#x5B58;&#x5728;</h5>
-<p>&#x8F93;&#x5165;&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x6587;&#x4EF6;id_rsa.pub &#x6216; id_dsa.pub&#xFF0C;&#x5219;&#x76F4;&#x63A5;&#x8FDB;&#x5165;&#x6B65;&#x9AA4;3&#x5C06;SSH key&#x6DFB;&#x52A0;&#x5230;GitHub&#x4E2D;&#xFF0C;&#x5426;&#x5219;&#x8FDB;&#x5165;&#x4E0B;&#x4E00;&#x6B65;&#x751F;&#x6210;SSH key</p>
+<p>&#x8F93;&#x5165;&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x6587;&#x4EF6;id_rsa.pub &#x6216; id_dsa.pub&#xFF0C;&#x5219;&#x76F4;&#x63A5;&#x8FDB;&#x5165;&#x6B65;&#x9AA4;2.3&#x5C06;SSH key&#x6DFB;&#x52A0;&#x5230;GitHub&#x4E2D;&#xFF0C;&#x5426;&#x5219;&#x8FDB;&#x5165;&#x4E0B;&#x4E00;&#x6B65;&#x751F;&#x6210;SSH key</p>
 <pre><code>ls -al ~/.ssh
 </code></pre><h5 id="22-&#x751F;&#x6210;&#x65B0;&#x7684;-ssh-key">2.2 &#x751F;&#x6210;&#x65B0;&#x7684; SSH KEY</h5>
-<pre><code>ssh-keygen -t rsa -C &quot;zhukejin@zhukejin.com&quot; //&#x8FD9;&#x91CC;&#x662F;gitlab&#x7684;&#x90AE;&#x7BB1;
+<pre><code>ssh-keygen -t rsa -C &quot;123@qq.com&quot; //&#x8FD9;&#x91CC;&#x662F;gitlab&#x7684;&#x90AE;&#x7BB1;
 </code></pre><p>&#x8DEF;&#x5F84;&#x9009;&#x62E9;&#xFF1A;&#x4F7F;&#x7528;&#x8BE5;&#x547D;&#x4EE4;&#x4E4B;&#x540E;, &#x4F1A;&#x51FA;&#x73B0;&#x63D0;&#x793A;&#x9009;&#x62E9;ssh-key&#x751F;&#x6210;&#x8DEF;&#x5F84;,&#x9009;&#x62E9;&#x5728;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#xFF08;&#x9ED8;&#x8BA4;&#x4F1A;&#x5728;&#x76F8;&#x5E94;&#x8DEF;&#x5F84;&#x4E0B;&#xFF08;/your_home_path&#xFF09;&#x751F;&#x6210; id_rsa &#x548C; id_rsa.pub &#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#xFF09;</p>
 <p>&#x5BC6;&#x7801;&#x786E;&#x8BA4;&#xFF1A;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x4E0D;&#x4F7F;&#x7528;&#x5BC6;&#x7801;&#x8FDB;&#x884C;&#x767B;&#x5F55;, &#x7528;&#x5BC6;&#x7801;&#x592A;&#x9EBB;&#x70E6;&#xFF0C;&#x76F4;&#x63A5;&#x56DE;&#x8F66;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x4F7F;&#x7528;&#x5BC6;&#x7801;&#x767B;&#x5F55;&#xFF0C;&#x90A3;&#x5C31;&#x8F93;&#x5165;&#x5BC6;&#x7801;&#x4E4B;&#x540E;&#x56DE;&#x8F66;&#x3002;</p>
 <h5 id="23-&#x5C06;-ssh-key-&#x6DFB;&#x52A0;&#x5230;github&#x4E2D;">2.3 &#x5C06; ssh key &#x6DFB;&#x52A0;&#x5230;GitHub&#x4E2D;</h5>
@@ -1758,7 +1758,7 @@
 <pre><code>clip &lt; ~/.ssh/id_rsa.pub
 </code></pre><h5 id="23-&#x914D;&#x7F6E;&#x4E2A;&#x4EBA;&#x4FE1;&#x606F;&#xFF0C;&#x952E;&#x5165;&#x6307;&#x4EE4;">2.3 &#x914D;&#x7F6E;&#x4E2A;&#x4EBA;&#x4FE1;&#x606F;&#xFF0C;&#x952E;&#x5165;&#x6307;&#x4EE4;</h5>
 <pre><code>git config --global user.name &quot;primo&quot; //&#x8FD9;&#x91CC;&#x662F;&#x4F7F;&#x7528;gitlab&#x7684;&#x7528;&#x6237;&#x540D;
-git config --global user.email &quot;zhukejin@zhukejin.com&quot; //&#x8FD9;&#x91CC;&#x662F;gitlab&#x7684;&#x90AE;&#x7BB1;
+git config --global user.email &quot;123@qq.com&quot; //&#x8FD9;&#x91CC;&#x662F;gitlab&#x7684;&#x90AE;&#x7BB1;
 </code></pre><h3 id="3-git-review-&#x7684;&#x5B89;&#x88C5;&#x53CA;&#x4F7F;&#x7528;">3. git-review &#x7684;&#x5B89;&#x88C5;&#x53CA;&#x4F7F;&#x7528;</h3>
 <h5 id="31-&#x9996;&#x5148;&#x5B89;&#x88C5;python&#x4EE5;&#x5B89;&#x88C5;git-review">3.1 &#x9996;&#x5148;&#x5B89;&#x88C5;Python&#x4EE5;&#x5B89;&#x88C5;git-review</h5>
 <p>3.1.1 &#x767B;&#x5F55; <a href="https://www.python.org/downloads/" target="_blank">https://www.python.org/downloads/</a> &#x4E0B;&#x8F7D;python</p>
@@ -1772,18 +1772,17 @@ git config --global user.email &quot;zhukejin@zhukejin.com&quot; //&#x8FD9;&#x91
 <h5 id="32-&#x5728;-git-bash-&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x5B89;&#x88C5;-git-review&#xFF1A;">3.2 &#x5728; Git Bash &#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x5B89;&#x88C5; git-review&#xFF1A;</h5>
 <pre><code>pip install git-review
 </code></pre><h3 id="4-git-&#x57FA;&#x672C;&#x547D;&#x4EE4;&#x884C;">4. git &#x57FA;&#x672C;&#x547D;&#x4EE4;&#x884C;</h3>
-<pre><code>git clone ssh://git@gitlab.daotech.io:9022/code/traffic-web.git //&#x514B;&#x9686;&#x4ED3;&#x5E93;&#xFF0C;&#x540E;&#x9762;&#x662F;&#x4ED3;&#x5E93;&#x7684;ssh&#x5730;&#x5740;
-git init //git&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x5728;&#x65B0;&#x5EFA;&#x4ED3;&#x5E93;&#x65F6;&#x9700;&#x8981;
-&#x2460; git pull --rebase //&#x62C9;&#x53D6;&#x4ED3;&#x5E93;&#x4E2D;&#x6700;&#x65B0;&#x7684;&#x5185;&#x5BB9;
-&#x2461; git add .  
-&#x2462; git commit -m &apos;change name&apos; //&#x4FEE;&#x6539;&#x5185;&#x5BB9;&#x7684;&#x6807;&#x9898;
+<h5 id="41-&#x4ED3;&#x5E93;&#x514B;&#x9686;">4.1 &#x4ED3;&#x5E93;&#x514B;&#x9686;</h5>
+<pre><code>git clone &lt;url&gt;  //&#x514B;&#x9686;&#x4ED3;&#x5E93;&#xFF0C;&#x540E;&#x9762;&#x662F;&#x4ED3;&#x5E93;&#x7684;ssh&#x5730;&#x5740;
+</code></pre><h5 id="42-&#x6DFB;&#x52A0;gerrit&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;">4.2 &#x6DFB;&#x52A0;gerrit&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;</h5>
+<pre><code>git remote add gerrit &lt;url&gt;  //&#x62EC;&#x53F7;&#x91CC;&#x4E3A;&#x4ED3;&#x5E93;ssh&#x5730;&#x5740;
+</code></pre><h5 id="43-&#x63D0;&#x4EA4;&#x4FEE;&#x6539;&#x540E;&#x7684;&#x5185;&#x5BB9;">4.3 &#x63D0;&#x4EA4;&#x4FEE;&#x6539;&#x540E;&#x7684;&#x5185;&#x5BB9;</h5>
+<pre><code>git pull --rebase //&#x62C9;&#x53D6;&#x4ED3;&#x5E93;&#x4E2D;&#x6700;&#x65B0;&#x7684;&#x5185;&#x5BB9;
+git add .  
+git commit -m &apos;change name&apos; //&#x4FEE;&#x6539;&#x5185;&#x5BB9;&#x7684;&#x6807;&#x9898;
 git status //&#x67E5;&#x770B;&#x4ED3;&#x5E93;&#x72B6;&#x6001;
-git push -u origin master  //&#x7B2C;&#x4E00;&#x6B21;&#x4E0A;&#x4F20;&#x5230;gitlab
-git push //&#x4E0A;&#x4F20;&#x5230;gitlab
-git remote add gerrit &lt;xxxxx&gt;  //&#x6DFB;&#x52A0;gerrit&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#xFF0C;&#x62EC;&#x53F7;&#x91CC;&#x5199;&#x4ED3;&#x5E93;ssh&#x5730;&#x5740;
 git-review //&#x4E0A;&#x4F20;&#x5230;gerrit
-</code></pre><p>&#x6CE8;&#x610F;&#xFF0C;&#x7B2C;&#x4E00;&#x6B21;&#x4E0A;&#x4F20;&#x5230; gitlab &#x6216; gerrit &#x8981;&#x8FDB;&#x884C; &#x2460;&#x2461;&#x2462; &#x6B65;&#x3002;</p>
-
+</code></pre>
                                 
                                 </section>
                             
@@ -1826,7 +1825,7 @@ git-review //&#x4E0A;&#x4F20;&#x5230;gerrit
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"git的下载","level":"1.6.1","depth":2,"next":{"title":"第六章：redux","level":"1.7","depth":1,"path":"redux/index.md","ref":"./redux/index.md","articles":[{"title":"第一节：状态","level":"1.7.1","depth":2,"path":"redux/1-state.md","ref":"./redux/1-state.md","articles":[]},{"title":"第二节：内部 state 使用","level":"1.7.2","depth":2,"path":"redux/2-state.md","ref":"./redux/2-state.md","articles":[]},{"title":"第三节：不用 Redux 实现组件间通信","level":"1.7.3","depth":2,"path":"redux/3-state.md","ref":"./redux/3-state.md","articles":[]},{"title":"第四节：Redux Store","level":"1.7.4","depth":2,"path":"redux/4-state.md","ref":"./redux/4-state.md","articles":[]},{"title":"第五节：处理多类数据","level":"1.7.5","depth":2,"path":"redux/5-state.md","ref":"./redux/5-state.md","articles":[]},{"title":"第六节：js :拷贝","level":"1.7.6","depth":2,"path":"redux/6-state.md","ref":"./redux/6-state.md","articles":[]}]},"previous":{"title":"第五章：git在Windows中的使用总结","level":"1.6","depth":1,"path":"git/index.md","ref":"./git/index.md","articles":[{"title":"git的下载","level":"1.6.1","depth":2,"path":"git/install.md","ref":"./git/install.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"git/install.md","mtime":"2017-12-26T06:45:03.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-26T06:45:10.661Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"git的下载","level":"1.6.1","depth":2,"next":{"title":"第六章：redux","level":"1.7","depth":1,"path":"redux/index.md","ref":"./redux/index.md","articles":[{"title":"第一节：状态","level":"1.7.1","depth":2,"path":"redux/1-state.md","ref":"./redux/1-state.md","articles":[]},{"title":"第二节：内部 state 使用","level":"1.7.2","depth":2,"path":"redux/2-state.md","ref":"./redux/2-state.md","articles":[]},{"title":"第三节：不用 Redux 实现组件间通信","level":"1.7.3","depth":2,"path":"redux/3-state.md","ref":"./redux/3-state.md","articles":[]},{"title":"第四节：Redux Store","level":"1.7.4","depth":2,"path":"redux/4-state.md","ref":"./redux/4-state.md","articles":[]},{"title":"第五节：处理多类数据","level":"1.7.5","depth":2,"path":"redux/5-state.md","ref":"./redux/5-state.md","articles":[]},{"title":"第六节：js :拷贝","level":"1.7.6","depth":2,"path":"redux/6-state.md","ref":"./redux/6-state.md","articles":[]}]},"previous":{"title":"第五章：git在Windows中的使用总结","level":"1.6","depth":1,"path":"git/index.md","ref":"./git/index.md","articles":[{"title":"git的下载","level":"1.6.1","depth":2,"path":"git/install.md","ref":"./git/install.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"git/install.md","mtime":"2017-12-26T07:11:26.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-26T07:11:33.460Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
