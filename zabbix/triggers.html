@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>git的使用 · GitBook</title>
+        <title>zabbix触发器函数的使用 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../redux/" />
+    <link rel="next" href="../mongodb/index.md" />
     
     
-    <link rel="prev" href="./" />
+    <link rel="prev" href="abc.html" />
     
 
     </head>
@@ -659,9 +659,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="./">
+        <li class="chapter " data-level="1.6" data-path="../git/">
             
-                <a href="./">
+                <a href="../git/">
             
                     
                     第五章：git在Windows中的使用总结
@@ -673,9 +673,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.6.1" data-path="install.html">
+        <li class="chapter " data-level="1.6.1" data-path="../git/install.html">
             
-                <a href="install.html">
+                <a href="../git/install.html">
             
                     
                     git的使用
@@ -1598,7 +1598,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13" data-path="../zabbix/index.md">
+        <li class="chapter " data-level="1.13" data-path="index.md">
             
                 <span>
             
@@ -1612,9 +1612,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.13.1" data-path="../zabbix/abc.html">
+        <li class="chapter " data-level="1.13.1" data-path="abc.html">
             
-                <a href="../zabbix/abc.html">
+                <a href="abc.html">
             
                     
                     入门
@@ -1625,9 +1625,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13.2" data-path="../zabbix/triggers.html">
+        <li class="chapter active" data-level="1.13.2" data-path="triggers.html">
             
-                <a href="../zabbix/triggers.html">
+                <a href="triggers.html">
             
                     
                     zabbix触发器函数的使用
@@ -1731,7 +1731,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >git的使用</a>
+        <a href=".." >zabbix触发器函数的使用</a>
     </h1>
 </div>
 
@@ -1746,75 +1746,154 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="git-&#x5728;windows&#x7CFB;&#x7EDF;&#x4E2D;&#x7684;&#x4F7F;&#x7528;">git &#x5728;Windows&#x7CFB;&#x7EDF;&#x4E2D;&#x7684;&#x4F7F;&#x7528;</h2>
-<h3 id="1git&#x4E0B;&#x8F7D;&#x53CA;&#x5B89;&#x88C5;">1.git&#x4E0B;&#x8F7D;&#x53CA;&#x5B89;&#x88C5;</h3>
-<p>&#x5B98;&#x7F51; <a href="http://git-scm.com/downloads" target="_blank">http://git-scm.com/downloads</a> &#x4E0B;&#x8F7D;windows&#x7248;git</p>
-<p>&#x6253;&#x5F00;&#x5B89;&#x88C5;&#x5305;&#xFF0C;&#x5F00;&#x59CB;&#x5B89;&#x88C5;&#xFF0C;&#x5B89;&#x88C5;&#x8FC7;&#x7A0B;&#x5982;&#x4E0B;&#xFF1A;</p>
-<p><img src="../images/gitinstall1.jpeg" width="450px" align="center"></p>
-<p><img src="../images/gitinstall2.jpeg" width="450px" align="center"></p>
-<p><img src="../images/gitinstall3.jpeg" width="450px" align="center"></p>
-<p><img src="../images/gitinstall4.jpeg" width="450px" align="center"></p>
-<p><img src="../images/gitinstall5.jpeg" width="450px" align="center"></p>
-<p><img src="../images/gitinstall6.jpeg" width="450px" align="center"></p>
-<p><img src="../images/gitinstall7.jpeg" width="450px" align="center"></p>
-<p><img src="../images/gitinstall8.jpeg" width="450px" align="center"></p>
-<h3 id="2-git-bash-&#x914D;&#x7F6E;">2. git bash &#x914D;&#x7F6E;</h3>
-<p>&#x5148;&#x53BB;&#x81EA;&#x884C;&#x521B;&#x5EFA;gitlab&#x8D26;&#x53F7;&#xFF0C;&#x7136;&#x540E;&#x8FDB;&#x884C;&#x5982;&#x4E0B;&#x64CD;&#x4F5C;</p>
-<h5 id="21-&#x68C0;&#x67E5;ssh-keys&#x662F;&#x5426;&#x5B58;&#x5728;">2.1 &#x68C0;&#x67E5;SSH keys&#x662F;&#x5426;&#x5B58;&#x5728;</h5>
-<p>&#x8F93;&#x5165;&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x6587;&#x4EF6;id_rsa.pub &#x6216; id_dsa.pub&#xFF0C;&#x5219;&#x76F4;&#x63A5;&#x8FDB;&#x5165;&#x6B65;&#x9AA4;2.3&#x5C06;SSH key&#x6DFB;&#x52A0;&#x5230;GitHub&#x4E2D;&#xFF0C;&#x5426;&#x5219;&#x8FDB;&#x5165;&#x4E0B;&#x4E00;&#x6B65;&#x751F;&#x6210;SSH key</p>
-<pre><code>ls -al ~/.ssh
-</code></pre><h5 id="22-&#x751F;&#x6210;&#x65B0;&#x7684;-ssh-key">2.2 &#x751F;&#x6210;&#x65B0;&#x7684; SSH KEY</h5>
-<pre><code>ssh-keygen -t rsa -C &quot;123@qq.com&quot; //&#x8FD9;&#x91CC;&#x662F;gitlab&#x7684;&#x90AE;&#x7BB1;
-</code></pre><p>&#x8DEF;&#x5F84;&#x9009;&#x62E9;&#xFF1A;&#x4F7F;&#x7528;&#x8BE5;&#x547D;&#x4EE4;&#x4E4B;&#x540E;, &#x4F1A;&#x51FA;&#x73B0;&#x63D0;&#x793A;&#x9009;&#x62E9;ssh-key&#x751F;&#x6210;&#x8DEF;&#x5F84;,&#x9009;&#x62E9;&#x5728;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#xFF08;&#x9ED8;&#x8BA4;&#x4F1A;&#x5728;&#x76F8;&#x5E94;&#x8DEF;&#x5F84;&#x4E0B;&#xFF08;/your_home_path&#xFF09;&#x751F;&#x6210; id_rsa &#x548C; id_rsa.pub &#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#xFF09;</p>
-<p>&#x5BC6;&#x7801;&#x786E;&#x8BA4;&#xFF1A;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x4E0D;&#x4F7F;&#x7528;&#x5BC6;&#x7801;&#x8FDB;&#x884C;&#x767B;&#x5F55;, &#x7528;&#x5BC6;&#x7801;&#x592A;&#x9EBB;&#x70E6;&#xFF0C;&#x76F4;&#x63A5;&#x56DE;&#x8F66;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x4F7F;&#x7528;&#x5BC6;&#x7801;&#x767B;&#x5F55;&#xFF0C;&#x90A3;&#x5C31;&#x8F93;&#x5165;&#x5BC6;&#x7801;&#x4E4B;&#x540E;&#x56DE;&#x8F66;&#x3002;</p>
-<h5 id="23-&#x5C06;-ssh-key-&#x6DFB;&#x52A0;&#x5230;github&#x4E2D;">2.3 &#x5C06; ssh key &#x6DFB;&#x52A0;&#x5230;GitHub&#x4E2D;</h5>
-<p>&#x8F93;&#x5165;&#x4E0B;&#x9762;&#x547D;&#x4EE4;&#x53EF;&#x590D;&#x5236; id_rsa.pub &#x6587;&#x4EF6;&#x4E2D;&#x7684; SSH key&#xFF0C;&#x5C06;&#x8FD9;&#x4E9B;&#x590D;&#x5236;&#x5230; Gitlab &#x548C; gerrit &#x7684; Add SSH key &#x9875;&#x9762;&#x5373;&#x53EF;&#x3002;</p>
-<pre><code>clip &lt; ~/.ssh/id_rsa.pub
-</code></pre><h5 id="23-&#x914D;&#x7F6E;&#x4E2A;&#x4EBA;&#x4FE1;&#x606F;&#xFF0C;&#x952E;&#x5165;&#x6307;&#x4EE4;">2.3 &#x914D;&#x7F6E;&#x4E2A;&#x4EBA;&#x4FE1;&#x606F;&#xFF0C;&#x952E;&#x5165;&#x6307;&#x4EE4;</h5>
-<pre><code>git config --global user.name &quot;primo&quot; //&#x8FD9;&#x91CC;&#x662F;&#x4F7F;&#x7528;gitlab&#x7684;&#x7528;&#x6237;&#x540D;
-git config --global user.email &quot;123@qq.com&quot; //&#x8FD9;&#x91CC;&#x662F;gitlab&#x7684;&#x90AE;&#x7BB1;
-</code></pre><h3 id="3-git-review-&#x7684;&#x5B89;&#x88C5;&#x53CA;&#x4F7F;&#x7528;">3. git-review &#x7684;&#x5B89;&#x88C5;&#x53CA;&#x4F7F;&#x7528;</h3>
-<h5 id="31-&#x9996;&#x5148;&#x5B89;&#x88C5;python&#x4EE5;&#x5B89;&#x88C5;git-review">3.1 &#x9996;&#x5148;&#x5B89;&#x88C5;Python&#x4EE5;&#x5B89;&#x88C5;git-review</h5>
-<p>3.1.1 &#x767B;&#x5F55; <a href="https://www.python.org/downloads/" target="_blank">https://www.python.org/downloads/</a> &#x4E0B;&#x8F7D;python</p>
-<p>3.1.2 &#x5B89;&#x88C5;&#x65F6;&#x4FDD;&#x6301;Python&#x5B89;&#x88C5;&#x5728;&#x9ED8;&#x8BA4;&#x76EE;&#x5F55;&#xFF08;&#x5982;C&#xFF1A;\ Python27&#xFF09;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5B89;&#x88C5;&#x5728;&#x4EFB;&#x4F55;&#x5176;&#x4ED6;&#x76EE;&#x5F55;&#x3002;</p>
-<p>3.1.3 windows&#x73AF;&#x5883;&#x4E0B;&#x9762;&#x914D;&#x7F6E;pip&#x73AF;&#x5883;&#x53D8;&#x91CF;:&#x524D;&#x63D0;&#x662F;&#x8BBE;&#x7F6E;python&#x811A;&#x672C;&#x76EE;&#x5F55;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x5047;&#x8BBE;python&#x7684;&#x5B89;&#x88C5;&#x8DEF;&#x5F84;&#x4E3A;c:\python2.6&#xFF0C;&#x5219;&#x4FEE;&#x6539;&#x6211;&#x7684;&#x7535;&#x8111;-&gt;&#x5C5E;&#x6027;-&gt;&#x9AD8;&#x7EA7;-&gt;&#x73AF;&#x5883;&#x53D8;&#x91CF;-&gt;&#x7CFB;&#x7EDF;&#x53D8;&#x91CF;&#xFF0C;&#x6DFB;&#x52A0;</p>
-<pre><code>&#x53D8;&#x91CF;&#x540D;: python //&#x53D8;&#x91CF;&#x540D;&#x53EF;&#x968F;&#x610F;
-&#x53D8;&#x91CF;&#x503C;: c:\python2.6  //&#x4F7F;&#x7528;&#x6D4F;&#x89C8;&#x6587;&#x4EF6;&#x7684;&#x65B9;&#x5F0F;&#x627E;&#x5230;&#x5B89;&#x88C5;&#x597D;&#x7684;python&#x4E0D;&#x5BB9;&#x6613;&#x5199;&#x9519;&#x8DEF;&#x5F84;
-</code></pre><p>&#x5728;&#x7CFB;&#x7EDF;&#x53D8;&#x91CF;&#x4E2D;&#x7684;Path&#x6DFB;&#x52A0;&#x73AF;&#x5883;&#x53D8;&#x91CF;</p>
-<pre><code>%python%  //&#x5373;&#x53D8;&#x91CF;&#x540D;
-</code></pre><p>&#x5BF9;&#x4E8E;2.7&#x53CA;&#x4EE5;&#x4E0A;&#x7248;&#x672C;&#xFF0C;python &#x5C06;&#x81EA;&#x52A8;&#x5B89;&#x88C5; pip&#x3002;</p>
-<h5 id="32-&#x5728;-git-bash-&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x5B89;&#x88C5;-git-review&#xFF1A;">3.2 &#x5728; Git Bash &#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x5B89;&#x88C5; git-review&#xFF1A;</h5>
-<pre><code>pip install git-review
-</code></pre><h3 id="4-gitlab-&#x4E2D;&#x521B;&#x5EFA;&#x9879;&#x76EE;">4. gitlab &#x4E2D;&#x521B;&#x5EFA;&#x9879;&#x76EE;</h3>
-<p>&#x4E3A;&#x4FBF;&#x4E8E;&#x9879;&#x76EE;&#x7684;&#x5206;&#x7EC4;&#x7BA1;&#x7406;&#xFF0C;&#x8981;&#x5148;&#x521B;&#x5EFA; Group &#xFF0C;&#x70B9;&#x51FB; <strong>New Group</strong></p>
-<p><img src="../images/gitlab1.png" align="center"></p>
-<p>&#x586B;&#x5199; Group &#x540D;&#x53CA; <strong>Description</strong> &#xFF0C;&#x7136;&#x540E;&#x70B9;&#x51FB; <strong>Create group</strong></p>
-<p><img src="../images/gitlab2.png" align="center"></p>
-<p>&#x521B;&#x5EFA;&#x5B8C;&#x6210;&#x5E76;&#x8FDB;&#x5165;&#x65B0; Group ,&#x70B9;&#x51FB; <strong>New project</strong> &#x6765;&#x521B;&#x5EFA;&#x65B0;&#x9879;&#x76EE;</p>
-<p><img src="../images/gitlab3.png" align="center"></p>
-<p>&#x586B;&#x5199; <strong>Project name</strong> &#x53CA; <strong>Project description</strong> ,&#x70B9;&#x51FB; <strong>Create project</strong></p>
-<p><img src="../images/gitlab4.png" align="center"></p>
-<p>&#x521B;&#x5EFA;&#x5B8C;&#x6210;&#x7684;&#x9879;&#x76EE;&#x5982;&#x4E0B;&#x56FE;&#xFF0C;&#x70B9;&#x51FB;&#x590D;&#x5236;&#x56FE;&#x6807;&#x5373;&#x53EF;&#x590D;&#x5236;&#x9879;&#x76EE;&#x7684;ssh&#x5730;&#x5740;</p>
-<p><img src="../images/gitlab5.png" align="center"></p>
-<h3 id="5-gerrit-&#x4E2D;&#x521B;&#x5EFA;&#x9879;&#x76EE;">5. gerrit &#x4E2D;&#x521B;&#x5EFA;&#x9879;&#x76EE;</h3>
-<p>gerrit&#x4E2D;&#x70B9;&#x51FB; <strong>Projects</strong> --&gt; <strong>Create New Project</strong> &#x6765;&#x521B;&#x5EFA;&#x9879;&#x76EE;</p>
-<p><img src="../images/gerrit1.png" align="center"></p>
-<p>&#x586B;&#x5199; <strong>Project name</strong> ( gerrit &#x4E2D; Project name &#x987B;&#x4E0E;gitlab&#x4E2D;&#x9879;&#x76EE;&#x540D;&#x76F8;&#x540C;),&#x9009;&#x62E9; <strong>Rights Inherit From</strong>,&#x70B9;&#x51FB; <strong>Create Project</strong></p>
-<p><img src="../images/gerrit2.png" align="center"></p>
-<p>&#x521B;&#x5EFA;&#x5B8C;&#x6210;&#x7684;&#x9879;&#x76EE;&#x5982;&#x4E0B;&#x56FE;</p>
-<p><img src="../images/gerrit3.png" align="center"></p>
-<h3 id="6-git-&#x57FA;&#x672C;&#x547D;&#x4EE4;&#x884C;">6. git &#x57FA;&#x672C;&#x547D;&#x4EE4;&#x884C;</h3>
-<h5 id="61-&#x4ED3;&#x5E93;&#x514B;&#x9686;">6.1 &#x4ED3;&#x5E93;&#x514B;&#x9686;</h5>
-<pre><code>git clone &lt;url&gt;  //&#x4ED3;&#x5E93;&#x7684;ssh&#x5730;&#x5740;
-</code></pre><h5 id="62-&#x6DFB;&#x52A0;gerrit&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;">6.2 &#x6DFB;&#x52A0;gerrit&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;</h5>
-<pre><code>git remote add gerrit &lt;url&gt;  //&#x4ED3;&#x5E93;ssh&#x5730;&#x5740;
-</code></pre><h5 id="63-&#x63D0;&#x4EA4;&#x4FEE;&#x6539;&#x540E;&#x7684;&#x5185;&#x5BB9;">6.3 &#x63D0;&#x4EA4;&#x4FEE;&#x6539;&#x540E;&#x7684;&#x5185;&#x5BB9;</h5>
-<pre><code>git pull --rebase //&#x62C9;&#x53D6;&#x4ED3;&#x5E93;&#x4E2D;&#x6700;&#x65B0;&#x7684;&#x5185;&#x5BB9;
-git add .  
-git commit -m &apos;change name&apos; //&#x4FEE;&#x6539;&#x5185;&#x5BB9;&#x7684;&#x6807;&#x9898;
-git status //&#x67E5;&#x770B;&#x4ED3;&#x5E93;&#x72B6;&#x6001;
-git-review //&#x4E0A;&#x4F20;&#x5230;gerrit
-</code></pre>
+                                <h3 id="zabbix&#x89E6;&#x53D1;&#x5668;&#x51FD;&#x6570;&#x7684;&#x4F7F;&#x7528;">zabbix&#x89E6;&#x53D1;&#x5668;&#x51FD;&#x6570;&#x7684;&#x4F7F;&#x7528;</h3>
+<h5 id="zabbix&#x89E6;&#x53D1;&#x5668;&#x65B9;&#x6CD5;last">zabbix&#x89E6;&#x53D1;&#x5668;&#x65B9;&#x6CD5;last</h5>
+<p>&#x7528;&#x4E8E;&#x83B7;&#x53D6;item&#x6700;&#x65B0;&#x503C;&#x6216;&#x8005;&#x7B2C;&#x51E0;&#x4E2A;&#x503C;&#x4EE5;&#x53CA;&#x67D0;&#x4E2A;&#x65F6;&#x95F4;&#x7684;&#x54EA;&#x4E00;&#x4E2A;&#x503C;</p>
+<p>zabbix&#x89E6;&#x53D1;&#x5668;&#x65B9;&#x6CD5;last - &#x8BED;&#x6CD5;:</p>
+<pre><code>last (sec|#num,&lt;time_shift&gt;)
+</code></pre><p>sec&#xFF1A;&#x6682;&#x65F6;&#x6CA1;&#x7528;</p>
+<p><code>#num&#xFF1A;&#x5012;&#x6570;&#x7B2C;&#x51E0;&#x4E2A;&#xFF0C;&#x4F8B;&#x5982;#1&#xFF0C;#2&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;#1&#xFF0C;&#x5373;last()&#x4E0E;last(#1)&#x662F;&#x4E00;&#x6837;&#x7684;</code></p>
+<p><time_shift>&#xFF1A;&#x65F6;&#x95F4;&#x504F;&#x79FB;&#xFF0C;1d&#x8868;&#x793A;&#x6628;&#x5929;&#x7684;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#xFF0C;1h&#x8868;&#x793A;&#x4E00;&#x5C0F;&#x65F6;&#x524D;&#x7684;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;</time_shift></p>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code>{www-ttlsa-com:system.cpu.load[percpu,avg1].last(,1d)}&gt;0.7  //&#x6628;&#x65E5;&#x6B64;&#x65F6;CPU&#x8D1F;&#x8F7D;&#x5927;&#x4E8E;0.7
+</code></pre><h5 id="abschange">abschange</h5>
+<p>&#x652F;&#x6301;&#x7C7B;&#x578B;&#xFF1A;float,int,str,text,log</p>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x8FD4;&#x56DE;&#x6700;&#x540E;&#x548C;&#x6700;&#x524D;&#x4E4B;&#x95F4;&#x7684;&#x5DEE;&#x503C;&#x7684;&#x7EDD;&#x5BF9;&#x503C;&#xFF0C;&#x5BF9;&#x4E8E;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#xFF1A;0&#x8868;&#x793A;&#x76F8;&#x7B49;&#xFF0C;1&#x8868;&#x793A;&#x4E0D;&#x540C;</p>
+<h5 id="avg">avg</h5>
+<p>&#x53C2;&#x6570;&#xFF1A;&#x79D2;&#x6216;#num</p>
+<p>&#x652F;&#x6301;&#x7C7B;&#x578B;&#xFF1A;float,int</p>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x8FD4;&#x56DE;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x7684;&#x5E73;&#x5747;&#x503C;</p>
+<p>&#x4E3E;&#x4F8B;&#xFF1A;</p>
+<p>avg(5):&#x6700;&#x540E;5&#x79D2;&#x7684;&#x5E73;&#x5747;&#x503C;</p>
+<p>avg(#5&#xFF09;&#xFF1A;&#x8868;&#x793A;&#x6700;&#x8FD1;5&#x6B21;&#x5F97;&#x5230;&#x503C;&#x7684;&#x5E73;&#x5747;&#x503C;</p>
+<p>avg(3600,86400&#xFF09;&#xFF1A;&#x8868;&#x793A;&#x4E00;&#x5929;&#x524D;&#x7684;&#x4E00;&#x4E2A;&#x5C0F;&#x65F6;&#x7684;&#x5E73;&#x5747;&#x503C;</p>
+<p>&#x5982;&#x679C;&#x4EC5;&#x6709;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x8868;&#x793A;&#x6307;&#x5B9A;&#x65F6;&#x95F4;&#x7684;&#x5E73;&#x5747;&#x503C;&#xFF0C;&#x4ECE;&#x73B0;&#x5728;&#x5F00;&#x59CB;&#x7B97;&#x8D77;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x8868;&#x793A;&#x6F02;&#x79FB;&#xFF0C;&#x4ECE;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x524D;&#x5F00;&#x59CB;&#x7B97;&#x65F6;&#x95F4;&#xFF0C;</p>
+<p><code>#n</code>&#x8868;&#x793A;&#x6700;&#x8FD1;n&#x6B21;&#x7684;&#x503C;</p>
+<p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<p>&#x89E6;&#x53D1;&#x5668;&#x540D;&#x79F0;&#xFF1A;Comparing average load today with average load of the same time yesterday (&#x4F7F;&#x7528; time_shift &#x65F6;&#x95F4;&#x504F;&#x79FB;&#x91CF;&#x53C2;&#x6570;).
+{server:system.cpu.load.avg(1h)}/{server:system.cpu.load.avg(1h,1d)}&gt;2
+This expression will fire if the average load of the last hour tops the average load of the same hour yesterday more than two times.</p>
+<h5 id="max">max</h5>
+<p>&#x53C2;&#x6570;:&#x79D2;&#x6216;#num</p>
+<p>&#x652F;&#x6301;&#x503C;&#x7C7B;&#x578B;:float,int</p>
+<p>&#x63CF;&#x8FF0;:&#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#x7684;&#x6700;&#x5927;&#x503C;.&#x65F6;&#x95F4;&#x95F4;&#x9694;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x662F;&#x79D2;&#x6216;&#x6536;&#x96C6;&#x503C;&#x7684;&#x6570;&#x76EE;(&#x524D;&#x7F00;&#x4E3A;#).&#x4ECE;Zabbix1.8.2&#x5F00;&#x59CB;&#xFF0C;&#x51FD;&#x6570;&#x652F;&#x6301;&#x7B2C;&#x4E8C;&#x4E2A;&#x53EF;&#x9009;&#x53C2;&#x6570;time_shift&#xFF0C;&#x53EF;&#x4EE5;&#x67E5;&#x770B;avg()&#x51FD;&#x6570;&#x83B7;&#x53D6;&#x5B83;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;.</p>
+<p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<p>&#x89E6;&#x53D1;&#x5668;&#x540D;&#x79F0;&#xFF1A;Free disk space is too low Problem: &#x6700;&#x8FD1;5&#x5206;&#x949F;&#x5185;&#x5269;&#x4F59;&#x78C1;&#x76D8;&#x7A7A;&#x95F4;&#x5C0F;&#x4E8E;10GB</p>
+<p>({TRIGGER.VALUE}=0&amp;{server:vfs.fs.size[/,free].max(5m)}&lt;10G)</p>
+<h5 id="min">min</h5>
+<p>&#x53C2;&#x6570;:&#x79D2;&#x6216;#num</p>
+<p>&#x652F;&#x6301;&#x503C;&#x7C7B;&#x578B;:float,int</p>
+<p>&#x63CF;&#x8FF0;:&#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#x7684;&#x6700;&#x5C0F;&#x503C;.&#x65F6;&#x95F4;&#x95F4;&#x9694;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x662F;&#x79D2;&#x6216;&#x6536;&#x96C6;&#x503C;&#x7684;&#x6570;&#x76EE;(&#x524D;&#x7F00;&#x4E3A;#).&#x4ECE;Zabbix1.8.2&#x5F00;&#x59CB;&#xFF0C;&#x51FD;&#x6570;&#x652F;&#x6301;&#x7B2C;&#x4E8C;&#x4E2A;&#x53EF;&#x9009;&#x53C2;&#x6570;time_shift&#xFF0C;&#x53EF;&#x4EE5;&#x67E5;&#x770B;avg()&#x51FD;&#x6570;&#x83B7;&#x53D6;&#x5B83;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;.</p>
+<p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<p>&#x89E6;&#x53D1;&#x5668;&#x540D;&#x79F0;&#xFF1A;Free disk space is too low Problem:&#x6700;&#x8FD1;10&#x5206;&#x949F;&#x5185;&#x78C1;&#x76D8;&#x7A7A;&#x95F4;&#x5927;&#x4E8E;40GB</p>
+<p>({TRIGGER.VALUE}=1&amp;{server:vfs.fs.size[/,free].min(10m)}&lt;40G)</p>
+<h5 id="nodata">nodata</h5>
+<p>&#x53C2;&#x6570;:&#x79D2;</p>
+<p>&#x652F;&#x6301;&#x503C;&#x7C7B;&#x578B;:any</p>
+<p>&#x63CF;&#x8FF0;:&#x5F53;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;1&#x8868;&#x793A;&#x6307;&#x5B9A;&#x7684;&#x95F4;&#x9694;(&#x95F4;&#x9694;&#x4E0D;&#x5E94;&#x5C0F;&#x4E8E;30&#x79D2;)&#x6CA1;&#x6709;&#x63A5;&#x6536;&#x5230;&#x6570;&#x636E;,0&#x8868;&#x793A;&#x5176;&#x4ED6;.
+&#x793A;&#x4F8B;&#xFF1A;</p>
+<p>&#x89E6;&#x53D1;&#x5668;&#x540D;&#x79F0;&#xFF1A;No heartbeats within last 3 minutes &#x4F7F;&#x7528;&#x51FD;&#x6570; nodata():
+{zabbix.zabbix.com:tick.nodata(3m)}=1</p>
+<h5 id="change">change</h5>
+<p>&#x53C2;&#x6570;&#xFF1A;&#x5FFD;&#x7565;</p>
+<p>&#x652F;&#x6301;&#x7C7B;&#x578B;&#xFF1A;float,int,str,text,log</p>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x8FD4;&#x56DE;&#x6700;&#x8FD1;&#x83B7;&#x5F97;&#x503C;&#x4E0E;&#x4E4B;&#x524D;&#x83B7;&#x5F97;&#x503C;&#x7684;&#x5DEE;&#x503C;&#xFF0C;&#x5BF9;&#x4E8E;&#x5B57;&#x7B26;&#x4E32;0&#x8868;&#x793A;&#x76F8;&#x7B49;&#xFF0C;1&#x8868;&#x793A;&#x4E0D;&#x540C;</p>
+<p>&#x4E3E;&#x4F8B;&#xFF1A;
+change(0)&gt;n:&#x5FFD;&#x7565;&#x53C2;&#x6570;&#x4E00;&#x822C;&#x8F93;&#x5165;0&#xFF0C;&#x8868;&#x793A;&#x6700;&#x8FD1;&#x5F97;&#x5230;&#x7684;&#x503C;&#x4E0E;&#x4E0A;&#x4E00;&#x4E2A;&#x503C;&#x7684;&#x5DEE;&#x503C;&#x5927;&#x4E8E;n</p>
+<h5 id="count">count</h5>
+<p>&#x53C2;&#x6570;&#xFF1A;&#x79D2;&#x6216;#num</p>
+<p>&#x652F;&#x6301;&#x7C7B;&#x578B;&#xFF1A;float,int,str,text,log</p>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#x5185;&#x6570;&#x503C;&#x7684;&#x7EDF;&#x8BA1;&#xFF0C;</p>
+<p>&#x4E3E;&#x4F8B;&#xFF1A;</p>
+<p>count(600)&#x6700;&#x8FD1;10&#x5206;&#x949F;&#x5F97;&#x5230;&#x503C;&#x7684;&#x4E2A;&#x6570;</p>
+<p>count(600,12)&#x6700;&#x8FD1;10&#x5206;&#x949F;&#x5F97;&#x5230;&#x503C;&#x7684;&#x4E2A;&#x6570;&#x7B49;&#x4E8E;12</p>
+<p>count(600,12,&quot;gt&quot;)&#x6700;&#x8FD1;10&#x5206;&#x949F;&#x5F97;&#x5230;&#x503C;&#x7684;&#x4E2A;&#x6570;&#x5927;&#x4E8E;12</p>
+<p>count(#10,12,&quot;gt&quot;)&#x6700;&#x8FD1;10&#x4E2A;&#x503C;&#x4E2D;&#xFF0C;&#x503C;&#x5927;&#x4E8E;12&#x7684;&#x4E2A;&#x6570;</p>
+<p>count(600,12,&quot;gt&quot;,86400)24&#x5C0F;&#x65F6;&#x4E4B;&#x524D;&#x7684;10&#x5206;&#x949F;&#x5185;&#x503C;&#x5927;&#x4E8E;12&#x7684;&#x4E2A;&#x6570;</p>
+<p>count(600,6/7,&quot;band&quot;)-thenumberofvaluesforlast10minuteshaving&apos;110&apos;(inbinary)inthe3leastsignificantbits.</p>
+<p>count(600,,,86400)24&#x5C0F;&#x65F6;&#x4E4B;&#x524D;&#x7684;10&#x5206;&#x949F;&#x6570;&#x636E;&#x503C;&#x7684;&#x4E2A;&#x6570;</p>
+<p>&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;&#x6307;&#x5B9A;&#x65F6;&#x95F4;&#x6BB5;</p>
+<p>&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;&#x6837;&#x672C;&#x6570;&#x636E;</p>
+<p>&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;&#x64CD;&#x4F5C;&#x53C2;&#x6570;</p>
+<p>&#x7B2C;&#x56DB;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;&#x6F02;&#x79FB;&#x53C2;&#x6570;</p>
+<p><code>#</code>&#x652F;&#x6301;&#x7684;&#x64CD;&#x4F5C;&#x7C7B;&#x578B;
+eq: &#x76F8;&#x7B49;
+ne: &#x4E0D;&#x76F8;&#x7B49;
+gt: &#x5927;&#x4E8E;
+ge: &#x5927;&#x4E8E;&#x7B49;&#x4E8E;
+lt: &#x5C0F;&#x4E8E;
+le: &#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;
+like: &#x5185;&#x5BB9;&#x5339;&#x914D;</p>
+<h5 id="date">date</h5>
+<p>&#x53C2;&#x6570;&#xFF1A;&#x5FFD;&#x7565;</p>
+<p>&#x652F;&#x6301;&#x7C7B;&#x578B;&#xFF1A;any</p>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x683C;&#x5F0F;YYYYMMDD</p>
+<h5 id="dayofmonth">dayofmonth</h5>
+<p>&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x662F;&#x672C;&#x6708;&#x7684;&#x7B2C;&#x51E0;&#x5929;</p>
+<h5 id="dayofweek">dayofweek</h5>
+<p>&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x662F;&#x672C;&#x5468;&#x7684;&#x7B2C;&#x51E0;&#x5929;</p>
+<h5 id="delta">delta</h5>
+<p>&#x53C2;&#x6570;&#xFF1A;&#x79D2;&#x6216;#num</p>
+<p>&#x652F;&#x6301;&#x7C7B;&#x578B;&#xFF1A;float&#xFF0C;int</p>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x8FD4;&#x56DE;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#x5185;&#x7684;&#x6700;&#x5927;&#x503C;&#x4E0E;&#x6700;&#x5C0F;&#x503C;&#x7684;&#x5DEE;&#x503C;</p>
+<h5 id="diff">diff</h5>
+<p>&#x53C2;&#x6570;:&#x5FFD;&#x7565;</p>
+<p>&#x652F;&#x6301;&#x503C;&#x7C7B;&#x578B;:float,int,str,text,log</p>
+<p>&#x4F5C;&#x7528;:&#x8FD4;&#x56DE;&#x503C;&#x4E3A;1&#x8868;&#x793A;&#x6700;&#x8FD1;&#x7684;&#x503C;&#x4E0E;&#x4E4B;&#x524D;&#x7684;&#x503C;&#x4E0D;&#x540C;&#xFF0C;0&#x4E3A;&#x5176;&#x4ED6;&#x60C5;&#x51B5;
+&#x793A;&#x4F8B;&#xFF1A;
+&#x89E6;&#x53D1;&#x5668;&#x540D;&#x79F0;&#xFF1A;/etc/passwd has been changed &#x4F7F;&#x7528;&#x51FD;&#x6570; diff():
+{www.zabbix.com:vfs.file.cksum[/etc/passwd].diff(0)}&gt;0</p>
+<h5 id="fuzzytime">fuzzytime</h5>
+<p>&#x53C2;&#x6570;:&#x79D2;</p>
+<p>&#x652F;&#x6301;&#x503C;&#x7C7B;&#x578B;:float,int</p>
+<p>&#x4F5C;&#x7528;:&#x8FD4;&#x56DE;&#x503C;&#x4E3A;1&#x8868;&#x793A;&#x76D1;&#x63A7;&#x9879;&#x503C;&#x7684;&#x65F6;&#x95F4;&#x6233;&#x4E0E;ZabbixServer&#x7684;&#x65F6;&#x95F4;&#x591A;N&#x79D2;,0&#x4E3A;&#x5176;&#x4ED6;.&#x5E38;&#x4F7F;&#x7528;system.localtime&#x6765;&#x68C0;&#x67E5;&#x672C;&#x5730;&#x65F6;&#x95F4;&#x662F;&#x5426;&#x4E0E;Zabbixserver&#x65F6;&#x95F4;&#x76F8;&#x540C;.
+&#x793A;&#x4F8B;&#xFF1A;
+&#x89E6;&#x53D1;&#x5668;&#x540D;&#x79F0;&#xFF1A;Check if client local time is in sync with Zabbix server time &#x4F7F;&#x7528;&#x51FD;&#x6570; fuzzytime():
+{MySQL_DB:system.localtime.fuzzytime(10)}=0</p>
+<p>&#x4E3B;&#x673A;MySQL_DB&#x5F53;&#x524D;&#x670D;&#x52A1;&#x5668;&#x65F6;&#x95F4;&#x5982;&#x679C;&#x4E0E;zabbix server&#x4E4B;&#x95F4;&#x7684;&#x65F6;&#x95F4;&#x76F8;&#x5DEE;10&#x79D2;&#x4EE5;&#x4E0A;&#xFF0C;&#x8868;&#x8FBE;&#x5F0F;&#x8FD4;&#x56DE;true&#xFF0C;&#x89E6;&#x53D1;&#x5668;&#x72B6;&#x6001;&#x6539;&#x53D8;&#x4E3A;&#x201C;problem&#x201D;</p>
+<h5 id="last">last</h5>
+<p>&#x53C2;&#x6570;:&#x79D2;&#x6216;#num</p>
+<p>&#x652F;&#x6301;&#x503C;&#x7C7B;&#x578B;:float,int,str,text,log</p>
+<p>&#x4F5C;&#x7528;:&#x6700;&#x8FD1;&#x7684;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x4E3A;&#x79D2;&#xFF0C;&#x5219;&#x5FFD;&#x7565;&#xFF0C;#num&#x8868;&#x793A;&#x6700;&#x8FD1;&#x7B2C;N&#x4E2A;&#x503C;&#xFF0C;&#x8BF7;&#x6CE8;&#x610F;&#x5F53;&#x524D;&#x7684;#num&#x548C;&#x5176;&#x4ED6;&#x4E00;&#x4E9B;&#x51FD;&#x6570;&#x7684;#num&#x7684;&#x610F;&#x601D;&#x662F;&#x4E0D;&#x540C;&#x7684;</p>
+<p>&#x4F8B;&#x5B50;:</p>
+<p>last(0)&#x7B49;&#x4EF7;&#x4E8E;last(#1)last(#3)&#x8868;&#x793A;&#x6700;&#x8FD1;<strong>&#x7B2C;</strong>3&#x4E2A;&#x503C;(&#x5E76;&#x4E0D;&#x662F;&#x6700;&#x8FD1;&#x7684;&#x4E09;&#x4E2A;&#x503C;)</p>
+<p>&#x672C;&#x51FD;&#x6570;&#x4E5F;&#x652F;&#x6301;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;<strong>time_shift</strong>&#xFF0C;&#x4F8B;&#x5982;</p>
+<p>last(0,86400)&#x8FD4;&#x56DE;&#x4E00;&#x5929;&#x524D;&#x7684;&#x6700;&#x8FD1;&#x7684;&#x503C;</p>
+<p>&#x5982;&#x679C;&#x5728;history&#x4E2D;&#x540C;&#x4E00;&#x79D2;&#x4E2D;&#x6709;&#x591A;&#x4E2A;&#x503C;&#x5B58;&#x5728;&#xFF0C;Zabbix&#x4E0D;&#x4FDD;&#x8BC1;&#x503C;&#x7684;&#x7CBE;&#x786E;&#x987A;&#x5E8F;</p>
+<p><code>#num</code>&#x4ECE;Zabbix1.6.2&#x8D77;&#x5F00;&#x59CB;&#x652F;&#x6301;,timeshift&#x4ECE;1.8.2&#x5176;&#x5F00;&#x59CB;&#x652F;&#x6301;,&#x53EF;&#x4EE5;&#x67E5;&#x8BE2;avg()&#x51FD;&#x6570;&#x83B7;&#x53D6;&#x5B83;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;</p>
+<h5 id="logeventid">logeventid</h5>
+<p>&#x53C2;&#x6570;:string</p>
+<p>&#x652F;&#x6301;&#x503C;&#x7C7B;&#x578B;:log</p>
+<p>&#x63CF;&#x8FF0;:&#x68C0;&#x67E5;&#x6700;&#x8FD1;&#x7684;&#x65E5;&#x5FD7;&#x6761;&#x76EE;&#x7684;EventID&#x662F;&#x5426;&#x5339;&#x914D;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;.&#x53C2;&#x6570;&#x4E3A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;,POSIX&#x6269;&#x5C55;&#x6837;&#x5F0F;.&#x5F53;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;0&#x65F6;&#x8868;&#x793A;&#x4E0D;&#x5339;&#x914D;&#xFF0C;1&#x8868;&#x793A;&#x5339;&#x914D;&#x3002;&#x8BE5;&#x51FD;&#x6570;&#x4ECE;Zabbix1.8.5&#x8D77;&#x5F00;&#x59CB;&#x652F;&#x6301;.</p>
+<h5 id="logseverity">logseverity</h5>
+<p>&#x53C2;&#x6570;:&#x5FFD;&#x7565;</p>
+<p>&#x652F;&#x6301;&#x503C;&#x7C7B;&#x578B;:log</p>
+<p>&#x63CF;&#x8FF0;:&#x8FD4;&#x56DE;&#x6700;&#x8FD1;&#x65E5;&#x5FD7;&#x6761;&#x76EE;&#x7684;&#x65E5;&#x5FD7;&#x7B49;&#x7EA7;(logseverity).&#x5F53;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;0&#x65F6;&#x8868;&#x793A;&#x9ED8;&#x8BA4;&#x7B49;&#x7EA7;&#xFF0C;N&#x4E3A;&#x5177;&#x4F53;&#x5BF9;&#x5E94;&#x7B49;&#x7EA7;(&#x6574;&#x6570;&#xFF0C;&#x5E38;&#x7528;&#x4E8E;Windowseventlogs).Zabbix&#x65E5;&#x5FD7;&#x7B49;&#x7EA7;&#x6765;&#x6E90;&#x4E8E;Windowseventlog&#x7684;Information&#x5217;.</p>
+<h5 id="logsource">logsource</h5>
+<p>&#x53C2;&#x6570;:string</p>
+<p>&#x652F;&#x6301;&#x503C;&#x7C7B;&#x578B;:log</p>
+<p>&#x63CF;&#x8FF0;:&#x68C0;&#x67E5;&#x6700;&#x8FD1;&#x7684;&#x65E5;&#x5FD7;&#x6761;&#x76EE;&#x662F;&#x5426;&#x5339;&#x914D;&#x53C2;&#x6570;&#x7684;&#x65E5;&#x5FD7;&#x6765;&#x6E90;.&#x5F53;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;0&#x65F6;&#x8868;&#x793A;&#x4E0D;&#x5339;&#x914D;&#xFF0C;1&#x8868;&#x793A;&#x5339;&#x914D;&#x3002;&#x901A;&#x573A;&#x7528;&#x4E8E;Windowseventlogs&#x76D1;&#x63A7;.&#x4F8B;&#x5982;logsource[&quot;VMWareServer&quot;]</p>
+<h5 id="now">now</h5>
+<p>&#x53C2;&#x6570;:&#x5FFD;&#x7565;</p>
+<p>&#x652F;&#x6301;&#x503C;&#x7C7B;&#x578B;:any</p>
+<p>&#x63CF;&#x8FF0;:&#x8FD4;&#x56DE;&#x8DDD;&#x79BB;Epoch(1970&#x5E74;1&#x6708;1&#x65E5;00:00:00UTC)&#x65F6;&#x95F4;&#x7684;&#x79D2;&#x6570;</p>
+<h5 id="prev">prev</h5>
+<p>&#x53C2;&#x6570;:&#x5FFD;&#x7565;</p>
+<p>&#x652F;&#x6301;&#x503C;&#x7C7B;&#x578B;:float,int,str,text,log</p>
+<p>&#x63CF;&#x8FF0;:&#x8FD4;&#x56DE;&#x4E4B;&#x524D;&#x7684;&#x503C;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;last(#2)</p>
+<h5 id="regexp">regexp</h5>
+<p>&#x53C2;&#x6570;:&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;string,&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x79D2;&#x6216;#num</p>
+<p>&#x652F;&#x6301;&#x503C;&#x7C7B;&#x578B;:str,log,text</p>
+<p>&#x63CF;&#x8FF0;:&#x68C0;&#x67E5;&#x6700;&#x8FD1;&#x7684;&#x503C;&#x662F;&#x5426;&#x5339;&#x914D;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x53C2;&#x6570;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4E3A;POSIX&#x6269;&#x5C55;&#x6837;&#x5F0F;,&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x79D2;&#x6570;&#x6216;&#x6536;&#x96C6;&#x503C;&#x7684;&#x6570;&#x76EE;&#xFF0C;&#x5C06;&#x4F1A;&#x5904;&#x7406;&#x591A;&#x4E2A;&#x503C;.&#x672C;&#x51FD;&#x6570;&#x533A;&#x5206;&#x5927;&#x5C0F;&#x5199;&#x3002;&#x5F53;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;1&#x65F6;&#x8868;&#x793A;&#x627E;&#x5230;&#xFF0C;0&#x4E3A;&#x5176;&#x4ED6;.</p>
+<h5 id="str">str</h5>
+<p>&#x53C2;&#x6570;:&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;string,&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x79D2;&#x6216;#num</p>
+<p>&#x652F;&#x6301;&#x503C;&#x7C7B;&#x578B;:str,log,text</p>
+<p>&#x63CF;&#x8FF0;:&#x67E5;&#x627E;&#x6700;&#x8FD1;&#x503C;&#x4E2D;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x6307;&#x5B9A;&#x67E5;&#x627E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5927;&#x5C0F;&#x5199;&#x654F;&#x611F;&#x3002;&#x7B2C;&#x4E8C;&#x4E2A;&#x53EF;&#x9009;&#x7684;&#x53C2;&#x6570;&#x6307;&#x5B9A;&#x79D2;&#x6570;&#x6216;&#x6536;&#x96C6;&#x503C;&#x7684;&#x6570;&#x76EE;&#xFF0C;&#x5C06;&#x4F1A;&#x5904;&#x7406;&#x591A;&#x4E2A;&#x503C;&#x3002;&#x5F53;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;1&#x65F6;&#x8868;&#x793A;&#x627E;&#x5230;&#xFF0C;0&#x4E3A;&#x5176;&#x4ED6;.</p>
+<p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<p>&#x89E6;&#x53D1;&#x5668;&#x540D;&#x79F0;&#xFF1A;Zabbix agent needs to be upgraded &#x4F7F;&#x7528;&#x51FD;&#x6570;str():</p>
+<p>{zabbix.zabbix.com:agent.version.str(&quot;beta8&quot;)}=1</p>
+<p>&#x5982;&#x679C;&#x5F53;&#x524D;zabbix agent&#x7248;&#x672C;&#x5305;&#x542B;beta8&#xFF08;&#x5047;&#x8BBE;&#x5F53;&#x524D;&#x7248;&#x672C;&#x4E3A;1.0beta8&#xFF09;&#xFF0C;&#x8FD9;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#x4F1A;&#x8FD4;&#x56DE;true. strlen &#x53C2;&#x6570;:&#x79D2;&#x6216;#num &#x652F;&#x6301;&#x503C;&#x7C7B;&#x578B;:str,log,text &#x63CF;&#x8FF0;:&#x6307;&#x5B9A;&#x6700;&#x8FD1;&#x503C;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x957F;&#x5EA6;(&#x5E76;&#x975E;&#x5B57;&#x8282;),&#x53C2;&#x6570;&#x503C;&#x7C7B;&#x4F3C;&#x4E8E;last&#x51FD;&#x6570;.&#x4F8B;&#x5982;strlen(0)&#x7B49;&#x4EF7;&#x4E8E;strlen(#1),strlen(#3)&#x8868;&#x793A;&#x6700;&#x8FD1;&#x7684;&#x7B2C;&#x4E09;&#x4E2A;&#x503C;,strlen(0,86400)&#x8868;&#x793A;&#x4E00;&#x5929;&#x524D;&#x7684;&#x6700;&#x8FD1;&#x7684;&#x503C;.&#x8BE5;&#x51FD;&#x6570;&#x4ECE;Zabbix1.8.4&#x8D77;&#x5F00;&#x59CB;&#x652F;&#x6301; sum &#x53C2;&#x6570;:&#x79D2;&#x6216;#num &#x652F;&#x6301;&#x503C;&#x7C7B;&#x578B;:float,int &#x63CF;&#x8FF0;:&#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#x4E2D;&#x6536;&#x96C6;&#x5230;&#x7684;&#x503C;&#x7684;&#x603B;&#x548C;.&#x65F6;&#x95F4;&#x95F4;&#x9694;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x652F;&#x6301;&#x79D2;&#x6216;&#x6536;&#x96C6;&#x503C;&#x7684;&#x6570;&#x76EE;(&#x4EE5;#&#x5F00;&#x59CB;).&#x4ECE;Zabbix1.8.2&#x5F00;&#x59CB;&#xFF0C;&#x672C;&#x51FD;&#x6570;&#x652F;&#x6301;time_shift&#x4F5C;&#x4E3A;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x3002;&#x53EF;&#x4EE5;&#x67E5;&#x770B;avg&#x51FD;&#x6570;&#x83B7;&#x53D6;&#x5B83;&#x7684;&#x7528;&#x6CD5; time &#x53C2;&#x6570;:&#x5FFD;&#x7565; &#x652F;&#x6301;&#x503C;&#x7C7B;&#x578B;:any &#x63CF;&#x8FF0;:&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#xFF0C;&#x683C;&#x5F0F;&#x4E3A;HHMMSS&#xFF0C;&#x4F8B;&#x5982;123055</p>
+
                                 
                                 </section>
                             
@@ -1841,12 +1920,12 @@ git-review //&#x4E0A;&#x4F20;&#x5230;gerrit
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 第五章：git在Windows中的使用总结">
+                <a href="abc.html" class="navigation navigation-prev " aria-label="Previous page: 入门">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../redux/" class="navigation navigation-next " aria-label="Next page: 第六章：redux">
+                <a href="../mongodb/index.md" class="navigation navigation-next " aria-label="Next page: 第十三章：mongodb">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1857,7 +1936,7 @@ git-review //&#x4E0A;&#x4F20;&#x5230;gerrit
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"git的使用","level":"1.6.1","depth":2,"next":{"title":"第六章：redux","level":"1.7","depth":1,"path":"redux/index.md","ref":"./redux/index.md","articles":[{"title":"第一节：状态","level":"1.7.1","depth":2,"path":"redux/1-state.md","ref":"./redux/1-state.md","articles":[]},{"title":"第二节：内部 state 使用","level":"1.7.2","depth":2,"path":"redux/2-state.md","ref":"./redux/2-state.md","articles":[]},{"title":"第三节：不用 Redux 实现组件间通信","level":"1.7.3","depth":2,"path":"redux/3-state.md","ref":"./redux/3-state.md","articles":[]},{"title":"第四节：Redux Store","level":"1.7.4","depth":2,"path":"redux/4-state.md","ref":"./redux/4-state.md","articles":[]},{"title":"第五节：处理多类数据","level":"1.7.5","depth":2,"path":"redux/5-state.md","ref":"./redux/5-state.md","articles":[]},{"title":"第六节：js :拷贝","level":"1.7.6","depth":2,"path":"redux/6-state.md","ref":"./redux/6-state.md","articles":[]}]},"previous":{"title":"第五章：git在Windows中的使用总结","level":"1.6","depth":1,"path":"git/index.md","ref":"./git/index.md","articles":[{"title":"git的使用","level":"1.6.1","depth":2,"path":"git/install.md","ref":"./git/install.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"git/install.md","mtime":"2017-12-27T08:30:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-28T03:54:44.524Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"zabbix触发器函数的使用","level":"1.13.2","depth":2,"next":{"title":"第十三章：mongodb","level":"1.14","depth":1,"path":"mongodb/index.md","ref":"./mongodb/index.md","articles":[{"title":"macOS安装mongo","level":"1.14.1","depth":2,"path":"mongodb/install.md","ref":"./mongodb/install.md","articles":[]},{"title":"Docker Mongodb安装配置","level":"1.14.2","depth":2,"path":"mongodb/docker-mongo.md","ref":"./mongodb/docker-mongo.md","articles":[]},{"title":"mongo基本使用","level":"1.14.3","depth":2,"path":"mongodb/use.md","ref":"./mongodb/use.md","articles":[]}]},"previous":{"title":"入门","level":"1.13.1","depth":2,"path":"zabbix/abc.md","ref":"./zabbix/abc.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"zabbix/triggers.md","mtime":"2017-12-28T03:54:16.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-28T03:54:44.524Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
