@@ -1761,13 +1761,13 @@
 <h3 id="2-git-bash-&#x914D;&#x7F6E;">2. git bash &#x914D;&#x7F6E;</h3>
 <p>&#x5148;&#x53BB;&#x81EA;&#x884C;&#x521B;&#x5EFA;gitlab&#x8D26;&#x53F7;&#xFF0C;&#x7136;&#x540E;&#x8FDB;&#x884C;&#x5982;&#x4E0B;&#x64CD;&#x4F5C;</p>
 <h5 id="21-&#x68C0;&#x67E5;ssh-keys&#x662F;&#x5426;&#x5B58;&#x5728;">2.1 &#x68C0;&#x67E5;SSH keys&#x662F;&#x5426;&#x5B58;&#x5728;</h5>
-<p>&#x8F93;&#x5165;&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x6587;&#x4EF6;id_rsa.pub &#x6216; id_dsa.pub&#xFF0C;&#x5219;&#x76F4;&#x63A5;&#x8FDB;&#x5165;&#x6B65;&#x9AA4;2.3&#x5C06;SSH key&#x6DFB;&#x52A0;&#x5230;GitHub&#x4E2D;&#xFF0C;&#x5426;&#x5219;&#x8FDB;&#x5165;&#x4E0B;&#x4E00;&#x6B65;&#x751F;&#x6210;SSH key</p>
+<p>&#x8F93;&#x5165;&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x6587;&#x4EF6;id_rsa.pub &#x6216; id_dsa.pub&#xFF0C;&#x5219;&#x76F4;&#x63A5;&#x8FDB;&#x5165;&#x6B65;&#x9AA4;2.3&#x5C06;SSH key&#x6DFB;&#x52A0;&#x5230;Gitlab&#x4E2D;&#xFF0C;&#x5426;&#x5219;&#x8FDB;&#x5165;&#x4E0B;&#x4E00;&#x6B65;&#x751F;&#x6210;SSH key</p>
 <pre><code>ls -al ~/.ssh
 </code></pre><h5 id="22-&#x751F;&#x6210;&#x65B0;&#x7684;-ssh-key">2.2 &#x751F;&#x6210;&#x65B0;&#x7684; SSH KEY</h5>
 <pre><code>ssh-keygen -t rsa -C &quot;123@qq.com&quot; //&#x8FD9;&#x91CC;&#x662F;gitlab&#x7684;&#x90AE;&#x7BB1;
 </code></pre><p>&#x8DEF;&#x5F84;&#x9009;&#x62E9;&#xFF1A;&#x4F7F;&#x7528;&#x8BE5;&#x547D;&#x4EE4;&#x4E4B;&#x540E;, &#x4F1A;&#x51FA;&#x73B0;&#x63D0;&#x793A;&#x9009;&#x62E9;ssh-key&#x751F;&#x6210;&#x8DEF;&#x5F84;,&#x9009;&#x62E9;&#x5728;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#xFF08;&#x9ED8;&#x8BA4;&#x4F1A;&#x5728;&#x76F8;&#x5E94;&#x8DEF;&#x5F84;&#x4E0B;&#xFF08;/your_home_path&#xFF09;&#x751F;&#x6210; id_rsa &#x548C; id_rsa.pub &#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#xFF09;</p>
 <p>&#x5BC6;&#x7801;&#x786E;&#x8BA4;&#xFF1A;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x4E0D;&#x4F7F;&#x7528;&#x5BC6;&#x7801;&#x8FDB;&#x884C;&#x767B;&#x5F55;, &#x7528;&#x5BC6;&#x7801;&#x592A;&#x9EBB;&#x70E6;&#xFF0C;&#x76F4;&#x63A5;&#x56DE;&#x8F66;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x4F7F;&#x7528;&#x5BC6;&#x7801;&#x767B;&#x5F55;&#xFF0C;&#x90A3;&#x5C31;&#x8F93;&#x5165;&#x5BC6;&#x7801;&#x4E4B;&#x540E;&#x56DE;&#x8F66;&#x3002;</p>
-<h5 id="23-&#x5C06;-ssh-key-&#x6DFB;&#x52A0;&#x5230;github&#x4E2D;">2.3 &#x5C06; ssh key &#x6DFB;&#x52A0;&#x5230;GitHub&#x4E2D;</h5>
+<h5 id="23-&#x5C06;-ssh-key-&#x6DFB;&#x52A0;&#x5230;-gitlab-&#x548C;-gerrit-&#x4E2D;">2.3 &#x5C06; ssh key &#x6DFB;&#x52A0;&#x5230; Gitlab &#x548C; gerrit &#x4E2D;</h5>
 <p>&#x8F93;&#x5165;&#x4E0B;&#x9762;&#x547D;&#x4EE4;&#x53EF;&#x590D;&#x5236; id_rsa.pub &#x6587;&#x4EF6;&#x4E2D;&#x7684; SSH key&#xFF0C;&#x5C06;&#x8FD9;&#x4E9B;&#x590D;&#x5236;&#x5230; Gitlab &#x548C; gerrit &#x7684; Add SSH key &#x9875;&#x9762;&#x5373;&#x53EF;&#x3002;</p>
 <pre><code>clip &lt; ~/.ssh/id_rsa.pub
 </code></pre><h5 id="23-&#x914D;&#x7F6E;&#x4E2A;&#x4EBA;&#x4FE1;&#x606F;&#xFF0C;&#x952E;&#x5165;&#x6307;&#x4EE4;">2.3 &#x914D;&#x7F6E;&#x4E2A;&#x4EBA;&#x4FE1;&#x606F;&#xFF0C;&#x952E;&#x5165;&#x6307;&#x4EE4;</h5>
@@ -1805,16 +1805,30 @@ git config --global user.email &quot;123@qq.com&quot; //&#x8FD9;&#x91CC;&#x662F;
 <p><img src="../images/gerrit3.png" align="center"></p>
 <h3 id="6-git-&#x57FA;&#x672C;&#x547D;&#x4EE4;&#x884C;">6. git &#x57FA;&#x672C;&#x547D;&#x4EE4;&#x884C;</h3>
 <h5 id="61-&#x4ED3;&#x5E93;&#x514B;&#x9686;">6.1 &#x4ED3;&#x5E93;&#x514B;&#x9686;</h5>
-<pre><code>git clone &lt;url&gt;  //&#x4ED3;&#x5E93;&#x7684;ssh&#x5730;&#x5740;
+<pre><code> git clone &lt;ssh-url&gt; //git&#x9879;&#x76EE;ssh&#x5730;&#x5740;&#xFF0C;&#x4ECE;gitlab&#x4E2D;&#x83B7;&#x53D6;
 </code></pre><h5 id="62-&#x6DFB;&#x52A0;gerrit&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;">6.2 &#x6DFB;&#x52A0;gerrit&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;</h5>
-<pre><code>git remote add gerrit &lt;url&gt;  //&#x4ED3;&#x5E93;ssh&#x5730;&#x5740;
-</code></pre><h5 id="63-&#x63D0;&#x4EA4;&#x4FEE;&#x6539;&#x540E;&#x7684;&#x5185;&#x5BB9;">6.3 &#x63D0;&#x4EA4;&#x4FEE;&#x6539;&#x540E;&#x7684;&#x5185;&#x5BB9;</h5>
-<pre><code>git pull --rebase //&#x62C9;&#x53D6;&#x4ED3;&#x5E93;&#x4E2D;&#x6700;&#x65B0;&#x7684;&#x5185;&#x5BB9;
-git add .  
-git commit -m &apos;change name&apos; //&#x4FEE;&#x6539;&#x5185;&#x5BB9;&#x7684;&#x6807;&#x9898;
-git status //&#x67E5;&#x770B;&#x4ED3;&#x5E93;&#x72B6;&#x6001;
-git-review //&#x4E0A;&#x4F20;&#x5230;gerrit
-</code></pre>
+<pre><code>git remote add gerrit &lt;gerrit-url&gt; // gerrit&#x7684;ssh&#x5730;&#x5740;&#xFF0C;&#x4ECE;gerrit&#x4E2D;&#x83B7;&#x53D6;
+</code></pre><h5 id="63-&#x4EE3;&#x7801;&#x4E0A;&#x4F20;&#x6D41;&#x7A0B;">6.3 &#x4EE3;&#x7801;&#x4E0A;&#x4F20;&#x6D41;&#x7A0B;</h5>
+<pre><code>1.&#x5C06;&#x4EE3;&#x7801;&#x52A0;&#x5165;&#x6682;&#x5B58;&#x533A;
+git add -A
+2.&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x81F3;&#x672C;&#x5730;&#x5DE5;&#x4F5C;&#x533A;
+git commit -m &#x2018;your commit message&#x2019; -a
+3.&#x4E0A;&#x4F20;&#x4EE3;&#x7801;&#x81F3;gerrit&#x4E2D;
+git review
+4.&#x83B7;&#x53D6;&#x6700;&#x65B0;&#x4EE3;&#x7801;
+git pull --rebase
+</code></pre><h3 id="7-gerrit-&#x4E2D;&#x4EE3;&#x7801;&#x5BA1;&#x6838;">7. gerrit &#x4E2D;&#x4EE3;&#x7801;&#x5BA1;&#x6838;</h3>
+<p>&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x540E;&#xFF0C;&#x5BA1;&#x6838;&#x4EBA;&#x5458;&#x8981;&#x5BF9;&#x4FEE;&#x6539;&#x7684;&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x5BA1;&#x6838;&#x3002;&#x767B;&#x5F55; gerrit &#x8FDB;&#x5165; <strong>All</strong>--&gt;<strong>Open</strong> &#xFF0C;&#x53EF;&#x770B;&#x5230;&#x6709;&#x65B0;&#x63D0;&#x4EA4;&#x7684;&#x9879;&#x76EE;&#xFF0C;&#x70B9;&#x51FB;&#x9879;&#x76EE;&#x540D;&#x79F0;</p>
+<p><img src="../images/gerritcheck1.png" align="center"></p>
+<p>&#x8FDB;&#x5165;&#x5BA1;&#x6838;&#x7684;&#x754C;&#x9762;&#x3002;<strong>File Path</strong> &#x4E2D;&#x663E;&#x793A;&#x7684;&#x662F;&#x8FDB;&#x884C;&#x8FC7;&#x4FEE;&#x6539;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x70B9;&#x51FB;&#x6587;&#x4EF6;&#x540D;&#x79F0;</p>
+<p><img src="../images/gerritcheck2.png" align="center"></p>
+<p>&#x8FDB;&#x5165;&#x4FEE;&#x6539;&#x7684;&#x6587;&#x4EF6;&#x9875;&#x9762;&#xFF0C;&#x5BA1;&#x6838;&#x8005;&#x53EF;&#x4EE5;&#x5728;&#x6B64;&#x770B;&#x5230;&#x63D0;&#x4EA4;&#x4EBA;&#x5458;&#x7684;&#x5177;&#x4F53;&#x4FEE;&#x6539;&#x5185;&#x5BB9;</p>
+<p><img src="../images/gerritcheck3.png" align="center"></p>
+<p>&#x5728;&#x5BA1;&#x6838;&#x754C;&#x9762;&#xFF0C;<strong>0</strong> &#x8868;&#x793A;&#x5BA1;&#x6838;&#x901A;&#x8FC7;&#x4EE3;&#x7801;&#xFF0C;<strong>-1</strong>&#x3001;<strong>-2</strong> &#x8868;&#x793A;&#x5BA1;&#x6838;&#x4E0D;&#x901A;&#x8FC7;&#xFF0C;&#x70B9;&#x51FB; <strong>Post</strong></p>
+<p><img src="../images/gerritcheck5.png" align="center"></p>
+<p>&#x70B9;&#x51FB; <strong>Submit</strong> &#x63D0;&#x4EA4;&#x5BA1;&#x6838;&#xFF0C;&#x5BA1;&#x6838;&#x901A;&#x8FC7;&#x540E;&#x63D0;&#x4EA4;&#x4EBA;&#x5458;&#x4FEE;&#x6539;&#x7684;&#x4EE3;&#x7801;&#x4F1A;&#x8FDB;&#x5165;gerrit&#x4E2D;&#x7684;&#x9879;&#x76EE;&#x91CC;&#xFF0C;&#x5BA1;&#x6838;&#x4E0D;&#x901A;&#x8FC7;&#x5219;&#x63D0;&#x4EA4;&#x7684;&#x4EE3;&#x7801;&#x4E0D;&#x80FD;&#x8FDB;&#x5165; gerrit &#x7684;&#x9879;&#x76EE;&#x4E2D;</p>
+<p><img src="../images/gerritcheck4.png" align="center"></p>
+
                                 
                                 </section>
                             
@@ -1857,7 +1871,7 @@ git-review //&#x4E0A;&#x4F20;&#x5230;gerrit
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"git的使用","level":"1.6.1","depth":2,"next":{"title":"第六章：redux","level":"1.7","depth":1,"path":"redux/index.md","ref":"./redux/index.md","articles":[{"title":"第一节：状态","level":"1.7.1","depth":2,"path":"redux/1-state.md","ref":"./redux/1-state.md","articles":[]},{"title":"第二节：内部 state 使用","level":"1.7.2","depth":2,"path":"redux/2-state.md","ref":"./redux/2-state.md","articles":[]},{"title":"第三节：不用 Redux 实现组件间通信","level":"1.7.3","depth":2,"path":"redux/3-state.md","ref":"./redux/3-state.md","articles":[]},{"title":"第四节：Redux Store","level":"1.7.4","depth":2,"path":"redux/4-state.md","ref":"./redux/4-state.md","articles":[]},{"title":"第五节：处理多类数据","level":"1.7.5","depth":2,"path":"redux/5-state.md","ref":"./redux/5-state.md","articles":[]},{"title":"第六节：js :拷贝","level":"1.7.6","depth":2,"path":"redux/6-state.md","ref":"./redux/6-state.md","articles":[]}]},"previous":{"title":"第五章：git在Windows中的使用总结","level":"1.6","depth":1,"path":"git/index.md","ref":"./git/index.md","articles":[{"title":"git的使用","level":"1.6.1","depth":2,"path":"git/install.md","ref":"./git/install.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"git/install.md","mtime":"2017-12-27T08:30:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-28T03:54:44.524Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"git的使用","level":"1.6.1","depth":2,"next":{"title":"第六章：redux","level":"1.7","depth":1,"path":"redux/index.md","ref":"./redux/index.md","articles":[{"title":"第一节：状态","level":"1.7.1","depth":2,"path":"redux/1-state.md","ref":"./redux/1-state.md","articles":[]},{"title":"第二节：内部 state 使用","level":"1.7.2","depth":2,"path":"redux/2-state.md","ref":"./redux/2-state.md","articles":[]},{"title":"第三节：不用 Redux 实现组件间通信","level":"1.7.3","depth":2,"path":"redux/3-state.md","ref":"./redux/3-state.md","articles":[]},{"title":"第四节：Redux Store","level":"1.7.4","depth":2,"path":"redux/4-state.md","ref":"./redux/4-state.md","articles":[]},{"title":"第五节：处理多类数据","level":"1.7.5","depth":2,"path":"redux/5-state.md","ref":"./redux/5-state.md","articles":[]},{"title":"第六节：js :拷贝","level":"1.7.6","depth":2,"path":"redux/6-state.md","ref":"./redux/6-state.md","articles":[]}]},"previous":{"title":"第五章：git在Windows中的使用总结","level":"1.6","depth":1,"path":"git/index.md","ref":"./git/index.md","articles":[{"title":"git的使用","level":"1.6.1","depth":2,"path":"git/install.md","ref":"./git/install.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"git/install.md","mtime":"2017-12-29T03:20:14.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-29T03:26:41.590Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
