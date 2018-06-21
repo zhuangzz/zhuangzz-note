@@ -1,0 +1,2718 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Mysql Load Balance and HA with Group Replication and ProxySQL · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="20180607_mysql_master_slave.html" />
+    
+    
+    <link rel="prev" href="index.md" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Inction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../blockchain/index.md">
+            
+                <span>
+            
+                    
+                    Blockchain
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../blockchain/blockchain.html">
+            
+                <a href="../blockchain/blockchain.html">
+            
+                    
+                    什么是Blockchain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../blockchain/bitcoin.html">
+            
+                <a href="../blockchain/bitcoin.html">
+            
+                    
+                    比特币
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../hyperledger/index.md">
+            
+                <span>
+            
+                    
+                    Hyperledger
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../hyperledger/ca.html">
+            
+                <a href="../hyperledger/ca.html">
+            
+                    
+                    ca认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../hyperledger/binaries.html">
+            
+                <a href="../hyperledger/binaries.html">
+            
+                    
+                    下载平台特定的二进制文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="../hyperledger/generate_certificate.html">
+            
+                <a href="../hyperledger/generate_certificate.html">
+            
+                    
+                    Hyperledger 定制网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="../hyperledger/firstnet.html">
+            
+                <a href="../hyperledger/firstnet.html">
+            
+                    
+                    开启第一个网络时遇到的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5" data-path="../hyperledger/cello.html">
+            
+                <a href="../hyperledger/cello.html">
+            
+                    
+                    cello
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.6" data-path="../hyperledger/pug.html">
+            
+                <a href="../hyperledger/pug.html">
+            
+                    
+                    pug
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.7" data-path="../hyperledger/explore.html">
+            
+                <a href="../hyperledger/explore.html">
+            
+                    
+                    blockchain-explore
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.8" data-path="../hyperledger/build-test.html">
+            
+                <a href="../hyperledger/build-test.html">
+            
+                    
+                    测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="index.md">
+            
+                <span>
+            
+                    
+                    docker
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1" data-path="20180617_mysql_group_replication&proxysql.html">
+            
+                <a href="20180617_mysql_group_replication&proxysql.html">
+            
+                    
+                    Mysql Load Balance and HA with Group Replication and ProxySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="20180607_mysql_master_slave.html">
+            
+                <a href="20180607_mysql_master_slave.html">
+            
+                    
+                    Docker containers with MySQL master-slave replication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="open_maria_mysql.html">
+            
+                <a href="open_maria_mysql.html">
+            
+                    
+                    maria_mysql集群改进后
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="maria_mysql.html">
+            
+                <a href="maria_mysql.html">
+            
+                    
+                    maria_mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="tag.html">
+            
+                <a href="tag.html">
+            
+                    
+                    查看镜像版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="openldap.html">
+            
+                <a href="openldap.html">
+            
+                    
+                    Openldap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="redis_cluster.html">
+            
+                <a href="redis_cluster.html">
+            
+                    
+                    Redis Cluster
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="docker_mariadb.html">
+            
+                <a href="docker_mariadb.html">
+            
+                    
+                    docker中进入mariaDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="docker_grafana.html">
+            
+                <a href="docker_grafana.html">
+            
+                    
+                    docker 中部署grafana
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="docker_zabbix.html">
+            
+                <a href="docker_zabbix.html">
+            
+                    
+                    docker 中部署zabbix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="problem.html">
+            
+                <a href="problem.html">
+            
+                    
+                    docker 中遇到问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="mongo_cluster.html">
+            
+                <a href="mongo_cluster.html">
+            
+                    
+                    mongo cluster
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="docker_machine.html">
+            
+                <a href="docker_machine.html">
+            
+                    
+                    docker machine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="command.html">
+            
+                <a href="command.html">
+            
+                    
+                    docker 命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="install.html">
+            
+                <a href="install.html">
+            
+                    
+                    docker安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="image.html">
+            
+                <a href="image.html">
+            
+                    
+                    入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="hello.html">
+            
+                <a href="hello.html">
+            
+                    
+                    在docker中运行hello world
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18" data-path="installnew.html">
+            
+                <a href="installnew.html">
+            
+                    
+                    在容器中装新程序及保存修改
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.19" data-path="new-image.html">
+            
+                <a href="new-image.html">
+            
+                    
+                    运行新镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.20" data-path="public.html">
+            
+                <a href="public.html">
+            
+                    
+                    发布镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.21" data-path="source.html">
+            
+                <a href="source.html">
+            
+                    
+                    一小时Docker教程 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../wechat/index.md">
+            
+                <span>
+            
+                    
+                    微信小游戏
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../wechat/error.html">
+            
+                <a href="../wechat/error.html">
+            
+                    
+                    遇到的报错
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../wechat/object-oriented.html">
+            
+                <a href="../wechat/object-oriented.html">
+            
+                    
+                    js面向对象基础填坑
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../wechat/canvas.html">
+            
+                <a href="../wechat/canvas.html">
+            
+                    
+                    canvas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../wechat/introduce.html">
+            
+                <a href="../wechat/introduce.html">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../vue/">
+            
+                <a href="../vue/">
+            
+                    
+                    vue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../vue/transitions.html">
+            
+                <a href="../vue/transitions.html">
+            
+                    
+                    transitions过度&动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../vue/timestamp.html">
+            
+                <a href="../vue/timestamp.html">
+            
+                    
+                    时间戳是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../vue/amap.html">
+            
+                <a href="../vue/amap.html">
+            
+                    
+                    高德地图运用笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../jquery/">
+            
+                <a href="../jquery/">
+            
+                    
+                    jQuery
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../jquery/1-state.html">
+            
+                <a href="../jquery/1-state.html">
+            
+                    
+                    第一节:安装sublime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../jquery/2-state.html">
+            
+                <a href="../jquery/2-state.html">
+            
+                    
+                    第二节:做一个轮播图、tab
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../jquery/3-state.html">
+            
+                <a href="../jquery/3-state.html">
+            
+                    
+                    第三节:实现导航栏
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../jquery/4-state.html">
+            
+                <a href="../jquery/4-state.html">
+            
+                    
+                    第四节:事件、效果，做侧边栏
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../jquery/5-state.html">
+            
+                <a href="../jquery/5-state.html">
+            
+                    
+                    第五节:评论效果实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../jquery/6-state.html">
+            
+                <a href="../jquery/6-state.html">
+            
+                    
+                    第六节:表单相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../jquery/8-state.html">
+            
+                <a href="../jquery/8-state.html">
+            
+                    
+                    第七节:使用swiper animate做简历、清浮动
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../javascript/">
+            
+                <a href="../javascript/">
+            
+                    
+                    javaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../javascript/1-state.html">
+            
+                <a href="../javascript/1-state.html">
+            
+                    
+                    第一节:变量 数据类型 for循环 运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../javascript/2-state.html">
+            
+                <a href="../javascript/2-state.html">
+            
+                    
+                    第二节:for循环 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../javascript/3-state.html">
+            
+                <a href="../javascript/3-state.html">
+            
+                    
+                    第三节:对象 数组 数学
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../javascript/4-state.html">
+            
+                <a href="../javascript/4-state.html">
+            
+                    
+                    第四节:排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../javascript/5-state.html">
+            
+                <a href="../javascript/5-state.html">
+            
+                    
+                    第五节:日期对象 函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../javascript/6-state.html">
+            
+                <a href="../javascript/6-state.html">
+            
+                    
+                    第六节:倒计时 字符串对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../javascript/7-state.html">
+            
+                <a href="../javascript/7-state.html">
+            
+                    
+                    第七节:函数 正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../javascript/8-state.html">
+            
+                <a href="../javascript/8-state.html">
+            
+                    
+                    第八节:match replace search、dom 文档对象模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../javascript/9-state.html">
+            
+                <a href="../javascript/9-state.html">
+            
+                    
+                    第九节:addClass、removeClass
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="../javascript/10-state.html">
+            
+                <a href="../javascript/10-state.html">
+            
+                    
+                    第十节:dom、事件委托
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.11" data-path="../javascript/11-state.html">
+            
+                <a href="../javascript/11-state.html">
+            
+                    
+                    第十一节:键盘事件、event事件、绑定事件、滚动条
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.12" data-path="../javascript/12-state.html">
+            
+                <a href="../javascript/12-state.html">
+            
+                    
+                    第十二节:window、属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.13" data-path="../javascript/13-state.html">
+            
+                <a href="../javascript/13-state.html">
+            
+                    
+                    第十三节:怎么获取指定元素的任意样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.14" data-path="../javascript/14-state.html">
+            
+                <a href="../javascript/14-state.html">
+            
+                    
+                    第十四节:深拷贝、浅拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.15" data-path="../javascript/15-state.html">
+            
+                <a href="../javascript/15-state.html">
+            
+                    
+                    第十五节:构造函数、对象冒充
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../command/">
+            
+                <a href="../command/">
+            
+                    
+                    终端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../command/iterm-ohmyzsh.html">
+            
+                <a href="../command/iterm-ohmyzsh.html">
+            
+                    
+                    iterm2--oh my zsh
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../command/bash-zsh.html">
+            
+                <a href="../command/bash-zsh.html">
+            
+                    
+                    bash zsh 互相切换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../command/1-state.html">
+            
+                <a href="../command/1-state.html">
+            
+                    
+                    安装nodejs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../command/2-state.html">
+            
+                <a href="../command/2-state.html">
+            
+                    
+                    从GitHub克隆仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../command/3-state.html">
+            
+                <a href="../command/3-state.html">
+            
+                    
+                    向GitHub创建个人网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../command/4-state.html">
+            
+                <a href="../command/4-state.html">
+            
+                    
+                    命令行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../command/5-state.html">
+            
+                <a href="../command/5-state.html">
+            
+                    
+                    Atom编辑器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../command/6-state.html">
+            
+                <a href="../command/6-state.html">
+            
+                    
+                    nodejs安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../command/7-state.html">
+            
+                <a href="../command/7-state.html">
+            
+                    
+                    npm使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="../command/8-state.html">
+            
+                <a href="../command/8-state.html">
+            
+                    
+                    如何让使用gh-pages机制托管一个静态页面？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="../command/git-command.html">
+            
+                <a href="../command/git-command.html">
+            
+                    
+                    git命令行
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../gitbook/">
+            
+                <a href="../gitbook/">
+            
+                    
+                    Gitbook 使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../gitbook/markdown.html">
+            
+                <a href="../gitbook/markdown.html">
+            
+                    
+                    markdown 语法简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../gitbook/create-note.html">
+            
+                <a href="../gitbook/create-note.html">
+            
+                    
+                     安装 Gitbook 并创建笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../gitbook/npm-build.html">
+            
+                <a href="../gitbook/npm-build.html">
+            
+                    
+                     编译Gitbook 为静态HTML文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../gitbook/pages-manage.html">
+            
+                <a href="../gitbook/pages-manage.html">
+            
+                    
+                     托管到GitHub pages 静态网站服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../gitbook/changelog.html">
+            
+                <a href="../gitbook/changelog.html">
+            
+                    
+                    生成日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../git/">
+            
+                <a href="../git/">
+            
+                    
+                    随时隐藏
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../git/update.html">
+            
+                <a href="../git/update.html">
+            
+                    
+                    系统升级
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1.1" data-path="../git/install.html">
+            
+                <a href="../git/install.html">
+            
+                    
+                    git在Windows中的使用总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.2" data-path="../git/working_arrangements.html">
+            
+                <a href="../git/working_arrangements.html">
+            
+                    
+                    Working arrangements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.3" data-path="../git/18_1_04.html">
+            
+                <a href="../git/18_1_04.html">
+            
+                    
+                    Working Progress_01/04
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.4" data-path="../git/18_1_05.html">
+            
+                <a href="../git/18_1_05.html">
+            
+                    
+                    Working Progress_01/05
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.5" data-path="../git/1_08.html">
+            
+                <a href="../git/1_08.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.6" data-path="../git/web_guide.html">
+            
+                <a href="../git/web_guide.html">
+            
+                    
+                    web
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.7" data-path="../git/20171222_hui_guide.html">
+            
+                <a href="../git/20171222_hui_guide.html">
+            
+                    
+                    phone
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../redux/">
+            
+                <a href="../redux/">
+            
+                    
+                    redux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../redux/1-state.html">
+            
+                <a href="../redux/1-state.html">
+            
+                    
+                    第一节：状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../redux/2-state.html">
+            
+                <a href="../redux/2-state.html">
+            
+                    
+                    第二节：内部 state 使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../redux/3-state.html">
+            
+                <a href="../redux/3-state.html">
+            
+                    
+                    第三节：不用 Redux 实现组件间通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../redux/4-state.html">
+            
+                <a href="../redux/4-state.html">
+            
+                    
+                    第四节：Redux Store
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../redux/5-state.html">
+            
+                <a href="../redux/5-state.html">
+            
+                    
+                    第五节：处理多类数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../redux/6-state.html">
+            
+                <a href="../redux/6-state.html">
+            
+                    
+                    第六节：js :拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../react/">
+            
+                <a href="../react/">
+            
+                    
+                    react
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../react/1-state.html">
+            
+                <a href="../react/1-state.html">
+            
+                    
+                    什么是nodejs/NVM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../react/2-state.html">
+            
+                <a href="../react/2-state.html">
+            
+                    
+                    什么是es6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../react/3-state.html">
+            
+                <a href="../react/3-state.html">
+            
+                    
+                    什么是面向对象编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../react/3-states.html">
+            
+                <a href="../react/3-states.html">
+            
+                    
+                    this的常见使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../react/4-state.html">
+            
+                <a href="../react/4-state.html">
+            
+                    
+                    如何使用类的继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="../react/5-state.html">
+            
+                <a href="../react/5-state.html">
+            
+                    
+                    super()是干吗用的
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="../react/6-state.html">
+            
+                <a href="../react/6-state.html">
+            
+                    
+                    es6模块怎么用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.8" data-path="../react/7-state.html">
+            
+                <a href="../react/7-state.html">
+            
+                    
+                    为何要发明let和const
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.9" data-path="../react/8-state.html">
+            
+                <a href="../react/8-state.html">
+            
+                    
+                    解构赋值是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.10" data-path="../react/template-str.html">
+            
+                <a href="../react/template-str.html">
+            
+                    
+                    模板字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.11" data-path="../react/arrow-function.html">
+            
+                <a href="../react/arrow-function.html">
+            
+                    
+                    胖箭头函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.12" data-path="../react/array-find.html">
+            
+                <a href="../react/array-find.html">
+            
+                    
+                    数组的find方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.13" data-path="../react/array-map.html">
+            
+                <a href="../react/array-map.html">
+            
+                    
+                    数组的map()方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.14" data-path="../react/array-filter.html">
+            
+                <a href="../react/array-filter.html">
+            
+                    
+                    数组filter方法如何用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.15" data-path="../react/array-reverse.html">
+            
+                <a href="../react/array-reverse.html">
+            
+                    
+                    如何将数组逆序(reverse)输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.16" data-path="../react/object-assign.html">
+            
+                <a href="../react/object-assign.html">
+            
+                    
+                    如何对象合并object.assign
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.17" data-path="../react/object-keys.html">
+            
+                <a href="../react/object-keys.html">
+            
+                    
+                    Object.keys如何用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.18" data-path="../react/object-keys.html">
+            
+                <a href="../react/object-keys.html">
+            
+                    
+                    什么是对象展开运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.19" data-path="../react/es-stage.html">
+            
+                <a href="../react/es-stage.html">
+            
+                    
+                    ES6/ES7/ES8/stage0
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.20" data-path="../react/promise.html">
+            
+                <a href="../react/promise.html">
+            
+                    
+                    Promise是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.21" data-path="../react/coding-style.html">
+            
+                <a href="../react/coding-style.html">
+            
+                    
+                    什么编程风格最棒
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.22" data-path="../react/npm.html">
+            
+                <a href="../react/npm.html">
+            
+                    
+                    npm是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.23" data-path="../react/nodejs-project.html">
+            
+                <a href="../react/nodejs-project.html">
+            
+                    
+                    创建一个Nodejs项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.24" data-path="../react/create-react-app.html">
+            
+                <a href="../react/create-react-app.html">
+            
+                    
+                    create-react-app
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.25" data-path="../react/react-hello-world.html">
+            
+                <a href="../react/react-hello-world.html">
+            
+                    
+                    简单的react的Hello-World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.26" data-path="../react/react-component.html">
+            
+                <a href="../react/react-component.html">
+            
+                    
+                    React组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.27" data-path="../react/react-jsx.html">
+            
+                <a href="../react/react-jsx.html">
+            
+                    
+                    组件中JSX语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.28" data-path="../react/many-components.html">
+            
+                <a href="../react/many-components.html">
+            
+                    
+                    项目组件化拆分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.29" data-path="../react/css-org.html">
+            
+                <a href="../react/css-org.html">
+            
+                    
+                    CSS布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.30" data-path="../react/common-errors.html">
+            
+                <a href="../react/common-errors.html">
+            
+                    
+                    常见运行错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.31" data-path="../react/clear.html">
+            
+                <a href="../react/clear.html">
+            
+                    
+                    关于clearfix和Flexbox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.32" data-path="../react/props.html">
+            
+                <a href="../react/props.html">
+            
+                    
+                    组件属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.33" data-path="../react/children.html">
+            
+                <a href="../react/children.html">
+            
+                    
+                    组件children
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.34" data-path="../react/events.html">
+            
+                <a href="../react/events.html">
+            
+                    
+                    React的事件响应
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.35" data-path="../react/jsx-complete.html">
+            
+                <a href="../react/jsx-complete.html">
+            
+                    
+                    Atom中如何emmet自动补齐
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.36" data-path="../react/state.html">
+            
+                <a href="../react/state.html">
+            
+                    
+                    state
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.37" data-path="../react/state-color.html">
+            
+                <a href="../react/state-color.html">
+            
+                    
+                    state例子：div变色方法对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.38" data-path="../react/and.html">
+            
+                <a href="../react/and.html">
+            
+                    
+                    与运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.39" data-path="../react/list-key.html">
+            
+                <a href="../react/list-key.html">
+            
+                    
+                    组件和key
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.40" data-path="../react/pass-handle.html">
+            
+                <a href="../react/pass-handle.html">
+            
+                    
+                    向事件处理函数中传参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.41" data-path="../react/list-mani.html">
+            
+                <a href="../react/list-mani.html">
+            
+                    
+                    操作列表上的一个元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.42" data-path="../react/json-server.html">
+            
+                <a href="../react/json-server.html">
+            
+                    
+                    JSON-Server安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.43" data-path="../react/data-v.html">
+            
+                <a href="../react/data-v.html">
+            
+                    
+                    数据可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../software/">
+            
+                <a href="../software/">
+            
+                    
+                    还没想好标题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../software/homebrew.html">
+            
+                <a href="../software/homebrew.html">
+            
+                    
+                    安装Homebrew
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../software/review.html">
+            
+                <a href="../software/review.html">
+            
+                    
+                    使用git-review涉及的命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../ps/">
+            
+                <a href="../ps/">
+            
+                    
+                    ps
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../ps/tool.html">
+            
+                <a href="../ps/tool.html">
+            
+                    
+                    常用工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../zabbix/index.md">
+            
+                <span>
+            
+                    
+                    zabbix
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../zabbix/abc.html">
+            
+                <a href="../zabbix/abc.html">
+            
+                    
+                    入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../zabbix/triggers.html">
+            
+                <a href="../zabbix/triggers.html">
+            
+                    
+                    zabbix触发器函数的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../linux/index.md">
+            
+                <span>
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../linux/scp.html">
+            
+                <a href="../linux/scp.html">
+            
+                    
+                    复制命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../linux/lsof.html">
+            
+                <a href="../linux/lsof.html">
+            
+                    
+                    停止占用端口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../linux/autocomplete.html">
+            
+                <a href="../linux/autocomplete.html">
+            
+                    
+                    bash tab 自动补齐
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../mongodb/index.md">
+            
+                <span>
+            
+                    
+                    mongodb
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="../mongodb/install.html">
+            
+                <a href="../mongodb/install.html">
+            
+                    
+                    macOS安装mongo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2" data-path="../mongodb/docker-mongo.html">
+            
+                <a href="../mongodb/docker-mongo.html">
+            
+                    
+                    Docker Mongodb安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.3" data-path="../mongodb/use.html">
+            
+                <a href="../mongodb/use.html">
+            
+                    
+                    mongo基本使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../go/index.md">
+            
+                <span>
+            
+                    
+                    go
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" data-path="../go/install.md">
+            
+                <span>
+            
+                    
+                    go的下载及环境变量的设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Mysql Load Balance and HA with Group Replication and ProxySQL</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="mysql-load-balance-and-ha-with-group-replication-and-proxysql">Mysql Load Balance and HA with Group Replication and ProxySQL</h1>
+<p>reference:</p>
+<p><a href="https://www.digitalocean.com/community/tutorials/how-to-use-proxysql-as-a-load-balancer-for-mysql-on-ubuntu-16-04" target="_blank">https://www.digitalocean.com/community/tutorials/how-to-use-proxysql-as-a-load-balancer-for-mysql-on-ubuntu-16-04</a></p>
+<p><br>
+<a href="http://blog.muhrizal.com/2017/12/13/Configure-ProxySQL-on-Ubuntu-16-04/" target="_blank">http://blog.muhrizal.com/2017/12/13/Configure-ProxySQL-on-Ubuntu-16-04/</a></p>
+<h2 id="environment">Environment</h2>
+<p>4 hosts, install mysql-server on all host, then pick one host to install proxysql.</p>
+<table>
+<thead>
+<tr>
+<th>host</th>
+<th>ip</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>proxysql</td>
+<td>10.0.1.2</td>
+</tr>
+<tr>
+<td>mysql1</td>
+<td>10.0.1.3</td>
+</tr>
+<tr>
+<td>mysql2</td>
+<td>10.0.1.4</td>
+</tr>
+<tr>
+<td>mysql5</td>
+<td>10.0.1.5</td>
+</tr>
+</tbody>
+</table>
+<h2 id="installation">Installation</h2>
+<ul>
+<li>mysql</li>
+</ul>
+<pre><code class="lang-shell">$ cd /tmp
+$ curl -OL https://dev.mysql.com/get/mysql-apt-config_0.8.3-1_all.deb
+$ sudo dpkg -i mysql-apt-config*
+$ sudo apt-get update
+$ sudo apt-get install mysql-server
+</code></pre>
+<ul>
+<li>proxysql</li>
+</ul>
+<pre><code class="lang-shell">$ cd /tmp
+$ wget https://github.com/sysown/proxysql/releases/download/v1.4.9/proxysql_1.4.9-ubuntu16_amd64.deb
+$ sudo dpkg -i proxysql_1.4.9-ubuntu16_amd64.deb
+</code></pre>
+<h2 id="configure-mysql-group-replication">Configure MySQL Group Replication</h2>
+<ul>
+<li>Generate a UUID to Identify the MySQL Group</li>
+</ul>
+<pre><code class="lang-shell">$ uuidgen
+</code></pre>
+<p>You will see</p>
+<pre><code class="lang-shell">#output
+959cf631-538c-415d-8164-ca00181be227
+</code></pre>
+<p>Copy the value you receive. We will have to reference this in a moment when configuring a group name for our pool of servers.</p>
+<ul>
+<li>Set Up Group Replication in the MySQL Configuration File</li>
+</ul>
+<p>Now we are ready to modify MySQL&apos;s configuration file. Open up the main MySQL configuration file on each MySQL server:</p>
+<pre><code class="lang-shell">sudo vim /etc/mysql/my.cnf
+
+!includedir /etc/mysql/conf.d/
+!includedir /etc/mysql/mysql.conf.d/
+
+[mysqld]
+
+# General replication settings
+gtid_mode = ON
+enforce_gtid_consistency = ON
+master_info_repository = TABLE
+relay_log_info_repository = TABLE
+binlog_checksum = NONE
+log_slave_updates = ON
+log_bin = binlog
+binlog_format = ROW
+transaction_write_set_extraction = XXHASH64
+loose-group_replication_bootstrap_group = OFF
+loose-group_replication_start_on_boot = OFF
+loose-group_replication_ssl_mode = REQUIRED
+loose-group_replication_recovery_use_ssl = 1
+
+# Shared replication group configuration
+loose-group_replication_group_name = &quot;&quot;
+loose-group_replication_ip_whitelist = &quot;&quot;
+loose-group_replication_group_seeds = &quot;&quot;
+
+# Single or Multi-primary mode? Uncomment these two lines
+# for multi-primary mode, where any host can accept writes
+loose-group_replication_single_primary_mode = OFF
+loose-group_replication_enforce_update_everywhere_checks = ON
+
+# Host specific replication configuration
+server_id =
+bind-address = &quot;&quot;
+report_host = &quot;&quot;
+loose-group_replication_local_address = &quot;&quot;
+</code></pre>
+<p>We&apos;ve divided the configuration above into four sections.</p>
+<ol>
+<li>Boilerplate Group Replication Settings</li>
+</ol>
+<pre><code># General replication settings
+gtid_mode = ON
+enforce_gtid_consistency = ON
+master_info_repository = TABLE
+relay_log_info_repository = TABLE
+binlog_checksum = NONE
+log_slave_updates = ON
+log_bin = binlog
+binlog_format = ROW
+transaction_write_set_extraction = XXHASH64
+loose-group_replication_bootstrap_group = OFF
+loose-group_replication_start_on_boot = OFF
+loose-group_replication_ssl_mode = REQUIRED
+loose-group_replication_recovery_use_ssl = 1
+</code></pre><p> You don&apos;t need to modify anything in this section, so you can move on after pasting it into all three mysql nodes.</p>
+<ol>
+<li>Shared Group Replication Settings</li>
+</ol>
+<p>Set the loose-group_replication_group_name to the UUID you generated previously with the uuidgen command. Paste the UUID you copied as the value for this variable.</p>
+<p>Next, set loose-group_replication_ip_whitelist to a list of all of your MySQL server IP addresses, separated by commas. The loose-group_replication_group_seeds setting should be almost the same as the whitelist, but should append the group replication port we will use to the end of each member. For this guide, we&apos;ll use the recommended port of 33061 for the group replication:</p>
+<pre><code class="lang-shell">
+# Shared replication group configuration
+loose-group_replication_group_name = &quot;959cf631-538c-415d-8164-ca00181be227&quot;
+loose-group_replication_ip_whitelist = &quot;10.0.1.3,10.0.1.4,10.0.1.5&quot;
+loose-group_replication_group_seeds = &quot;10.0.1.3:33061,10.0.1.4:33061,10.0.1.5:33061&quot;
+</code></pre>
+<p><strong>note:</strong>: You have to use the same uuid in all mysql nodes.</p>
+<ol>
+<li>Choose multiple master mode</li>
+</ol>
+<p>If you wish to configure a single-primary group, just comment these two directives, otherwise keep it on.</p>
+<pre><code class="lang-shell"># Single or Multi-primary mode? Uncomment these two lines
+# for multi-primary mode, where any host can accept writes
+loose-group_replication_single_primary_mode = OFF
+loose-group_replication_enforce_update_everywhere_checks = ON
+</code></pre>
+<p><strong>These settings must be the same on each of your MySQL servers.</strong></p>
+<ol>
+<li>Host-Specific Configuration Settings</li>
+</ol>
+<p>The server_id directive must be set to a unique number. For the first member, just set this to &quot;1&quot; and increment the number on each additional host. Set bind-address and report_host to the current server&apos;s IP address so that the MySQL instance will listen for external connections and report its address correctly to other hosts. The loose-group_replication_local_address should also be set to the current server&apos;s IP address with the group replication port (33061), appended to the IP address:</p>
+<pre><code class="lang-sh"><span class="hljs-comment"># Host specific replication configuration</span>
+server_id = 1
+<span class="hljs-built_in">bind</span>-address = <span class="hljs-string">&quot;10.0.1.3&quot;</span>
+report_host = <span class="hljs-string">&quot;10.0.1.3&quot;</span>
+loose-group_replication_<span class="hljs-built_in">local</span>_address = <span class="hljs-string">&quot;10.0.1.3:33061&quot;</span>
+</code></pre>
+<ul>
+<li>Restart MySQL</li>
+</ul>
+<pre><code class="lang-sh">sudo service mysql restart
+</code></pre>
+<ul>
+<li>Configure Replication User and Enable Group Replication Plugin</li>
+</ul>
+<p>In each host, run:</p>
+<pre><code class="lang-sh">$ mysql -u root -p
+</code></pre>
+<pre><code class="lang-sql"><span class="hljs-keyword">SET</span> SQL_LOG_BIN=<span class="hljs-number">0</span>;
+<span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">USER</span> <span class="hljs-string">&apos;repl&apos;</span>@<span class="hljs-string">&apos;%&apos;</span> <span class="hljs-keyword">IDENTIFIED</span> <span class="hljs-keyword">BY</span> <span class="hljs-string">&apos;password&apos;</span> REQUIRE SSL;
+<span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">REPLICATION</span> <span class="hljs-keyword">SLAVE</span> <span class="hljs-keyword">ON</span> *.* <span class="hljs-keyword">TO</span> <span class="hljs-string">&apos;repl&apos;</span>@<span class="hljs-string">&apos;%&apos;</span>;
+<span class="hljs-keyword">FLUSH</span> <span class="hljs-keyword">PRIVILEGES</span>;
+<span class="hljs-keyword">SET</span> SQL_LOG_BIN=<span class="hljs-number">1</span>;
+</code></pre>
+<p>Next, we need to set the group_replication_recovery channel to use our new replication user and the associated password. Each server will then use these credentials to authenticate to the group.</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">CHANGE</span> <span class="hljs-keyword">MASTER</span> <span class="hljs-keyword">TO</span> MASTER_USER=<span class="hljs-string">&apos;repl&apos;</span>, MASTER_PASSWORD=<span class="hljs-string">&apos;password&apos;</span> <span class="hljs-keyword">FOR</span> CHANNEL <span class="hljs-string">&apos;group_replication_recovery&apos;</span>;
+</code></pre>
+<p>With the replication user in place, we can enable the group replication plugin to prepare to initialize the group. Since we are using the latest version of MySQL, we can enable the plugin by typing:</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">INSTALL</span> <span class="hljs-keyword">PLUGIN</span> group_replication <span class="hljs-keyword">SONAME</span> <span class="hljs-string">&apos;group_replication.so&apos;</span>;
+</code></pre>
+<ul>
+<li>Start Group Replication</li>
+</ul>
+<p>Now that each MySQL server has a replication user configured and the group replication plugin enabled, we can begin to bring up our group.</p>
+<ol>
+<li>Bootstrap First Node</li>
+</ol>
+<p>On mysql1</p>
+<pre><code class="lang-SQL"><span class="hljs-keyword">SET</span> <span class="hljs-keyword">GLOBAL</span> group_replication_bootstrap_group=<span class="hljs-keyword">ON</span>;
+<span class="hljs-keyword">START</span> GROUP_REPLICATION;
+<span class="hljs-keyword">SET</span> <span class="hljs-keyword">GLOBAL</span> group_replication_bootstrap_group=<span class="hljs-keyword">OFF</span>;
+</code></pre>
+<ol>
+<li>Start Up the Remaining Nodes</li>
+</ol>
+<p>On mysql2</p>
+<pre><code class="lang-SQL"><span class="hljs-keyword">START</span> GROUP_REPLICATION;
+</code></pre>
+<p>On mysql3</p>
+<pre><code class="lang-SQL"><span class="hljs-keyword">START</span> GROUP_REPLICATION;
+</code></pre>
+<p>Check the membership list. You should see three servers now:</p>
+<pre><code class="lang-SQL"><span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> performance_schema.replication_group_members;
+</code></pre>
+<pre><code class="lang-SQL"># output
++<span class="hljs-comment">---------------------------+--------------------------------------+--------------+-------------+--------------+</span>
+| CHANNEL_NAME              | MEMBER_ID                            | MEMBER_HOST  | MEMBER_PORT | MEMBER_STATE |
++<span class="hljs-comment">---------------------------+--------------------------------------+--------------+-------------+--------------+</span>
+| group_replication_applier | 13324ab7-1b01-11e7-9dd1-22b78adaa992 | 10.0.1.3  |        3306 | ONLINE       |
+| group_replication_applier | 1ae4b211-1b01-11e7-9d89-ceb93e1d5494 | 10.0.1.4  |        3306 | ONLINE       |
+| group_replication_applier | 157b597a-1b01-11e7-9d83-566a6de6dfef | 10.0.1.5  |        3306 | ONLINE       |
++<span class="hljs-comment">---------------------------+--------------------------------------+--------------+-------------+--------------+</span>
+3 rows in <span class="hljs-keyword">set</span> (<span class="hljs-number">0.01</span> sec)
+</code></pre>
+<h2 id="setup-proxysql">Setup Proxysql</h2>
+<ul>
+<li>Login to ProxySQL Admin Module</li>
+</ul>
+<pre><code class="lang-sh">mysql -u admin -padmin -h 127.0.0.1 -P 6032 --prompt=<span class="hljs-string">&apos;Admin&gt; &apos;</span>
+</code></pre>
+<ul>
+<li>Add Group Replication Nodes to ProxySQL</li>
+</ul>
+<pre><code class="lang-sql">Admin&gt; INSERT INTO mysql_servers(hostgroup_id,hostname,port) VALUES (1,&apos;10.0.1.119&apos;,3306);
+Admin&gt; INSERT INTO mysql_servers(hostgroup_id,hostname,port) VALUES (1,&apos;10.0.1.31&apos;,3306);
+Admin&gt; INSERT INTO mysql_servers(hostgroup_id,hostname,port) VALUES (1,&apos;10.0.1.43&apos;,3306);
+Admin&gt; LOAD MYSQL SERVERS TO RUNTIME;
+Admin&gt; SAVE MYSQL SERVERS TO DISK;
+Admin&gt; SELECT * FROM disk.mysql_servers;
+</code></pre>
+<ul>
+<li>Create ProxySQL Monitoring User</li>
+</ul>
+<p>On any mysql node of one group, run:</p>
+<pre><code class="lang-SQL">mysql&gt; CREATE USER &apos;proxysql&apos;@&apos;%&apos; IDENTIFIED BY &apos;ProxySQLPassword&apos;;
+mysql&gt; GRANT USAGE ON *.* TO &apos;proxysql&apos;@&apos;%&apos;;
+</code></pre>
+<p>Configure the monitoring user in ProxySQL. Use LOAD command to load this configuration at runtime. Use SAVE to save these changes to disk so they can persist after ProxySQL is shutdown.</p>
+<pre><code class="lang-SQL">Admin&gt; UPDATE global_variables SET variable_value=&apos;proxysql&apos; WHERE variable_name=&apos;mysql-monitor_username&apos;;
+Admin&gt; UPDATE global_variables SET variable_value=&apos;ProxySQLPassword&apos; WHERE variable_name=&apos;mysql-monitor_password&apos;;
+Admin&gt; LOAD MYSQL VARIABLES TO RUNTIME;
+Admin&gt; SAVE MYSQL VARIABLES TO DISK;
+</code></pre>
+<ul>
+<li>Create ProxySQL Client User</li>
+</ul>
+<p>In ProxySQL Node:</p>
+<pre><code class="lang-SQL">Admin&gt; INSERT INTO mysql_users (username,password,default_hostgroup) VALUES (&apos;sbuser&apos;,&apos;sbpassword&apos;,&apos;1&apos;);
+Admin&gt; LOAD MYSQL USERS TO RUNTIME;
+Admin&gt; SAVE MYSQL USERS TO DISK;
+</code></pre>
+<p>In one MySQL group replication node</p>
+<pre><code>mysql&gt; CREATE USER &apos;sbuser&apos;@&apos;10.0.1.2&apos; IDENTIFIED BY &apos;sbpassword&apos;;
+mysql&gt; GRANT ALL ON *.* TO &apos;sbuser&apos;@&apos;10.0.1.2&apos;;
+</code></pre><h2 id="test">Test</h2>
+<p>Just create a database and insert some data by proxysql client user <code>sbuser</code>, and check it in every mysql node.</p>
+<pre><code>mysql -u sbuser -psbpassword -h 10.0.1.2 -P 6033
+</code></pre><h2 id="dara-migration">Dara migration</h2>
+<p><strong>Every table must include primary key.</strong></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="index.md" class="navigation navigation-prev " aria-label="Previous page: docker">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="20180607_mysql_master_slave.html" class="navigation navigation-next " aria-label="Next page: Docker containers with MySQL master-slave replication">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Mysql Load Balance and HA with Group Replication and ProxySQL","level":"1.3.1","depth":2,"next":{"title":"Docker containers with MySQL master-slave replication","level":"1.3.2","depth":2,"path":"docker/20180607_mysql_master_slave.md","ref":"./docker/20180607_mysql_master_slave.md","articles":[]},"previous":{"title":"docker","level":"1.3","depth":1,"path":"docker/index.md","ref":"./docker/index.md","articles":[{"title":"Mysql Load Balance and HA with Group Replication and ProxySQL","level":"1.3.1","depth":2,"path":"docker/20180617_mysql_group_replication&proxysql.md","ref":"./docker/20180617_mysql_group_replication&proxysql.md","articles":[]},{"title":"Docker containers with MySQL master-slave replication","level":"1.3.2","depth":2,"path":"docker/20180607_mysql_master_slave.md","ref":"./docker/20180607_mysql_master_slave.md","articles":[]},{"title":"maria_mysql集群改进后","level":"1.3.3","depth":2,"path":"docker/open_maria_mysql.md","ref":"./docker/open_maria_mysql.md","articles":[]},{"title":"maria_mysql","level":"1.3.4","depth":2,"path":"docker/maria_mysql.md","ref":"./docker/maria_mysql.md","articles":[]},{"title":"查看镜像版本","level":"1.3.5","depth":2,"path":"docker/tag.md","ref":"./docker/tag.md","articles":[]},{"title":"Openldap","level":"1.3.6","depth":2,"path":"docker/openldap.md","ref":"./docker/openldap.md","articles":[]},{"title":"Redis Cluster","level":"1.3.7","depth":2,"path":"docker/redis_cluster.md","ref":"./docker/redis_cluster.md","articles":[]},{"title":"docker中进入mariaDB","level":"1.3.8","depth":2,"path":"docker/docker_mariadb.md","ref":"./docker/docker_mariadb.md","articles":[]},{"title":"docker 中部署grafana","level":"1.3.9","depth":2,"path":"docker/docker_grafana.md","ref":"./docker/docker_grafana.md","articles":[]},{"title":"docker 中部署zabbix","level":"1.3.10","depth":2,"path":"docker/docker_zabbix.md","ref":"./docker/docker_zabbix.md","articles":[]},{"title":"docker 中遇到问题","level":"1.3.11","depth":2,"path":"docker/problem.md","ref":"./docker/problem.md","articles":[]},{"title":"mongo cluster","level":"1.3.12","depth":2,"path":"docker/mongo_cluster.md","ref":"./docker/mongo_cluster.md","articles":[]},{"title":"docker machine","level":"1.3.13","depth":2,"path":"docker/docker_machine.md","ref":"./docker/docker_machine.md","articles":[]},{"title":"docker 命令","level":"1.3.14","depth":2,"path":"docker/command.md","ref":"./docker/command.md","articles":[]},{"title":"docker安装","level":"1.3.15","depth":2,"path":"docker/install.md","ref":"./docker/install.md","articles":[]},{"title":"入门","level":"1.3.16","depth":2,"path":"docker/image.md","ref":"./docker/image.md","articles":[]},{"title":"在docker中运行hello world","level":"1.3.17","depth":2,"path":"docker/hello.md","ref":"./docker/hello.md","articles":[]},{"title":"在容器中装新程序及保存修改","level":"1.3.18","depth":2,"path":"docker/installnew.md","ref":"./docker/installnew.md","articles":[]},{"title":"运行新镜像","level":"1.3.19","depth":2,"path":"docker/new-image.md","ref":"./docker/new-image.md","articles":[]},{"title":"发布镜像","level":"1.3.20","depth":2,"path":"docker/public.md","ref":"./docker/public.md","articles":[]},{"title":"一小时Docker教程 ","level":"1.3.21","depth":2,"path":"docker/source.md","ref":"./docker/source.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docker/20180617_mysql_group_replication&proxysql.md","mtime":"2018-06-21T06:02:37.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T06:06:54.729Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
