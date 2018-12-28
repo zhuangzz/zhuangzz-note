@@ -1,0 +1,2737 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>监控配置注意事项 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="port.html" />
+    
+    
+    <link rel="prev" href="triggers.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Inction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../blockchain/index.md">
+            
+                <span>
+            
+                    
+                    Blockchain
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../blockchain/blockchain.html">
+            
+                <a href="../blockchain/blockchain.html">
+            
+                    
+                    什么是Blockchain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../blockchain/bitcoin.html">
+            
+                <a href="../blockchain/bitcoin.html">
+            
+                    
+                    比特币
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../hyperledger/index.md">
+            
+                <span>
+            
+                    
+                    Hyperledger
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../hyperledger/ca.html">
+            
+                <a href="../hyperledger/ca.html">
+            
+                    
+                    ca认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../hyperledger/binaries.html">
+            
+                <a href="../hyperledger/binaries.html">
+            
+                    
+                    下载平台特定的二进制文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="../hyperledger/generate_certificate.html">
+            
+                <a href="../hyperledger/generate_certificate.html">
+            
+                    
+                    Hyperledger 定制网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="../hyperledger/firstnet.html">
+            
+                <a href="../hyperledger/firstnet.html">
+            
+                    
+                    开启第一个网络时遇到的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5" data-path="../hyperledger/cello.html">
+            
+                <a href="../hyperledger/cello.html">
+            
+                    
+                    cello
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.6" data-path="../hyperledger/pug.html">
+            
+                <a href="../hyperledger/pug.html">
+            
+                    
+                    pug
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.7" data-path="../hyperledger/explore.html">
+            
+                <a href="../hyperledger/explore.html">
+            
+                    
+                    blockchain-explore
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.8" data-path="../hyperledger/build-test.html">
+            
+                <a href="../hyperledger/build-test.html">
+            
+                    
+                    测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../docker/index.md">
+            
+                <span>
+            
+                    
+                    docker
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../docker/20180617_mysql_group_replication&proxysql.html">
+            
+                <a href="../docker/20180617_mysql_group_replication&proxysql.html">
+            
+                    
+                    Mysql Load Balance and HA with Group Replication and ProxySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../docker/20180607_mysql_master_slave.html">
+            
+                <a href="../docker/20180607_mysql_master_slave.html">
+            
+                    
+                    Docker containers with MySQL master-slave replication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../docker/open_maria_mysql.html">
+            
+                <a href="../docker/open_maria_mysql.html">
+            
+                    
+                    maria_mysql集群改进后
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../docker/maria_mysql.html">
+            
+                <a href="../docker/maria_mysql.html">
+            
+                    
+                    maria_mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../docker/tag.html">
+            
+                <a href="../docker/tag.html">
+            
+                    
+                    查看镜像版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../docker/openldap.html">
+            
+                <a href="../docker/openldap.html">
+            
+                    
+                    Openldap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../docker/redis_cluster.html">
+            
+                <a href="../docker/redis_cluster.html">
+            
+                    
+                    Redis Cluster
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../docker/docker_mariadb.html">
+            
+                <a href="../docker/docker_mariadb.html">
+            
+                    
+                    docker中进入mariaDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../docker/docker_grafana.html">
+            
+                <a href="../docker/docker_grafana.html">
+            
+                    
+                    docker 中部署grafana
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../docker/docker_zabbix.html">
+            
+                <a href="../docker/docker_zabbix.html">
+            
+                    
+                    docker 中部署zabbix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../docker/docker_zabbix2.html">
+            
+                <a href="../docker/docker_zabbix2.html">
+            
+                    
+                    docker 中部署zabbix2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../docker/problem.html">
+            
+                <a href="../docker/problem.html">
+            
+                    
+                    docker 中遇到问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../docker/mongo_cluster.html">
+            
+                <a href="../docker/mongo_cluster.html">
+            
+                    
+                    mongo cluster
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../docker/docker_machine.html">
+            
+                <a href="../docker/docker_machine.html">
+            
+                    
+                    docker machine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="../docker/command.html">
+            
+                <a href="../docker/command.html">
+            
+                    
+                    docker 命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="../docker/install.html">
+            
+                <a href="../docker/install.html">
+            
+                    
+                    docker安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="../docker/image.html">
+            
+                <a href="../docker/image.html">
+            
+                    
+                    入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18" data-path="../docker/hello.html">
+            
+                <a href="../docker/hello.html">
+            
+                    
+                    在docker中运行hello world
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.19" data-path="../docker/installnew.html">
+            
+                <a href="../docker/installnew.html">
+            
+                    
+                    在容器中装新程序及保存修改
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.20" data-path="../docker/new-image.html">
+            
+                <a href="../docker/new-image.html">
+            
+                    
+                    运行新镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.21" data-path="../docker/public.html">
+            
+                <a href="../docker/public.html">
+            
+                    
+                    发布镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.22" data-path="../docker/source.html">
+            
+                <a href="../docker/source.html">
+            
+                    
+                    一小时Docker教程 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../wechat/index.md">
+            
+                <span>
+            
+                    
+                    微信小游戏
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../wechat/error.html">
+            
+                <a href="../wechat/error.html">
+            
+                    
+                    遇到的报错
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../wechat/object-oriented.html">
+            
+                <a href="../wechat/object-oriented.html">
+            
+                    
+                    js面向对象基础填坑
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../wechat/canvas.html">
+            
+                <a href="../wechat/canvas.html">
+            
+                    
+                    canvas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../wechat/introduce.html">
+            
+                <a href="../wechat/introduce.html">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../vue/">
+            
+                <a href="../vue/">
+            
+                    
+                    vue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../vue/transitions.html">
+            
+                <a href="../vue/transitions.html">
+            
+                    
+                    transitions过度&动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../vue/timestamp.html">
+            
+                <a href="../vue/timestamp.html">
+            
+                    
+                    时间戳是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../vue/amap.html">
+            
+                <a href="../vue/amap.html">
+            
+                    
+                    高德地图运用笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../jquery/">
+            
+                <a href="../jquery/">
+            
+                    
+                    jQuery
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../jquery/1-state.html">
+            
+                <a href="../jquery/1-state.html">
+            
+                    
+                    第一节:安装sublime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../jquery/2-state.html">
+            
+                <a href="../jquery/2-state.html">
+            
+                    
+                    第二节:做一个轮播图、tab
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../jquery/3-state.html">
+            
+                <a href="../jquery/3-state.html">
+            
+                    
+                    第三节:实现导航栏
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../jquery/4-state.html">
+            
+                <a href="../jquery/4-state.html">
+            
+                    
+                    第四节:事件、效果，做侧边栏
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../jquery/5-state.html">
+            
+                <a href="../jquery/5-state.html">
+            
+                    
+                    第五节:评论效果实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../jquery/6-state.html">
+            
+                <a href="../jquery/6-state.html">
+            
+                    
+                    第六节:表单相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../jquery/8-state.html">
+            
+                <a href="../jquery/8-state.html">
+            
+                    
+                    第七节:使用swiper animate做简历、清浮动
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../javascript/">
+            
+                <a href="../javascript/">
+            
+                    
+                    javaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../javascript/1-state.html">
+            
+                <a href="../javascript/1-state.html">
+            
+                    
+                    第一节:变量 数据类型 for循环 运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../javascript/2-state.html">
+            
+                <a href="../javascript/2-state.html">
+            
+                    
+                    第二节:for循环 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../javascript/3-state.html">
+            
+                <a href="../javascript/3-state.html">
+            
+                    
+                    第三节:对象 数组 数学
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../javascript/4-state.html">
+            
+                <a href="../javascript/4-state.html">
+            
+                    
+                    第四节:排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../javascript/5-state.html">
+            
+                <a href="../javascript/5-state.html">
+            
+                    
+                    第五节:日期对象 函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../javascript/6-state.html">
+            
+                <a href="../javascript/6-state.html">
+            
+                    
+                    第六节:倒计时 字符串对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../javascript/7-state.html">
+            
+                <a href="../javascript/7-state.html">
+            
+                    
+                    第七节:函数 正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../javascript/8-state.html">
+            
+                <a href="../javascript/8-state.html">
+            
+                    
+                    第八节:match replace search、dom 文档对象模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../javascript/9-state.html">
+            
+                <a href="../javascript/9-state.html">
+            
+                    
+                    第九节:addClass、removeClass
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="../javascript/10-state.html">
+            
+                <a href="../javascript/10-state.html">
+            
+                    
+                    第十节:dom、事件委托
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.11" data-path="../javascript/11-state.html">
+            
+                <a href="../javascript/11-state.html">
+            
+                    
+                    第十一节:键盘事件、event事件、绑定事件、滚动条
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.12" data-path="../javascript/12-state.html">
+            
+                <a href="../javascript/12-state.html">
+            
+                    
+                    第十二节:window、属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.13" data-path="../javascript/13-state.html">
+            
+                <a href="../javascript/13-state.html">
+            
+                    
+                    第十三节:怎么获取指定元素的任意样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.14" data-path="../javascript/14-state.html">
+            
+                <a href="../javascript/14-state.html">
+            
+                    
+                    第十四节:深拷贝、浅拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.15" data-path="../javascript/15-state.html">
+            
+                <a href="../javascript/15-state.html">
+            
+                    
+                    第十五节:构造函数、对象冒充
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.16" data-path="../javascript/callback.html">
+            
+                <a href="../javascript/callback.html">
+            
+                    
+                    回调函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../command/">
+            
+                <a href="../command/">
+            
+                    
+                    终端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../command/iterm-ohmyzsh.html">
+            
+                <a href="../command/iterm-ohmyzsh.html">
+            
+                    
+                    iterm2--oh my zsh
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../command/bash-zsh.html">
+            
+                <a href="../command/bash-zsh.html">
+            
+                    
+                    bash zsh 互相切换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../command/1-state.html">
+            
+                <a href="../command/1-state.html">
+            
+                    
+                    安装nodejs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../command/2-state.html">
+            
+                <a href="../command/2-state.html">
+            
+                    
+                    从GitHub克隆仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../command/3-state.html">
+            
+                <a href="../command/3-state.html">
+            
+                    
+                    向GitHub创建个人网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../command/4-state.html">
+            
+                <a href="../command/4-state.html">
+            
+                    
+                    命令行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../command/5-state.html">
+            
+                <a href="../command/5-state.html">
+            
+                    
+                    Atom编辑器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../command/6-state.html">
+            
+                <a href="../command/6-state.html">
+            
+                    
+                    nodejs安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../command/7-state.html">
+            
+                <a href="../command/7-state.html">
+            
+                    
+                    npm使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="../command/8-state.html">
+            
+                <a href="../command/8-state.html">
+            
+                    
+                    如何让使用gh-pages机制托管一个静态页面？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="../command/git-command.html">
+            
+                <a href="../command/git-command.html">
+            
+                    
+                    git命令行
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../gitbook/">
+            
+                <a href="../gitbook/">
+            
+                    
+                    Gitbook 使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../gitbook/markdown.html">
+            
+                <a href="../gitbook/markdown.html">
+            
+                    
+                    markdown 语法简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../gitbook/create-note.html">
+            
+                <a href="../gitbook/create-note.html">
+            
+                    
+                     安装 Gitbook 并创建笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../gitbook/npm-build.html">
+            
+                <a href="../gitbook/npm-build.html">
+            
+                    
+                     编译Gitbook 为静态HTML文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../gitbook/pages-manage.html">
+            
+                <a href="../gitbook/pages-manage.html">
+            
+                    
+                     托管到GitHub pages 静态网站服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../gitbook/changelog.html">
+            
+                <a href="../gitbook/changelog.html">
+            
+                    
+                    生成日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../git/">
+            
+                <a href="../git/">
+            
+                    
+                    随时隐藏
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../git/update.html">
+            
+                <a href="../git/update.html">
+            
+                    
+                    系统升级
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1.1" data-path="../git/install.html">
+            
+                <a href="../git/install.html">
+            
+                    
+                    git在Windows中的使用总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.2" data-path="../git/working_arrangements.html">
+            
+                <a href="../git/working_arrangements.html">
+            
+                    
+                    Working arrangements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.3" data-path="../git/18_1_04.html">
+            
+                <a href="../git/18_1_04.html">
+            
+                    
+                    Working Progress_01/04
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.4" data-path="../git/18_1_05.html">
+            
+                <a href="../git/18_1_05.html">
+            
+                    
+                    Working Progress_01/05
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.5" data-path="../git/1_08.html">
+            
+                <a href="../git/1_08.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.6" data-path="../git/web_guide.html">
+            
+                <a href="../git/web_guide.html">
+            
+                    
+                    web
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.7" data-path="../git/20171222_hui_guide.html">
+            
+                <a href="../git/20171222_hui_guide.html">
+            
+                    
+                    phone
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../redux/">
+            
+                <a href="../redux/">
+            
+                    
+                    redux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../redux/1-state.html">
+            
+                <a href="../redux/1-state.html">
+            
+                    
+                    第一节：状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../redux/2-state.html">
+            
+                <a href="../redux/2-state.html">
+            
+                    
+                    第二节：内部 state 使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../redux/3-state.html">
+            
+                <a href="../redux/3-state.html">
+            
+                    
+                    第三节：不用 Redux 实现组件间通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../redux/4-state.html">
+            
+                <a href="../redux/4-state.html">
+            
+                    
+                    第四节：Redux Store
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../redux/5-state.html">
+            
+                <a href="../redux/5-state.html">
+            
+                    
+                    第五节：处理多类数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../redux/6-state.html">
+            
+                <a href="../redux/6-state.html">
+            
+                    
+                    第六节：js :拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../react/">
+            
+                <a href="../react/">
+            
+                    
+                    react
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../react/1-state.html">
+            
+                <a href="../react/1-state.html">
+            
+                    
+                    什么是nodejs/NVM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../react/2-state.html">
+            
+                <a href="../react/2-state.html">
+            
+                    
+                    什么是es6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../react/3-state.html">
+            
+                <a href="../react/3-state.html">
+            
+                    
+                    什么是面向对象编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../react/3-states.html">
+            
+                <a href="../react/3-states.html">
+            
+                    
+                    this的常见使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../react/4-state.html">
+            
+                <a href="../react/4-state.html">
+            
+                    
+                    如何使用类的继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="../react/5-state.html">
+            
+                <a href="../react/5-state.html">
+            
+                    
+                    super()是干吗用的
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="../react/6-state.html">
+            
+                <a href="../react/6-state.html">
+            
+                    
+                    es6模块怎么用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.8" data-path="../react/7-state.html">
+            
+                <a href="../react/7-state.html">
+            
+                    
+                    为何要发明let和const
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.9" data-path="../react/8-state.html">
+            
+                <a href="../react/8-state.html">
+            
+                    
+                    解构赋值是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.10" data-path="../react/template-str.html">
+            
+                <a href="../react/template-str.html">
+            
+                    
+                    模板字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.11" data-path="../react/arrow-function.html">
+            
+                <a href="../react/arrow-function.html">
+            
+                    
+                    胖箭头函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.12" data-path="../react/array-find.html">
+            
+                <a href="../react/array-find.html">
+            
+                    
+                    数组的find方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.13" data-path="../react/array-map.html">
+            
+                <a href="../react/array-map.html">
+            
+                    
+                    数组的map()方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.14" data-path="../react/array-filter.html">
+            
+                <a href="../react/array-filter.html">
+            
+                    
+                    数组filter方法如何用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.15" data-path="../react/array-reverse.html">
+            
+                <a href="../react/array-reverse.html">
+            
+                    
+                    如何将数组逆序(reverse)输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.16" data-path="../react/object-assign.html">
+            
+                <a href="../react/object-assign.html">
+            
+                    
+                    如何对象合并object.assign
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.17" data-path="../react/object-keys.html">
+            
+                <a href="../react/object-keys.html">
+            
+                    
+                    Object.keys如何用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.18" data-path="../react/object-keys.html">
+            
+                <a href="../react/object-keys.html">
+            
+                    
+                    什么是对象展开运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.19" data-path="../react/es-stage.html">
+            
+                <a href="../react/es-stage.html">
+            
+                    
+                    ES6/ES7/ES8/stage0
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.20" data-path="../react/promise.html">
+            
+                <a href="../react/promise.html">
+            
+                    
+                    Promise是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.21" data-path="../react/coding-style.html">
+            
+                <a href="../react/coding-style.html">
+            
+                    
+                    什么编程风格最棒
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.22" data-path="../react/npm.html">
+            
+                <a href="../react/npm.html">
+            
+                    
+                    npm是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.23" data-path="../react/nodejs-project.html">
+            
+                <a href="../react/nodejs-project.html">
+            
+                    
+                    创建一个Nodejs项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.24" data-path="../react/create-react-app.html">
+            
+                <a href="../react/create-react-app.html">
+            
+                    
+                    create-react-app
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.25" data-path="../react/react-hello-world.html">
+            
+                <a href="../react/react-hello-world.html">
+            
+                    
+                    简单的react的Hello-World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.26" data-path="../react/react-component.html">
+            
+                <a href="../react/react-component.html">
+            
+                    
+                    React组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.27" data-path="../react/react-jsx.html">
+            
+                <a href="../react/react-jsx.html">
+            
+                    
+                    组件中JSX语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.28" data-path="../react/many-components.html">
+            
+                <a href="../react/many-components.html">
+            
+                    
+                    项目组件化拆分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.29" data-path="../react/css-org.html">
+            
+                <a href="../react/css-org.html">
+            
+                    
+                    CSS布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.30" data-path="../react/common-errors.html">
+            
+                <a href="../react/common-errors.html">
+            
+                    
+                    常见运行错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.31" data-path="../react/clear.html">
+            
+                <a href="../react/clear.html">
+            
+                    
+                    关于clearfix和Flexbox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.32" data-path="../react/props.html">
+            
+                <a href="../react/props.html">
+            
+                    
+                    组件属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.33" data-path="../react/children.html">
+            
+                <a href="../react/children.html">
+            
+                    
+                    组件children
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.34" data-path="../react/events.html">
+            
+                <a href="../react/events.html">
+            
+                    
+                    React的事件响应
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.35" data-path="../react/jsx-complete.html">
+            
+                <a href="../react/jsx-complete.html">
+            
+                    
+                    Atom中如何emmet自动补齐
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.36" data-path="../react/state.html">
+            
+                <a href="../react/state.html">
+            
+                    
+                    state
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.37" data-path="../react/state-color.html">
+            
+                <a href="../react/state-color.html">
+            
+                    
+                    state例子：div变色方法对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.38" data-path="../react/and.html">
+            
+                <a href="../react/and.html">
+            
+                    
+                    与运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.39" data-path="../react/list-key.html">
+            
+                <a href="../react/list-key.html">
+            
+                    
+                    组件和key
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.40" data-path="../react/pass-handle.html">
+            
+                <a href="../react/pass-handle.html">
+            
+                    
+                    向事件处理函数中传参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.41" data-path="../react/list-mani.html">
+            
+                <a href="../react/list-mani.html">
+            
+                    
+                    操作列表上的一个元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.42" data-path="../react/json-server.html">
+            
+                <a href="../react/json-server.html">
+            
+                    
+                    JSON-Server安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.43" data-path="../react/data-v.html">
+            
+                <a href="../react/data-v.html">
+            
+                    
+                    数据可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../node/index.md">
+            
+                <span>
+            
+                    
+                    Node
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../node/dowload.html">
+            
+                <a href="../node/dowload.html">
+            
+                    
+                    自动下载图片
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../node/rename.html">
+            
+                <a href="../node/rename.html">
+            
+                    
+                    批量图片重命名
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../software/">
+            
+                <a href="../software/">
+            
+                    
+                    还没想好标题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../software/homebrew.html">
+            
+                <a href="../software/homebrew.html">
+            
+                    
+                    安装Homebrew
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../software/review.html">
+            
+                <a href="../software/review.html">
+            
+                    
+                    使用git-review涉及的命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../software/mysql.html">
+            
+                <a href="../software/mysql.html">
+            
+                    
+                    mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../ps/">
+            
+                <a href="../ps/">
+            
+                    
+                    ps
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../ps/tool.html">
+            
+                <a href="../ps/tool.html">
+            
+                    
+                    常用工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="index.md">
+            
+                <span>
+            
+                    
+                    zabbix
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="abc.html">
+            
+                <a href="abc.html">
+            
+                    
+                    入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="triggers.html">
+            
+                <a href="triggers.html">
+            
+                    
+                    zabbix触发器函数的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.16.3" data-path="tips.html">
+            
+                <a href="tips.html">
+            
+                    
+                    监控配置注意事项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="port.html">
+            
+                <a href="port.html">
+            
+                    
+                    监听端口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="email.html">
+            
+                <a href="email.html">
+            
+                    
+                    邮件报警
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../jmeter/index.md">
+            
+                <span>
+            
+                    
+                    Jmeter
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="../jmeter/abc.html">
+            
+                <a href="../jmeter/abc.html">
+            
+                    
+                    入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2" data-path="../jmeter/test.html">
+            
+                <a href="../jmeter/test.html">
+            
+                    
+                    测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../linux/index.md">
+            
+                <span>
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" data-path="../linux/scp.html">
+            
+                <a href="../linux/scp.html">
+            
+                    
+                    复制命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.2" data-path="../linux/lsof.html">
+            
+                <a href="../linux/lsof.html">
+            
+                    
+                    停止占用端口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.3" data-path="../linux/autocomplete.html">
+            
+                <a href="../linux/autocomplete.html">
+            
+                    
+                    bash tab 自动补齐
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../mongodb/index.md">
+            
+                <span>
+            
+                    
+                    mongodb
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.19.1" data-path="../mongodb/install.html">
+            
+                <a href="../mongodb/install.html">
+            
+                    
+                    macOS安装mongo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.2" data-path="../mongodb/docker-mongo.html">
+            
+                <a href="../mongodb/docker-mongo.html">
+            
+                    
+                    Docker Mongodb安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.3" data-path="../mongodb/use.html">
+            
+                <a href="../mongodb/use.html">
+            
+                    
+                    mongo基本使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../go/index.md">
+            
+                <span>
+            
+                    
+                    go
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.20.1" data-path="../go/install.md">
+            
+                <span>
+            
+                    
+                    go的下载及环境变量的设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../ide/index.md">
+            
+                <span>
+            
+                    
+                    ide
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.21.1" data-path="../ide/vsc.html">
+            
+                <a href="../ide/vsc.html">
+            
+                    
+                    Visual Studio Code的安装和应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >监控配置注意事项</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="zabbix&#x914D;&#x7F6E;">Zabbix&#x914D;&#x7F6E;</h3>
+<p>&#x4E0B;&#x9762;&#x8BF4;&#x51E0;&#x70B9;&#x7528;zabbix &#x914D;&#x7F6E;&#x76D1;&#x63A7;&#x9879;&#x65F6;&#x7684;&#x6CE8;&#x610F;&#x4E8B;&#x9879;</p>
+<h3 id="&#x6B65;&#x9AA4;">&#x6B65;&#x9AA4;</h3>
+<p>&#x8BB0;&#x5F55;&#x4E9B;&#x914D;&#x7684;&#x987A;&#x624B;&#x7684;&#x6B65;&#x9AA4;&#xFF0C;&#x4E0B;&#x5217;&#x6B65;&#x9AA4;&#x662F;&#x5728;&#x90E8;&#x7F72;&#x597D;zabbix&#xFF0C;&#x80FD;&#x4E3B;&#x52A8;&#x53D1;&#x73B0;hosts&#x7684;&#x3001;&#x5BFC;&#x5165;&#x4E86;template&#x6A21;&#x677F;&#x57FA;&#x7840;&#x4E0A;&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#x7684;&#x3002;</p>
+<p><strong>&#x901A;&#x8FC7;&#x914D;&#x7F6E;template&#x6A21;&#x677F;&#x7684; item trigger &#x6765;&#x5B9E;&#x73B0;&#x76D1;&#x63A7;</strong></p>
+<ul>
+<li>&#x9009;&#x4E2D;&#x5BFC;&#x5165;&#x7684; template &#x6A21;&#x677F;</li>
+<li>&#x521B;&#x5EFA; item</li>
+<li>&#x521B;&#x5EFA; trigger</li>
+</ul>
+<blockquote>
+<p>&#x6CE8;&#xFF0C;&#x521B;&#x5EFA;&#x7684;item&#x4E0D;&#x9002;&#x7528;&#x4E8E;&#x6240;&#x6709; hosts&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x53BB;&#x4E0D;&#x9002;&#x7528;&#x7684; hosts&#x628A;item&#x7981;&#x7528;</p>
+</blockquote>
+<ul>
+<li>&#x76D1;&#x63A7;&#x7AEF;&#x53E3;</li>
+</ul>
+<p>net.tcp.listen[port]</p>
+<ul>
+<li>&#x5EF6;&#x8FDF;&#x76D1;&#x63A7;</li>
+</ul>
+<pre><code>#!/bin/bash
+
+set -e
+set -u
+
+#BASE_URL=&quot;http://10.0.1.198:9081/api/v1&quot;
+BASE_URL=&quot;http://118.89.230.78:9081/api/v1&quot;
+POINTSRETRIEVE_URI=&quot;/blockchain/pointsRetrieve&quot;
+TEST_POINT_USENAME=&quot;18510100999&quot;
+
+action=$1
+type=$2
+
+pointsRetrieve() {
+  tokenId=&quot;0d14f821-3e4b-49a0-8c46-839d1696d834&quot;
+  SUBMIT_RESULT=`curl --header &quot;tokenId: ${tokenId}&quot; -s \
+                 -w &apos;|%{time_total}|%{http_code}&apos; ${BASE_URL}${POINTSRETRIEVE_URI}?username=$TEST_POINT_USENAME`
+}
+
+if [ &quot;$action&quot; == &quot;pointsRetrieve&quot; ]
+then
+  pointsRetrieve
+  case $type in
+    # response time
+    time)
+      result=$(echo $SUBMIT_RESULT | cut -d &apos;|&apos; -f 2)
+      echo $result
+      # echo $SUBMIT_RESULT.data
+      ;;
+    # http status
+    status)
+      result=$(echo $SUBMIT_RESULT | cut -d &apos;|&apos; -f 3)
+      echo $result
+      ;;
+    success)
+      temp=$(echo $SUBMIT_RESULT | cut -d &apos;|&apos; -f 1)
+      jsonval $temp msg
+      success=1
+      if [ &quot;$JSON_VAL&quot; == &quot;&#x6210;&#x529F;&quot; ]
+      then
+        success=0
+      fi
+      echo $success
+      ;;
+    # default
+    *)
+      echo &quot;NAN&quot;
+      ;;
+  esac
+elif [ &quot;$action&quot; == &quot;404&quot; ]
+then
+  not_found
+  result=$(echo $RESULT_404 | cut -d &apos;|&apos; -f 2)
+  echo $result
+fi
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="triggers.html" class="navigation navigation-prev " aria-label="Previous page: zabbix触发器函数的使用">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="port.html" class="navigation navigation-next " aria-label="Next page: 监听端口">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"监控配置注意事项","level":"1.16.3","depth":2,"next":{"title":"监听端口","level":"1.16.4","depth":2,"path":"zabbix/port.md","ref":"./zabbix/port.md","articles":[]},"previous":{"title":"zabbix触发器函数的使用","level":"1.16.2","depth":2,"path":"zabbix/triggers.md","ref":"./zabbix/triggers.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"zabbix/tips.md","mtime":"2018-09-21T09:41:46.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-28T13:47:59.216Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
