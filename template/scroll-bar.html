@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>mysql · GitBook</title>
+        <title>滚动条 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../ps/" />
+    <link rel="next" href="../jquery/" />
     
     
-    <link rel="prev" href="review.html" />
+    <link rel="prev" href="index" />
     
 
     </head>
@@ -717,7 +717,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="../template/index">
+        <li class="chapter " data-level="1.6" data-path="index">
             
                 <span>
             
@@ -731,9 +731,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="../template/scroll-bar.html">
+        <li class="chapter active" data-level="1.6.1" data-path="scroll-bar.html">
             
-                <a href="../template/scroll-bar.html">
+                <a href="scroll-bar.html">
             
                     
                     滚动条
@@ -2194,9 +2194,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.15" data-path="./">
+        <li class="chapter " data-level="1.15" data-path="../software/">
             
-                <a href="./">
+                <a href="../software/">
             
                     
                     未命名
@@ -2208,9 +2208,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.15.1" data-path="homebrew.html">
+        <li class="chapter " data-level="1.15.1" data-path="../software/homebrew.html">
             
-                <a href="homebrew.html">
+                <a href="../software/homebrew.html">
             
                     
                     安装Homebrew
@@ -2221,9 +2221,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.15.2" data-path="review.html">
+        <li class="chapter " data-level="1.15.2" data-path="../software/review.html">
             
-                <a href="review.html">
+                <a href="../software/review.html">
             
                     
                     使用git-review涉及的命令
@@ -2234,9 +2234,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.15.3" data-path="mysql.html">
+        <li class="chapter " data-level="1.15.3" data-path="../software/mysql.html">
             
-                <a href="mysql.html">
+                <a href="../software/mysql.html">
             
                     
                     mysql
@@ -2636,7 +2636,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >mysql</a>
+        <a href=".." >滚动条</a>
     </h1>
 </div>
 
@@ -2651,14 +2651,555 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <pre><code>mysql -u root -h10.0.1.10 -pmysecret -P13306  patroller &lt; ./data-dump.sql
-</code></pre><pre><code>use patroller;
-show databases;
-select DEVICE_NO from xx;
-</code></pre><pre><code>mysql -h172.17.0.2 -uroot -pmysecret
-select host,user from mysql.user
-mysql -P13306 -h10.0.1.6 -uroot -pmysecret
+                                <pre><code class="lang-html"><span class="hljs-meta">&lt;!doctype html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>CSS3&#x81EA;&#x5B9A;&#x4E49;&#x6EDA;&#x52A8;&#x6761;-&#x8F69;&#x67AB;&#x9601;<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+<span class="hljs-selector-tag">header</span>
+{
+    <span class="hljs-attribute">font-family</span>: <span class="hljs-string">&apos;Lobster&apos;</span>, cursive;
+    <span class="hljs-attribute">text-align</span>: center;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">25px</span>;    
+}
+
+<span class="hljs-selector-id">#info</span>
+{
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">18px</span>;
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#555</span>;
+    <span class="hljs-attribute">text-align</span>: center;
+    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">25px</span>;
+}
+
+<span class="hljs-selector-tag">a</span>{
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#074E8C</span>;
+}
+
+<span class="hljs-selector-class">.scrollbar</span>
+{
+    <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">30px</span>;
+    <span class="hljs-attribute">float</span>: left;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">300px</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">65px</span>;
+    <span class="hljs-attribute">background</span>: <span class="hljs-number">#F5F5F5</span>;
+    <span class="hljs-attribute">overflow-y</span>: scroll;
+    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">25px</span>;
+}
+
+<span class="hljs-selector-class">.force-overflow</span>
+{
+    <span class="hljs-attribute">min-height</span>: <span class="hljs-number">450px</span>;
+}
+
+<span class="hljs-selector-id">#wrapper</span>
+{
+    <span class="hljs-attribute">text-align</span>: center;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">500px</span>;
+    <span class="hljs-attribute">margin</span>: auto;
+}
+
+<span class="hljs-comment">/*
+ *  STYLE 1
+ */</span>
+
+<span class="hljs-selector-id">#style-1</span><span class="hljs-selector-pseudo">::-webkit-scrollbar-track</span>
+{
+    <span class="hljs-attribute">-webkit-box-shadow</span>: inset <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">6px</span> <span class="hljs-built_in">rgba</span>(0,0,0,0.3);
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F5F5F5</span>;
+}
+
+<span class="hljs-selector-id">#style-1</span><span class="hljs-selector-pseudo">::-webkit-scrollbar</span>
+{
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">12px</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F5F5F5</span>;
+}
+
+<span class="hljs-selector-id">#style-1</span><span class="hljs-selector-pseudo">::-webkit-scrollbar-thumb</span>
+{
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">-webkit-box-shadow</span>: inset <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">6px</span> <span class="hljs-built_in">rgba</span>(0,0,0,.3);
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#555</span>;
+}
+
+<span class="hljs-comment">/*
+ *  STYLE 2
+ */</span>
+
+<span class="hljs-selector-id">#style-2</span><span class="hljs-selector-pseudo">::-webkit-scrollbar-track</span>
+{
+    <span class="hljs-attribute">-webkit-box-shadow</span>: inset <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">6px</span> <span class="hljs-built_in">rgba</span>(0,0,0,0.3);
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F5F5F5</span>;
+}
+
+<span class="hljs-selector-id">#style-2</span><span class="hljs-selector-pseudo">::-webkit-scrollbar</span>
+{
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">12px</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F5F5F5</span>;
+}
+
+<span class="hljs-selector-id">#style-2</span><span class="hljs-selector-pseudo">::-webkit-scrollbar-thumb</span>
+{
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">-webkit-box-shadow</span>: inset <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">6px</span> <span class="hljs-built_in">rgba</span>(0,0,0,.3);
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#D62929</span>;
+}
+
+<span class="hljs-comment">/*
+ *  STYLE 3
+ */</span>
+
+<span class="hljs-selector-id">#style-3</span><span class="hljs-selector-pseudo">::-webkit-scrollbar-track</span>
+{
+    <span class="hljs-attribute">-webkit-box-shadow</span>: inset <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">6px</span> <span class="hljs-built_in">rgba</span>(0,0,0,0.3);
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F5F5F5</span>;
+}
+
+<span class="hljs-selector-id">#style-3</span><span class="hljs-selector-pseudo">::-webkit-scrollbar</span>
+{
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">6px</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F5F5F5</span>;
+}
+
+<span class="hljs-selector-id">#style-3</span><span class="hljs-selector-pseudo">::-webkit-scrollbar-thumb</span>
+{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#000000</span>;
+}
+
+<span class="hljs-comment">/*
+ *  STYLE 4
+ */</span>
+
+<span class="hljs-selector-id">#style-4</span><span class="hljs-selector-pseudo">::-webkit-scrollbar-track</span>
+{
+    <span class="hljs-attribute">-webkit-box-shadow</span>: inset <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">6px</span> <span class="hljs-built_in">rgba</span>(0,0,0,0.3);
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F5F5F5</span>;
+}
+
+<span class="hljs-selector-id">#style-4</span><span class="hljs-selector-pseudo">::-webkit-scrollbar</span>
+{
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F5F5F5</span>;
+}
+
+<span class="hljs-selector-id">#style-4</span><span class="hljs-selector-pseudo">::-webkit-scrollbar-thumb</span>
+{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#000000</span>;
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid <span class="hljs-number">#555555</span>;
+}
+
+
+<span class="hljs-comment">/*
+ *  STYLE 5
+ */</span>
+
+<span class="hljs-selector-id">#style-5</span><span class="hljs-selector-pseudo">::-webkit-scrollbar-track</span>
+{
+    <span class="hljs-attribute">-webkit-box-shadow</span>: inset <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">6px</span> <span class="hljs-built_in">rgba</span>(0,0,0,0.3);
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F5F5F5</span>;
+}
+
+<span class="hljs-selector-id">#style-5</span><span class="hljs-selector-pseudo">::-webkit-scrollbar</span>
+{
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F5F5F5</span>;
+}
+
+<span class="hljs-selector-id">#style-5</span><span class="hljs-selector-pseudo">::-webkit-scrollbar-thumb</span>
+{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#0ae</span>;
+
+    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">-webkit-gradient</span>(linear, 0 0, 0 100%,
+                       color-stop(.5, rgba(255, 255, 255, .2)),
+                       <span class="hljs-built_in">color-stop</span>(.5, transparent), <span class="hljs-built_in">to</span>(transparent));
+}
+
+
+<span class="hljs-comment">/*
+ *  STYLE 6
+ */</span>
+
+<span class="hljs-selector-id">#style-6</span><span class="hljs-selector-pseudo">::-webkit-scrollbar-track</span>
+{
+    <span class="hljs-attribute">-webkit-box-shadow</span>: inset <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">6px</span> <span class="hljs-built_in">rgba</span>(0,0,0,0.3);
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F5F5F5</span>;
+}
+
+<span class="hljs-selector-id">#style-6</span><span class="hljs-selector-pseudo">::-webkit-scrollbar</span>
+{
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F5F5F5</span>;
+}
+
+<span class="hljs-selector-id">#style-6</span><span class="hljs-selector-pseudo">::-webkit-scrollbar-thumb</span>
+{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F90</span>;    
+    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(45deg,
+                                              rgba(255, 255, 255, .2) <span class="hljs-number">25%</span>,
+                                              transparent <span class="hljs-number">25%</span>,
+                                              transparent <span class="hljs-number">50%</span>,
+                                              <span class="hljs-built_in">rgba</span>(255, 255, 255, .2) <span class="hljs-number">50%</span>,
+                                              <span class="hljs-built_in">rgba</span>(255, 255, 255, .2) <span class="hljs-number">75%</span>,
+                                              transparent <span class="hljs-number">75%</span>,
+                                              transparent)
+}
+
+
+<span class="hljs-comment">/*
+ *  STYLE 7
+ */</span>
+
+<span class="hljs-selector-id">#style-7</span><span class="hljs-selector-pseudo">::-webkit-scrollbar-track</span>
+{
+    <span class="hljs-attribute">-webkit-box-shadow</span>: inset <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">6px</span> <span class="hljs-built_in">rgba</span>(0,0,0,0.3);
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F5F5F5</span>;
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">10px</span>;
+}
+
+<span class="hljs-selector-id">#style-7</span><span class="hljs-selector-pseudo">::-webkit-scrollbar</span>
+{
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F5F5F5</span>;
+}
+
+<span class="hljs-selector-id">#style-7</span><span class="hljs-selector-pseudo">::-webkit-scrollbar-thumb</span>
+{
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">-webkit-gradient</span>(linear,
+                                       left bottom,
+                                       left top,
+                                       color-stop(0.44, rgb(122,153,217)),
+                                       <span class="hljs-built_in">color-stop</span>(0.72, rgb(73,125,189)),
+                                       <span class="hljs-built_in">color-stop</span>(0.86, rgb(28,58,148)));
+}
+
+<span class="hljs-comment">/*
+ *  STYLE 8
+ */</span>
+
+<span class="hljs-selector-id">#style-8</span><span class="hljs-selector-pseudo">::-webkit-scrollbar-track</span>
+{
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid black;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F5F5F5</span>;
+}
+
+<span class="hljs-selector-id">#style-8</span><span class="hljs-selector-pseudo">::-webkit-scrollbar</span>
+{
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F5F5F5</span>;
+}
+
+<span class="hljs-selector-id">#style-8</span><span class="hljs-selector-pseudo">::-webkit-scrollbar-thumb</span>
+{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#000000</span>;    
+}
+
+
+<span class="hljs-comment">/*
+ *  STYLE 9
+ */</span>
+
+<span class="hljs-selector-id">#style-9</span><span class="hljs-selector-pseudo">::-webkit-scrollbar-track</span>
+{
+    <span class="hljs-attribute">-webkit-box-shadow</span>: inset <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">6px</span> <span class="hljs-built_in">rgba</span>(0,0,0,0.3);
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F5F5F5</span>;
+}
+
+<span class="hljs-selector-id">#style-9</span><span class="hljs-selector-pseudo">::-webkit-scrollbar</span>
+{
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F5F5F5</span>;
+}
+
+<span class="hljs-selector-id">#style-9</span><span class="hljs-selector-pseudo">::-webkit-scrollbar-thumb</span>
+{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F90</span>;    
+    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(90deg,
+                                              rgba(255, 255, 255, .2) <span class="hljs-number">25%</span>,
+                                              transparent <span class="hljs-number">25%</span>,
+                                              transparent <span class="hljs-number">50%</span>,
+                                              <span class="hljs-built_in">rgba</span>(255, 255, 255, .2) <span class="hljs-number">50%</span>,
+                                              <span class="hljs-built_in">rgba</span>(255, 255, 255, .2) <span class="hljs-number">75%</span>,
+                                              transparent <span class="hljs-number">75%</span>,
+                                              transparent)
+}
+
+
+<span class="hljs-comment">/*
+ *  STYLE 10
+ */</span>
+
+<span class="hljs-selector-id">#style-10</span><span class="hljs-selector-pseudo">::-webkit-scrollbar-track</span>
+{
+    <span class="hljs-attribute">-webkit-box-shadow</span>: inset <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">6px</span> <span class="hljs-built_in">rgba</span>(0,0,0,0.3);
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F5F5F5</span>;
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">10px</span>;
+}
+
+<span class="hljs-selector-id">#style-10</span><span class="hljs-selector-pseudo">::-webkit-scrollbar</span>
+{
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F5F5F5</span>;
+}
+
+<span class="hljs-selector-id">#style-10</span><span class="hljs-selector-pseudo">::-webkit-scrollbar-thumb</span>
+{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#AAA</span>;
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(90deg,
+                                              rgba(0, 0, 0, .2) <span class="hljs-number">25%</span>,
+                                              transparent <span class="hljs-number">25%</span>,
+                                              transparent <span class="hljs-number">50%</span>,
+                                              <span class="hljs-built_in">rgba</span>(0, 0, 0, .2) <span class="hljs-number">50%</span>,
+                                              <span class="hljs-built_in">rgba</span>(0, 0, 0, .2) <span class="hljs-number">75%</span>,
+                                              transparent <span class="hljs-number">75%</span>,
+                                              transparent)
+}
+
+
+<span class="hljs-comment">/*
+ *  STYLE 11
+ */</span>
+
+<span class="hljs-selector-id">#style-11</span><span class="hljs-selector-pseudo">::-webkit-scrollbar-track</span>
+{
+    <span class="hljs-attribute">-webkit-box-shadow</span>: inset <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">6px</span> <span class="hljs-built_in">rgba</span>(0,0,0,0.3);
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F5F5F5</span>;
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">10px</span>;
+}
+
+<span class="hljs-selector-id">#style-11</span><span class="hljs-selector-pseudo">::-webkit-scrollbar</span>
+{
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F5F5F5</span>;
+}
+
+<span class="hljs-selector-id">#style-11</span><span class="hljs-selector-pseudo">::-webkit-scrollbar-thumb</span>
+{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#3366FF</span>;
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(0deg,
+                                              rgba(255, 255, 255, 0.5) <span class="hljs-number">25%</span>,
+                                              transparent <span class="hljs-number">25%</span>,
+                                              transparent <span class="hljs-number">50%</span>,
+                                              <span class="hljs-built_in">rgba</span>(255, 255, 255, 0.5) <span class="hljs-number">50%</span>,
+                                              <span class="hljs-built_in">rgba</span>(255, 255, 255, 0.5) <span class="hljs-number">75%</span>,
+                                              transparent <span class="hljs-number">75%</span>,
+                                              transparent)
+}
+
+<span class="hljs-comment">/*
+ *  STYLE 12
+ */</span>
+
+<span class="hljs-selector-id">#style-12</span><span class="hljs-selector-pseudo">::-webkit-scrollbar-track</span>
+{
+    <span class="hljs-attribute">-webkit-box-shadow</span>: inset <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">6px</span> <span class="hljs-built_in">rgba</span>(0,0,0,0.9);
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#444444</span>;
+}
+
+<span class="hljs-selector-id">#style-12</span><span class="hljs-selector-pseudo">::-webkit-scrollbar</span>
+{
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">12px</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F5F5F5</span>;
+}
+
+<span class="hljs-selector-id">#style-12</span><span class="hljs-selector-pseudo">::-webkit-scrollbar-thumb</span>
+{
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#D62929</span>;
+    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(90deg,
+                                              transparent,
+                                              rgba(0, 0, 0, 0.4) <span class="hljs-number">50%</span>,
+                                              transparent,
+                                              transparent)
+}
+
+<span class="hljs-comment">/*
+ *  STYLE 13
+ */</span>
+
+<span class="hljs-selector-id">#style-13</span><span class="hljs-selector-pseudo">::-webkit-scrollbar-track</span>
+{
+    <span class="hljs-attribute">-webkit-box-shadow</span>: inset <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">6px</span> <span class="hljs-built_in">rgba</span>(0,0,0,0.9);
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#CCCCCC</span>;
+}
+
+<span class="hljs-selector-id">#style-13</span><span class="hljs-selector-pseudo">::-webkit-scrollbar</span>
+{
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">12px</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F5F5F5</span>;
+}
+
+<span class="hljs-selector-id">#style-13</span><span class="hljs-selector-pseudo">::-webkit-scrollbar-thumb</span>
+{
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#D62929</span>;
+    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(90deg,
+                                              transparent,
+                                              rgba(0, 0, 0, 0.4) <span class="hljs-number">50%</span>,
+                                              transparent,
+                                              transparent)
+}
+
+<span class="hljs-comment">/*
+ *  STYLE 14
+ */</span>
+
+<span class="hljs-selector-id">#style-14</span><span class="hljs-selector-pseudo">::-webkit-scrollbar-track</span>
+{
+    <span class="hljs-attribute">-webkit-box-shadow</span>: inset <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">6px</span> <span class="hljs-built_in">rgba</span>(0,0,0,0.6);
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#CCCCCC</span>;
+}
+
+<span class="hljs-selector-id">#style-14</span><span class="hljs-selector-pseudo">::-webkit-scrollbar</span>
+{
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F5F5F5</span>;
+}
+
+<span class="hljs-selector-id">#style-14</span><span class="hljs-selector-pseudo">::-webkit-scrollbar-thumb</span>
+{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#FFF</span>;
+    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(90deg,
+                                              rgba(0, 0, 0, 1) <span class="hljs-number">0%</span>,
+                                              <span class="hljs-built_in">rgba</span>(0, 0, 0, 1) <span class="hljs-number">25%</span>,
+                                              transparent <span class="hljs-number">100%</span>,
+                                              <span class="hljs-built_in">rgba</span>(0, 0, 0, 1) <span class="hljs-number">75%</span>,
+                                              transparent)
+}
+
+<span class="hljs-comment">/*
+ *  STYLE 15
+ */</span>
+
+<span class="hljs-selector-id">#style-15</span><span class="hljs-selector-pseudo">::-webkit-scrollbar-track</span>
+{
+    <span class="hljs-attribute">-webkit-box-shadow</span>: inset <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">6px</span> <span class="hljs-built_in">rgba</span>(0,0,0,0.1);
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F5F5F5</span>;
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">10px</span>;
+}
+
+<span class="hljs-selector-id">#style-15</span><span class="hljs-selector-pseudo">::-webkit-scrollbar</span>
+{
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F5F5F5</span>;
+}
+
+<span class="hljs-selector-id">#style-15</span><span class="hljs-selector-pseudo">::-webkit-scrollbar-thumb</span>
+{
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#FFF</span>;
+    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">-webkit-gradient</span>(linear,
+                                       40% 0%,
+                                       75% 84%,
+                                       from(#4D9C41),
+                                       <span class="hljs-built_in">to</span>(#19911D),
+                                       <span class="hljs-built_in">color-stop</span>(.6,#54DE5D))
+}
+
+<span class="hljs-comment">/*
+ *  STYLE 16
+ */</span>
+
+<span class="hljs-selector-id">#style-16</span><span class="hljs-selector-pseudo">::-webkit-scrollbar-track</span>
+{
+    <span class="hljs-attribute">-webkit-box-shadow</span>: inset <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">6px</span> <span class="hljs-built_in">rgba</span>(0,0,0,0.1);
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F5F5F5</span>;
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">10px</span>;
+}
+
+<span class="hljs-selector-id">#style-16</span><span class="hljs-selector-pseudo">::-webkit-scrollbar</span>
+{
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F5F5F5</span>;
+}
+
+<span class="hljs-selector-id">#style-16</span><span class="hljs-selector-pseudo">::-webkit-scrollbar-thumb</span>
+{
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#FFF</span>;
+    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">-webkit-linear-gradient</span>(top,
+                                              #e4f5fc 0%,
+                                              #bfe8f9 50%,
+                                              #9fd8ef 51%,
+                                              #2ab0ed 100%);
+}
+
+
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;wrapper&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scrollbar&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;style-default&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;force-overflow&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scrollbar&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;style-1&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;force-overflow&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scrollbar&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;style-2&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;force-overflow&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scrollbar&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;style-3&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;force-overflow&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scrollbar&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;style-4&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;force-overflow&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scrollbar&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;style-5&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;force-overflow&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scrollbar&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;style-6&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;force-overflow&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scrollbar&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;style-7&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;force-overflow&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scrollbar&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;style-8&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;force-overflow&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scrollbar&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;style-9&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;force-overflow&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scrollbar&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;style-10&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;force-overflow&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scrollbar&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;style-11&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;force-overflow&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scrollbar&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;style-13&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;force-overflow&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scrollbar&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;style-14&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;force-overflow&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scrollbar&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;style-15&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;force-overflow&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
+<p><a href="https://www.cnblogs.com/vicky-li/p/css.html" target="_blank">&#x53C2;&#x8003;</a></p>
+
                                 
                                 </section>
                             
@@ -2685,12 +3226,12 @@ mysql -P13306 -h10.0.1.6 -uroot -pmysecret
 
             
                 
-                <a href="review.html" class="navigation navigation-prev " aria-label="Previous page: 使用git-review涉及的命令">
+                <a href="index" class="navigation navigation-prev " aria-label="Previous page: 漂亮的模板">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../ps/" class="navigation navigation-next " aria-label="Next page: ps">
+                <a href="../jquery/" class="navigation navigation-next " aria-label="Next page: jQuery">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -2701,7 +3242,7 @@ mysql -P13306 -h10.0.1.6 -uroot -pmysecret
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"mysql","level":"1.15.3","depth":2,"next":{"title":"ps","level":"1.16","depth":1,"path":"ps/index.md","ref":"./ps/index.md","articles":[{"title":"常用工具","level":"1.16.1","depth":2,"path":"ps/tool.md","ref":"./ps/tool.md","articles":[]}]},"previous":{"title":"使用git-review涉及的命令","level":"1.15.2","depth":2,"path":"software/review.md","ref":"./software/review.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"software/mysql.md","mtime":"2018-08-23T02:53:52.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-27T03:50:41.822Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"滚动条","level":"1.6.1","depth":2,"next":{"title":"jQuery","level":"1.7","depth":1,"path":"jquery/index.md","ref":"./jquery/index.md","articles":[{"title":"第一节:安装sublime","level":"1.7.1","depth":2,"path":"jquery/1-state.md","ref":"./jquery/1-state.md","articles":[]},{"title":"第二节:做一个轮播图、tab","level":"1.7.2","depth":2,"path":"jquery/2-state.md","ref":"./jquery/2-state.md","articles":[]},{"title":"第三节:实现导航栏","level":"1.7.3","depth":2,"path":"jquery/3-state.md","ref":"./jquery/3-state.md","articles":[]},{"title":"第四节:事件、效果，做侧边栏","level":"1.7.4","depth":2,"path":"jquery/4-state.md","ref":"./jquery/4-state.md","articles":[]},{"title":"第五节:评论效果实现","level":"1.7.5","depth":2,"path":"jquery/5-state.md","ref":"./jquery/5-state.md","articles":[]},{"title":"第六节:表单相关","level":"1.7.6","depth":2,"path":"jquery/6-state.md","ref":"./jquery/6-state.md","articles":[]},{"title":"第七节:使用swiper animate做简历、清浮动","level":"1.7.7","depth":2,"path":"jquery/8-state.md","ref":"./jquery/8-state.md","articles":[]}]},"previous":{"title":"漂亮的模板","level":"1.6","depth":1,"path":"template/index","ref":"./template/index","articles":[{"title":"滚动条","level":"1.6.1","depth":2,"path":"template/scroll-bar.md","ref":"./template/scroll-bar.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"template/scroll-bar.md","mtime":"2019-03-27T03:50:21.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-27T03:50:41.822Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
