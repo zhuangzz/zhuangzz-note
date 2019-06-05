@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="moment.html" />
+    <link rel="next" href="uedutor.html" />
     
     
     <link rel="prev" href="./" />
@@ -673,7 +673,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="moment.html">
+        <li class="chapter " data-level="1.5.2" data-path="uedutor.html">
+            
+                <a href="uedutor.html">
+            
+                    
+                    富文本编辑
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="moment.html">
             
                 <a href="moment.html">
             
@@ -686,7 +699,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="transitions.html">
+        <li class="chapter " data-level="1.5.4" data-path="transitions.html">
             
                 <a href="transitions.html">
             
@@ -699,7 +712,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.4" data-path="timestamp.html">
+        <li class="chapter " data-level="1.5.5" data-path="timestamp.html">
             
                 <a href="timestamp.html">
             
@@ -712,7 +725,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.5" data-path="amap.html">
+        <li class="chapter " data-level="1.5.6" data-path="amap.html">
             
                 <a href="amap.html">
             
@@ -2782,26 +2795,26 @@ export default {
         },
         //&#x83B7;&#x53D6;&#x5230;&#x4E0A;&#x4F20;&#x7684;&#x6587;&#x4EF6;
         referenceUpload(e) {
-            let files = e.target.files || e.dataTransfer.files
-            console.log(&quot;files&quot;,files)
-            if (!files.length) return
-            let type = files[0].type //&#x6587;&#x4EF6;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x56FE;&#x7247;
-            let size = files[0].size //&#x6587;&#x4EF6;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x5224;&#x65AD;&#x56FE;&#x7247;&#x7684;&#x5927;&#x5C0F;
-            if (this.imgCropperData.accept.indexOf(type) == -1) {
-                alert(&quot;&#x8BF7;&#x9009;&#x62E9;&#x6211;&#x4EEC;&#x652F;&#x6301;&#x7684;&#x56FE;&#x7247;&#x683C;&#x5F0F;&#xFF01;&quot;)
-                return false
-            }
-            if (size &gt; 5242880) {
-                alert(&quot;&#x8BF7;&#x9009;&#x62E9;5M&#x4EE5;&#x5185;&#x7684;&#x56FE;&#x7247;&#xFF01;&quot;)
-                return false
-            }
-            this.picValue = files[0]
-            this.originImgUrl = this.getObjectURL(this.picValue)
-            //&#x6BCF;&#x6B21;&#x66FF;&#x6362;&#x56FE;&#x7247;&#x8981;&#x91CD;&#x65B0;&#x5F97;&#x5230;&#x65B0;&#x7684;url
-            if (this.cropper) {
-                this.cropper.replace(this.originImgUrl)
-            }
-            this.isSelect = true
+           let files = e.target.files || e.dataTransfer.files
+           console.log(&quot;files&quot;,files)
+           if (!files.length) return
+           let type = files[0].type //&#x6587;&#x4EF6;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x56FE;&#x7247;
+           let size = files[0].size //&#x6587;&#x4EF6;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x5224;&#x65AD;&#x56FE;&#x7247;&#x7684;&#x5927;&#x5C0F;
+           if (this.imgCropperData.accept.indexOf(type) == -1) {
+               alert(&quot;&#x8BF7;&#x9009;&#x62E9;&#x6211;&#x4EEC;&#x652F;&#x6301;&#x7684;&#x56FE;&#x7247;&#x683C;&#x5F0F;&#xFF01;&quot;)
+               return false
+           }
+           if (size &gt; 5242880) {
+               alert(&quot;&#x8BF7;&#x9009;&#x62E9;5M&#x4EE5;&#x5185;&#x7684;&#x56FE;&#x7247;&#xFF01;&quot;)
+               return false
+           }
+           this.picValue = files[0]
+           this.originImgUrl = this.getObjectURL(this.picValue)
+           //&#x6BCF;&#x6B21;&#x66FF;&#x6362;&#x56FE;&#x7247;&#x8981;&#x91CD;&#x65B0;&#x5F97;&#x5230;&#x65B0;&#x7684;url
+           if (this.cropper) {
+               this.cropper.replace(this.originImgUrl)
+           }
+           this.isSelect = true
         },
         cancelCropper () {
             this.isSelect = false
@@ -3266,7 +3279,7 @@ export default {
                 </a>
                 
                 
-                <a href="moment.html" class="navigation navigation-next " aria-label="Next page: moment 用法总结">
+                <a href="uedutor.html" class="navigation navigation-next " aria-label="Next page: 富文本编辑">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -3277,7 +3290,7 @@ export default {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"图片选择、剪裁、上传","level":"1.5.1","depth":2,"next":{"title":"moment 用法总结","level":"1.5.2","depth":2,"path":"vue/moment.md","ref":"./vue/moment.md","articles":[]},"previous":{"title":"vue","level":"1.5","depth":1,"path":"vue/index.md","ref":"./vue/index.md","articles":[{"title":"图片选择、剪裁、上传","level":"1.5.1","depth":2,"path":"vue/cropper.md","ref":"./vue/cropper.md","articles":[]},{"title":"moment 用法总结","level":"1.5.2","depth":2,"path":"vue/moment.md","ref":"./vue/moment.md","articles":[]},{"title":"transitions过度&动画","level":"1.5.3","depth":2,"path":"vue/transitions.md","ref":"./vue/transitions.md","articles":[]},{"title":"时间戳是什么","level":"1.5.4","depth":2,"path":"vue/timestamp.md","ref":"./vue/timestamp.md","articles":[]},{"title":"高德地图运用笔记","level":"1.5.5","depth":2,"path":"vue/amap.md","ref":"./vue/amap.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue/cropper.md","mtime":"2019-04-28T04:35:12.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-28T04:35:23.289Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"图片选择、剪裁、上传","level":"1.5.1","depth":2,"next":{"title":"富文本编辑","level":"1.5.2","depth":2,"path":"vue/uedutor.md","ref":"./vue/uedutor.md","articles":[]},"previous":{"title":"vue","level":"1.5","depth":1,"path":"vue/index.md","ref":"./vue/index.md","articles":[{"title":"图片选择、剪裁、上传","level":"1.5.1","depth":2,"path":"vue/cropper.md","ref":"./vue/cropper.md","articles":[]},{"title":"富文本编辑","level":"1.5.2","depth":2,"path":"vue/uedutor.md","ref":"./vue/uedutor.md","articles":[]},{"title":"moment 用法总结","level":"1.5.3","depth":2,"path":"vue/moment.md","ref":"./vue/moment.md","articles":[]},{"title":"transitions过度&动画","level":"1.5.4","depth":2,"path":"vue/transitions.md","ref":"./vue/transitions.md","articles":[]},{"title":"时间戳是什么","level":"1.5.5","depth":2,"path":"vue/timestamp.md","ref":"./vue/timestamp.md","articles":[]},{"title":"高德地图运用笔记","level":"1.5.6","depth":2,"path":"vue/amap.md","ref":"./vue/amap.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"vue/cropper.md","mtime":"2019-04-28T06:16:18.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-05T03:29:16.258Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
